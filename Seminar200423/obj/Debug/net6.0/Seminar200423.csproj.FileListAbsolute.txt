@@ -1,0 +1,15 @@
+/home/user/C#/Seminar200423/bin/Debug/net6.0/Seminar200423
+/home/user/C#/Seminar200423/bin/Debug/net6.0/Seminar200423.deps.json
+/home/user/C#/Seminar200423/bin/Debug/net6.0/Seminar200423.runtimeconfig.json
+/home/user/C#/Seminar200423/bin/Debug/net6.0/Seminar200423.dll
+/home/user/C#/Seminar200423/bin/Debug/net6.0/Seminar200423.pdb
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.csproj.AssemblyReference.cache
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.AssemblyInfoInputs.cache
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.AssemblyInfo.cs
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.csproj.CoreCompileInputs.cache
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.dll
+/home/user/C#/Seminar200423/obj/Debug/net6.0/refint/Seminar200423.dll
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.pdb
+/home/user/C#/Seminar200423/obj/Debug/net6.0/Seminar200423.genruntimeconfig.cache
+/home/user/C#/Seminar200423/obj/Debug/net6.0/ref/Seminar200423.dll
