@@ -230,17 +230,28 @@
 // 8 -> 2, 4, 6, 8
 
 
-Console.WriteLine("Enter a number");
-int number = int.Parse(Console.ReadLine());
-int start = 1;
-while (start <= number)
-{
-    if (start % 2 == 0)
-    {
-        Console.Write(start + "  ");
-    }
-    start++;
-}
+// Console.WriteLine("Enter a number");
+// int number = int.Parse(Console.ReadLine());
+// int start = 1;
+// while (start <= number)
+// {
+//     if (start % 2 == 0)
+//     {
+//         Console.Write(start + "  ");
+//     }
+//     start++;
+// }
+
+
+// To summarize two random numbers
+
+
+// int numberA = new Random().Next(1, 10);
+// Console.WriteLine(numberA);
+// int numberB = new Random().Next(1, 10);
+// Console.WriteLine(numberB);
+// int result = numberA + numberB;
+// Console.WriteLine(result);
 
 
 
