@@ -358,10 +358,12 @@ int Fmax(int arg1, int arg2, int arg3)
 // int Summax = Fmax(max1, max2, max3);
 
 
-int Summax = Fmax(
+int Summax = Fmax
+(
     Fmax(a1, b1, c1),
     Fmax(a2, b2, c2),
-    Fmax(a3, b3, c3));
+    Fmax(a3, b3, c3)
+);
 
 
 Console.WriteLine(Summax);
