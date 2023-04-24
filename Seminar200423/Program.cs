@@ -256,63 +256,113 @@
 
 // to find max from 5 numbers 1 8 3 2 6
 
-int a = 1;
-int b = 8;
-int c = 3;
-int d = 2;
-int e = 6;
+// int a = 1;
+// int b = 8;
+// int c = 3;
+// int d = 2;
+// int e = 6;
 
-int max = a;
-if (b > max) max = b;
-if (c > max) max = c;
-if (d > max) max = d;
-if (e > max) max = e;
-Console.WriteLine("max number is  " + max);
+// int max = a;
+// if (b > max) max = b;
+// if (c > max) max = c;
+// if (d > max) max = d;
+// if (e > max) max = e;
+// Console.WriteLine("max number is  " + max);
 
 
 // Write multiple points
-Console.Clear();
-// Console.SetCursorPosition(10, 4);
+
+
+// Console.Clear();
+// // Console.SetCursorPosition(10, 4);
+// // Console.WriteLine("+");
+// int xa = 1, ya = 40;
+// int xb = 40, yb = 1;
+// int xc = 80, yc = 40;
+// Console.SetCursorPosition(xa, ya);
 // Console.WriteLine("+");
-int xa = 1, ya = 40;
-int xb = 40, yb = 1;
-int xc = 80, yc = 40;
-Console.SetCursorPosition(xa, ya);
-Console.WriteLine("+");
-Console.SetCursorPosition(xb, yb);
-Console.WriteLine("+");
-Console.SetCursorPosition(xc, yc);
-Console.WriteLine("+");
-int x = xa, y = xb;
-int count = 0;
-while (count < 10000)
+// Console.SetCursorPosition(xb, yb);
+// Console.WriteLine("+");
+// Console.SetCursorPosition(xc, yc);
+// Console.WriteLine("+");
+// int x = xa, y = xb;
+// int count = 0;
+// while (count < 10000)
+// {
+//     int point = new Random().Next(0, 3); //[0:3] 0 1 2
+//     if (point == 0)
+//     {
+//         x = (x + xa) / 2;
+//         y = (y + ya) / 2;
+//     }
+//     if (point == 1)
+//     {
+//         x = (x + xb) / 2;
+//         y = (y + yb) / 2;
+//     }
+//     if (point == 2)
+//     {
+//         x = (x + xc) / 2;
+//         y = (y + yc) / 2;
+//     }
+//     Console.SetCursorPosition(x, y);
+//     Console.WriteLine("+");
+//     count++;
+// }
+
+
+
+
+// to find max from 9 numbers
+
+
+int a1 = 1;
+int b1 = 2;
+int c1 = 3;
+int a2 = 4;
+int b2 = 5555;
+int c2 = 6;
+int a3 = 7;
+int b3 = 8;
+int c3 = 9;
+
+// int max = 0;
+
+// if (a1 > max) max = a1;
+// if (b1 > max) max = b1;
+// if (c1 > max) max = c1;
+
+// if (a2 > max) max = a2;
+// if (b2 > max) max = b2;
+// if (c2 > max) max = c2;
+
+// if (a3 > max) max = a3;
+// if (b3 > max) max = b3;
+// if (c3 > max) max = c3;
+
+
+
+int Fmax(int arg1, int arg2, int arg3)
 {
-    int point = new Random().Next(0, 3); //[0:3] 0 1 2
-    if (point == 0)
-    {
-        x = (x + xa) / 2;
-        y = (y + ya) / 2;
-    }
-    if (point == 1)
-    {
-        x = (x + xb) / 2;
-        y = (y + yb) / 2;
-    }
-    if (point == 2)
-    {
-        x = (x + xc) / 2;
-        y = (y + yc) / 2;
-    }
-    Console.SetCursorPosition(x, y);
-    Console.WriteLine("+");
-    count++;
+    int result = arg1;
+    if (arg2 > result) result = arg2;
+    if (arg3 > result) result = arg3;
+    return result;
 }
 
 
+// int max1 = Fmax(a1, b1, c1);
+// int max2 = Fmax(a2, b2, c2);
+// int max3 = Fmax(a3, b3, c3);
+
+// int Summax = Fmax(max1, max2, max3);
 
 
+int Summax = Fmax(
+    Fmax(a1, b1, c1),
+    Fmax(a2, b2, c2),
+    Fmax(a3, b3, c3));
 
 
-
-
+Console.WriteLine(Summax);
 
