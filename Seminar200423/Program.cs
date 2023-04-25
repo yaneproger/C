@@ -313,7 +313,7 @@
 // to find max from 9 numbers
 
 // array index  =    0     1     2    3    4    5    6    7    8
-int[] numbers = { 1453, 259, 33, 47, 56, 654, 78, 86, 99 };
+// int[] numbers = { 1453, 259, 33, 47, 56, 654, 78, 86, 99 };
 
 // int a1 = 1;
 // int b1 = 2;
@@ -340,13 +340,13 @@ int[] numbers = { 1453, 259, 33, 47, 56, 654, 78, 86, 99 };
 // if (c3 > max) max = c3;
 
 
-int Fmax(int arg1, int arg2, int arg3)
-{
-    int result = arg1;
-    if (arg2 > result) result = arg2;
-    if (arg3 > result) result = arg3;
-    return result;
-}
+// int Fmax(int arg1, int arg2, int arg3)
+// {
+//     int result = arg1;
+//     if (arg2 > result) result = arg2;
+//     if (arg3 > result) result = arg3;
+//     return result;
+// }
 
 // int max1 = Fmax(a1, b1, c1);
 // int max2 = Fmax(a2, b2, c2);
@@ -362,14 +362,34 @@ int Fmax(int arg1, int arg2, int arg3)
 // );
 
 
-int Summax = Fmax
-(
-    Fmax(numbers[0], numbers[1], numbers[2]),
-    Fmax(numbers[3], numbers[4], numbers[5]),
-    Fmax(numbers[6], numbers[7], numbers[8])
-);
+// int Summax = Fmax
+// (
+//     Fmax(numbers[0], numbers[1], numbers[2]),
+//     Fmax(numbers[3], numbers[4], numbers[5]),
+//     Fmax(numbers[6], numbers[7], numbers[8])
+// );
 
-Console.WriteLine(Summax);
+// Console.WriteLine(Summax);
 
 
+// to find an index of the entered number
 
+// Console.WriteLine("enter a number 1 to 9 : ");
+// int find = int.Parse(Console.ReadLine());
+// int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+// // Console.WriteLine(array);
+// int index = 0;
+// // array[index] = 0;
+// int size = array.Length;
+// // int find = 5;
+
+// while (index < size)
+// {
+//     if (array[index] == find)
+//     {
+//         Console.WriteLine("index of the find is: " + index);
+
+//     }
+//     index++;
+// }
+// Console.WriteLine("the find is :" + find);
