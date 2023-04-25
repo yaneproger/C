@@ -376,7 +376,7 @@
 
 // Console.WriteLine("enter a number 1 to 9 : ");
 // int find = int.Parse(Console.ReadLine());
-// int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+// int[] array = { 1, 2, 4, 1, 3, 4, 5, 3, 3, 6, 7, 8, 9, 9, 9, 4, 5, 8 };
 // // Console.WriteLine(array);
 // int index = 0;
 // // array[index] = 0;
@@ -388,7 +388,7 @@
 //     if (array[index] == find)
 //     {
 //         Console.WriteLine("position(index) of the find is: " + index);
-
+//         break;
 //     }
 //     index++;
 // }
