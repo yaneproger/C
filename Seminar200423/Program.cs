@@ -387,9 +387,12 @@
 // {
 //     if (array[index] == find)
 //     {
-//         Console.WriteLine("index of the find is: " + index);
+//         Console.WriteLine("position(index) of the find is: " + index);
 
 //     }
 //     index++;
 // }
 // Console.WriteLine("the find is :" + find);
+
+
+
