@@ -310,21 +310,20 @@
 //     count++;
 // }
 
-
-
-
 // to find max from 9 numbers
 
+// array index  =    0     1     2    3    4    5    6    7    8
+int[] numbers = { 1453, 259, 33, 47, 56, 654, 78, 86, 99 };
 
-int a1 = 1;
-int b1 = 2;
-int c1 = 3;
-int a2 = 4;
-int b2 = 5555;
-int c2 = 6;
-int a3 = 7;
-int b3 = 8;
-int c3 = 9;
+// int a1 = 1;
+// int b1 = 2;
+// int c1 = 3;
+// int a2 = 4;
+// int b2 = 5;
+// int c2 = 6;
+// int a3 = 7;
+// int b3 = 8;
+// int c3 = 9;
 
 // int max = 0;
 
@@ -341,7 +340,6 @@ int c3 = 9;
 // if (c3 > max) max = c3;
 
 
-
 int Fmax(int arg1, int arg2, int arg3)
 {
     int result = arg1;
@@ -350,21 +348,28 @@ int Fmax(int arg1, int arg2, int arg3)
     return result;
 }
 
-
 // int max1 = Fmax(a1, b1, c1);
 // int max2 = Fmax(a2, b2, c2);
 // int max3 = Fmax(a3, b3, c3);
 
 // int Summax = Fmax(max1, max2, max3);
 
+// int Summax = Fmax
+// (
+//     Fmax(a1, b1, c1),
+//     Fmax(a2, b2, c2),
+//     Fmax(a3, b3, c3)
+// );
+
 
 int Summax = Fmax
 (
-    Fmax(a1, b1, c1),
-    Fmax(a2, b2, c2),
-    Fmax(a3, b3, c3)
+    Fmax(numbers[0], numbers[1], numbers[2]),
+    Fmax(numbers[3], numbers[4], numbers[5]),
+    Fmax(numbers[6], numbers[7], numbers[8])
 );
 
-
 Console.WriteLine(Summax);
+
+
 
