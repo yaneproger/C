@@ -374,9 +374,9 @@
 
 // to find an index of the entered number
 
-Console.WriteLine("enter a number 1 to 10 : ");
-int find = int.Parse(Console.ReadLine());
-Console.WriteLine();
+// Console.WriteLine("enter a number 1 to 10 : ");
+// int find = int.Parse(Console.ReadLine());
+// Console.WriteLine();
 
 // int[] array = { 1, 2, 4, 1, 3, 4, 5, 3, 3, 6, 7, 8, 9, 9, 9, 4, 5, 8 };
 // // Console.WriteLine(array);
@@ -424,7 +424,7 @@ Console.WriteLine();
 // {
 //     int size = array1.Length;
 //     int index = 0;
-//     int numberposition = 0;
+//     int numberposition = -1;
 
 //     while (index < size)
 //     {
