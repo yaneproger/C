@@ -374,8 +374,10 @@
 
 // to find an index of the entered number
 
-// Console.WriteLine("enter a number 1 to 9 : ");
-// int find = int.Parse(Console.ReadLine());
+Console.WriteLine("enter a number 1 to 10 : ");
+int find = int.Parse(Console.ReadLine());
+Console.WriteLine();
+
 // int[] array = { 1, 2, 4, 1, 3, 4, 5, 3, 3, 6, 7, 8, 9, 9, 9, 4, 5, 8 };
 // // Console.WriteLine(array);
 // int index = 0;
@@ -394,5 +396,53 @@
 // }
 // Console.WriteLine("the find is :" + find);
 
+// to find an index of the entered number using functions(methods) a void method
 
+// void FillArray(int[] array1)
+// {
+//     int length1 = array1.Length;
+//     int index = 0;
+//     while (index < length1)
+//     {
+//         array1[index] = new Random().Next(1, 10);
+//         index++;
+//     }
+// }
 
+// void PrintArray(int[] array2)
+// {
+//     int length2 = array2.Length;
+//     int index = 0;
+//     while (index < length2)
+//     {
+//         Console.WriteLine(array2[index]);
+//         index++;
+//     }
+// }
+
+// int IndexOf(int[] array1, int find)
+// {
+//     int size = array1.Length;
+//     int index = 0;
+//     int numberposition = 0;
+
+//     while (index < size)
+//     {
+//         if (array1[index] == find)
+//         {
+//             numberposition = index;
+//             break;
+//         }
+//         index++;
+//     }
+//     return numberposition;
+// }
+
+// int[] numbers = new int[15];
+// FillArray(numbers);
+// PrintArray(numbers);
+// // Console.WriteLine();
+// int pos = IndexOf(numbers, find);
+// Console.WriteLine();
+// Console.WriteLine("number's index is " + pos);
+// Console.WriteLine("the find is " + find);
