@@ -446,3 +446,141 @@
 // Console.WriteLine();
 // Console.WriteLine("number's index is " + pos);
 // Console.WriteLine("the find is " + find);
+
+
+
+
+
+// Seminar's exercises
+
+
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+// to find second digit of a random number
+
+
+// int Get2ndDigit(int arg)
+// {
+//     int num = new Random().Next(-10000, 10000);
+//     // int num = -9865;
+//     Console.WriteLine(num);
+//     if ((num > 1000) || (num < -1000) || (num < 100 && num > -100))
+//     {
+//         Console.WriteLine("there is no  3 digit number :" + num);
+//     }
+//     else
+//     {
+//         while ((num > 100) || (num < -100))
+//         {
+//             num = num / 10;
+//         }
+//         num = num % 10;
+//     }
+//     Console.WriteLine(num);
+//     return num;
+// }
+// int number = 0;
+// Console.WriteLine(Get2ndDigit(number));
+
+
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+//&& - логическое "И"
+// || - логическое "Или"
+
+// to get 3rd digit of a number or nothing
+
+
+// int Get3rdDigit(int arg1)
+// {
+//     int num = new Random().Next(-1000000, 10000000);
+//     // int num = -58976;
+//     Console.WriteLine(num);
+//     if (num < 100 && num > -100)
+//     {
+//         Console.WriteLine("there is no 3rd digit :" + num);
+//     }
+//     else
+//     {
+//         while ((num <= -1000) || (num >= 1000))
+//         {
+//             num = num / 10;
+//         }
+//         num = num % 10;
+//     }
+//     Console.WriteLine(num);
+//     return num;
+// }
+// int number = 0;
+// Console.WriteLine(Get3rdDigit(number));
+
+
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели,
+//  и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+// to distinguish weekday's number
+
+
+// int WeekDayCheck(int arg1)
+// {
+//     int day = int.Parse(Console.ReadLine());
+
+//     if ((day < 1) || (day > 7))
+//     {
+//         Console.WriteLine("Enter a weekday number");
+//     }
+//     else if ((day == 6) || (day == 7))
+//     {
+//         Console.WriteLine("Congrads! today is a restday!");
+//     }
+//     else
+//     {
+//         Console.WriteLine("Go to work man!");
+//     }
+//     return day;
+// }
+// int daycheck = 0;
+// Console.WriteLine("enter a weekday's number");
+// Console.WriteLine(WeekDayCheck(daycheck));
+
+
+
+// To distinguish a weekday's name
+
+// string GetWeekday(string day)
+// {
+//     Console.WriteLine("Enter a weekday");
+//     string wday = Console.ReadLine();
+//     if ((wday == "monday") || (wday == "tuesday") || (wday == "wednesday") || (wday == "thursday") || (wday == "friday") || (wday == "sunday") || (wday == "saturday"))
+//     {
+
+//         if ((wday == "sunday") || (wday == "saturday"))
+//         {
+//             Console.WriteLine("Congrads! today is a restday!");
+//         }
+//         else
+//         {
+//             Console.WriteLine("Go to work man!");
+//         }
+
+//     }
+//     else
+//     {
+//         Console.WriteLine("Enter a weekday's name");
+//     }
+//     return day;
+// }
+// string daycheck = "";
+// Console.WriteLine(GetWeekday(daycheck));
+
