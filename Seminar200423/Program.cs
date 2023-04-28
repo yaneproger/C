@@ -558,40 +558,40 @@
 
 // To distinguish a weekday's name
 
-string DayNameInput(string input)
-{
-    Console.WriteLine(input);
-    string day = Console.ReadLine();
-    return day;
-}
-string GetWeekday(string wday)
-{
-    // Console.WriteLine("Enter a weekday");
-    // string wday = Console.ReadLine();
-    if ((wday == "monday") || (wday == "tuesday") || (wday == "wednesday") || (wday == "thursday") || (wday == "friday") || (wday == "sunday") || (wday == "saturday"))
-    {
+// string DayNameInput(string input)
+// {
+//     Console.WriteLine(input);
+//     string day = Console.ReadLine();
+//     return day;
+// }
+// string GetWeekday(string wday)
+// {
+//     // Console.WriteLine("Enter a weekday");
+//     // string wday = Console.ReadLine();
+//     if ((wday == "monday") || (wday == "tuesday") || (wday == "wednesday") || (wday == "thursday") || (wday == "friday") || (wday == "sunday") || (wday == "saturday"))
+//     {
 
-        if ((wday == "sunday") || (wday == "saturday"))
-        {
-            Console.WriteLine("Congrads! today is a restday!");
-        }
-        else
-        {
-            Console.WriteLine("Go to work man!");
-        }
+//         if ((wday == "sunday") || (wday == "saturday"))
+//         {
+//             Console.WriteLine("Congrads! today is a restday!");
+//         }
+//         else
+//         {
+//             Console.WriteLine("Go to work man!");
+//         }
 
-    }
-    else
-    {
-        Console.WriteLine("Enter a weekday's name");
-    }
-    return wday;
-}
-// string daycheck = "";
-// Console.WriteLine(GetWeekday(daycheck));
+//     }
+//     else
+//     {
+//         Console.WriteLine("Enter a weekday's name");
+//     }
+//     return wday;
+// }
+// // string daycheck = "";
+// // Console.WriteLine(GetWeekday(daycheck));
 
-string wdayinput = DayNameInput("Enter a weekday's name : ");
-GetWeekday(wdayinput);
+// string wdayinput = DayNameInput("Enter a weekday's name : ");
+// GetWeekday(wdayinput);
 
 
 // Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
