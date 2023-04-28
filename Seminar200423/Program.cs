@@ -558,29 +558,147 @@
 
 // To distinguish a weekday's name
 
-// string GetWeekday(string day)
-// {
-//     Console.WriteLine("Enter a weekday");
-//     string wday = Console.ReadLine();
-//     if ((wday == "monday") || (wday == "tuesday") || (wday == "wednesday") || (wday == "thursday") || (wday == "friday") || (wday == "sunday") || (wday == "saturday"))
-//     {
+string DayNameInput(string input)
+{
+    Console.WriteLine(input);
+    string day = Console.ReadLine();
+    return day;
+}
+string GetWeekday(string wday)
+{
+    // Console.WriteLine("Enter a weekday");
+    // string wday = Console.ReadLine();
+    if ((wday == "monday") || (wday == "tuesday") || (wday == "wednesday") || (wday == "thursday") || (wday == "friday") || (wday == "sunday") || (wday == "saturday"))
+    {
 
-//         if ((wday == "sunday") || (wday == "saturday"))
-//         {
-//             Console.WriteLine("Congrads! today is a restday!");
-//         }
-//         else
-//         {
-//             Console.WriteLine("Go to work man!");
-//         }
+        if ((wday == "sunday") || (wday == "saturday"))
+        {
+            Console.WriteLine("Congrads! today is a restday!");
+        }
+        else
+        {
+            Console.WriteLine("Go to work man!");
+        }
 
-//     }
-//     else
-//     {
-//         Console.WriteLine("Enter a weekday's name");
-//     }
-//     return day;
-// }
+    }
+    else
+    {
+        Console.WriteLine("Enter a weekday's name");
+    }
+    return wday;
+}
 // string daycheck = "";
 // Console.WriteLine(GetWeekday(daycheck));
+
+string wdayinput = DayNameInput("Enter a weekday's name : ");
+GetWeekday(wdayinput);
+
+
+// Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
+
+
+// int Request(string messagein)
+// {
+//     Console.WriteLine(messagein);
+//     int KeyInput = int.Parse(Console.ReadLine());
+//     return KeyInput;
+// }
+// void FindCoordinates(int quarter)
+// {
+//     if (quarter == 1)
+//     {
+//         Console.WriteLine("coordinates between 0 and x , 0 and y ");
+//     }
+//     if (quarter == 2)
+//     {
+//         Console.WriteLine("coordinates between 0 and -x , 0 and y ");
+//     }
+//     if (quarter == 3)
+//     {
+//         Console.WriteLine("coordinates between 0 and x , 0 and -y ");
+//     }
+//     if (quarter == 4)
+//     {
+//         Console.WriteLine("coordinates between 0 and -x , 0 and -y ");
+//     }
+// }
+// int message = Request("enter a number");
+// FindCoordinates(message);
+
+
+
+
+// Напишите программу, которая принимает на вход кординаты двух точек 
+// и находит расстояние между ними в 2D пространстве. A(3.6); B(2.1); -> 5.09
+// A(7,-5);B(1,-1)->7.21
+
+
+
+// int PointRequest(string message)
+// {
+//     Console.WriteLine(message);
+//     int PointCoordinate = int.Parse(Console.ReadLine());
+//     return PointCoordinate;
+// }
+
+// double PointDistance(int x1, int y1, int x2, int y2)
+// {
+//     double distance = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+//     return distance;
+// }
+
+// int x1 = PointRequest("Enter x1 coodinate : ");
+// int y1 = PointRequest("Enter y1 coodinate : ");
+
+// int x2 = PointRequest("Enter x2 coodinate : ");
+// int y2 = PointRequest("Enter y2 coodinate : ");
+
+// // double result = PointDistance(x1, y1, x2, y2);
+// Console.WriteLine(PointDistance(x1, y1, x2, y2));
+
+
+
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел 
+// от 1 до N.
+
+// Console.WriteLine("enter a number");
+// Console.ReadLine();
+
+// int i = 1;
+// int n = 5;
+// while (i < n)
+// {
+//     int square = i * i;
+//     Console.WriteLine(square);
+//     i = i + 1;
+
+// }
+
+// Console.WriteLine(square);
+
+
+// int InputData(string message)
+// {
+//     Console.WriteLine(message);
+//     int DigitVar = Math.Abs(int.Parse(Console.ReadLine())); // math.abs throws minus "-" from entered digit, int.parse converts string to integer
+//     return DigitVar;
+// }
+
+// void SquareTable(int number)
+// {
+//     int i = 1;
+//     while (i <= number)
+//     {
+//         double num = Math.Pow((i), 2);
+//         Console.WriteLine(num);
+//         i++;
+//     }
+// }
+// int digit = InputData("Enter a digit : ");
+// SquareTable(digit);
+
+
+
 
