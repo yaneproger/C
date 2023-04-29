@@ -702,3 +702,173 @@
 
 
 
+
+
+
+
+
+// Задача 21
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// A (3,6,8); B (2,1,-7), -> 15.84
+
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+// here you should enter "string" operator, 
+// int KeyInput(string Point)  // // because you entered a message in x,y,z variables - " Enter x1 coordinates : "
+// {
+//     Console.WriteLine(Point);
+//     int PointCoordinate = int.Parse(Console.ReadLine());
+//     return PointCoordinate;
+// }
+
+// double Distance(int x1, int y1, int z1, int x2, int y2, int z2)
+// {
+//     double PointDistance = Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2) + Math.Pow((z1 - z2), 2));
+//     return PointDistance;
+// }
+
+// int Point1x1 = KeyInput("Enter x1 coordinates : ");
+// int Point1y1 = KeyInput("Enter y1 coordinates : ");
+// int Point1z1 = KeyInput("Enter z1 coordinates : ");
+
+// int Point2x2 = KeyInput("Enter x2 coordinates : ");
+// int Point2y2 = KeyInput("Enter y2 coordinates : ");
+// int Point2z2 = KeyInput("Enter z2 coordinates : ");
+
+// Console.WriteLine(Distance(Point1x1, Point1y1, Point1z1, Point2x2, Point2y2, Point2z2));
+
+
+
+
+// Задача 23
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+
+// int DigitInput(string message)
+// {
+//     Console.WriteLine(message);
+//     int Digit = Math.Abs(int.Parse(Console.ReadLine()));
+//     // int Digit = int.Parse(Console.ReadLine());
+//     return Digit;
+// }
+
+// void Cube(int num)
+// {
+//     int i = 1;
+//     // int num = 0;
+//     while (i < num)
+//     {
+//         double result = Math.Pow((i), 3);
+//         Console.WriteLine(result);
+//         i++;
+//     }
+// }
+// int digit = DigitInput("Enter a number : ");
+// Cube(digit);
+
+
+
+
+
+
+
+
+
+
+// Задача 19
+
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, 
+// является ли оно палиндромом - одинаково читающееся в обоих направлениях.
+
+// 14212 -> нет
+
+// 12821 -> да
+
+// 23432 -> да
+
+// string DigitInput(string inmessage)
+// {
+//     Console.WriteLine(inmessage);
+//     string input = Console.ReadLine();
+//     return input;
+// }
+
+// bool PolyCheck(int arg1)
+
+bool PolyCheck(string number)
+{
+    int index = 0;
+    int len = number.Length;
+    Console.WriteLine(len);
+    for (index = 0; index < len / 2; index++)
+
+        if (number[index] != number[len - index - 1])
+        {
+            return false;
+            // Console.WriteLine(number[index]);
+            // Console.WriteLine("No Poli");
+        }
+
+
+    // Console.WriteLine(number[index]);
+    // Console.WriteLine("Poli");
+    return true;
+
+
+}
+Console.WriteLine("enter a num");
+string num = Console.ReadLine();
+// char[] array = num.ToCharArray();
+Console.WriteLine(PolyCheck(num));
+
+
+
+// bool IsPalindrom(char[] word)
+// {
+//     for (int i = 0; i < word.Length / 2; i++)
+//     {
+//         if (word[i] != word[word.Length - 1 - i])
+//             return false;
+//     }
+//     return true;
+// }
+
+
+
+
+
+
+// {
+//     if (number[index] != number[len - index - 1])
+//     {
+//         return false;
+//     }
+//     return true;
+// }
+
+
+// int num = int.Parse(DigitInput("Enter a symbols"));
+// Console.WriteLine(PolyCheck(num));
+
+// for (int i = 0; i < len / 2; ++i)
+// {
+//     if (word[i] != word[len - i - 1])
+//     {
+//         return false;
+//     }
+// }
+
+
+
+
+
+
+
+
