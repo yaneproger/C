@@ -776,12 +776,6 @@
 
 
 
-
-
-
-
-
-
 // Задача 19
 
 // Напишите программу, которая принимает на вход пятизначное число и проверяет, 
@@ -793,82 +787,41 @@
 
 // 23432 -> да
 
-// string DigitInput(string inmessage)
-// {
-//     Console.WriteLine(inmessage);
-//     string input = Console.ReadLine();
-//     return input;
-// }
 
-// bool PolyCheck(int arg1)
+// to check if it palindrom
 
-bool PolyCheck(string number)
+int DigitInput(string inmessage)
 {
+    Console.WriteLine(inmessage);
+    int inputmsg = Convert.ToInt32(Console.ReadLine());
+    return inputmsg;
+}
+void PaliCheck(string number)
+{
+    Console.WriteLine(number);
     int index = 0;
     int len = number.Length;
     Console.WriteLine(len);
-    for (index = 0; index < len / 2; index++)
-
-        if (number[index] != number[len - index - 1])
-        {
-            return false;
-            // Console.WriteLine(number[index]);
-            // Console.WriteLine("No Poli");
-        }
-
-
-    // Console.WriteLine(number[index]);
-    // Console.WriteLine("Poli");
-    return true;
-
-
+    if (len == 5)
+    // if ((len == 5) && (int.TryParse(number) == true))
+    {
+        Console.WriteLine(number);
+        for (index = 0; index < len / 2; index++)
+            if (number[index] != number[len - index - 1])
+            {
+                Console.WriteLine(" NO Pali");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Pali");
+                break;
+            }
+    }
+    else
+    {
+        Console.WriteLine("the number is not in correct diapason");
+    }
 }
-Console.WriteLine("enter a num");
-string num = Console.ReadLine();
-// char[] array = num.ToCharArray();
-Console.WriteLine(PolyCheck(num));
-
-
-
-// bool IsPalindrom(char[] word)
-// {
-//     for (int i = 0; i < word.Length / 2; i++)
-//     {
-//         if (word[i] != word[word.Length - 1 - i])
-//             return false;
-//     }
-//     return true;
-// }
-
-
-
-
-
-
-// {
-//     if (number[index] != number[len - index - 1])
-//     {
-//         return false;
-//     }
-//     return true;
-// }
-
-
-// int num = int.Parse(DigitInput("Enter a symbols"));
-// Console.WriteLine(PolyCheck(num));
-
-// for (int i = 0; i < len / 2; ++i)
-// {
-//     if (word[i] != word[len - i - 1])
-//     {
-//         return false;
-//     }
-// }
-
-
-
-
-
-
-
-
+int num = DigitInput("Enter a symbols");
+PaliCheck(Convert.ToString(num));
