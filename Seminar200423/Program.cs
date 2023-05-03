@@ -798,23 +798,23 @@ int DigitInput(string inmessage)
 }
 void PaliCheck(string number)
 {
-    Console.WriteLine(number);
+    // Console.WriteLine(number);
     int index = 0;
     int len = number.Length;
-    Console.WriteLine(len);
+    // Console.WriteLine(len);
     if (len == 5)
     // if ((len == 5) && (int.TryParse(number) == true))
     {
-        Console.WriteLine(number);
+        // Console.WriteLine(number);
         for (index = 0; index < len / 2; index++)
             if (number[index] != number[len - index - 1])
             {
-                Console.WriteLine(" NO Pali");
+                Console.WriteLine(" NO Palindrom");
                 break;
             }
             else
             {
-                Console.WriteLine("Pali");
+                Console.WriteLine("This is a Palindrom");
                 break;
             }
     }
