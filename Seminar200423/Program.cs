@@ -843,3 +843,5 @@ void PaliCheck(string number)
 }
 string num = DigitInput("Enter a symbols");
 PaliCheck(Convert.ToString(num));
+
+
