@@ -790,20 +790,38 @@
 
 // to check if it palindrom
 
-int DigitInput(string inmessage)
+string DigitInput(string inmessage)
 {
     Console.WriteLine(inmessage);
-    int inputmsg = Convert.ToInt32(Console.ReadLine());
+    // int inputmsg = Convert.ToInt32(Console.ReadLine());
+    string inputmsg = Console.ReadLine();
     return inputmsg;
 }
+
+// int Digicheck(int digits)
+// {
+//     // int check = int.Parse(digits);
+//     int num;
+//     if (
+//     bool isNumber = int.TryParse(digits, out num)
+//     )
+
+
+
+//     return isNumber;
+
+// }
+
 void PaliCheck(string number)
 {
-    // Console.WriteLine(number);
     int index = 0;
     int len = number.Length;
-    // Console.WriteLine(len);
-    if (len == 5)
-    // if ((len == 5) && (int.TryParse(number) == true))
+    int check;
+    bool isdigits = int.TryParse(number, out check);
+    Console.WriteLine("isdigits :" + isdigits);
+    // if (len == 5)
+    // if ((len == 5) && (Convert.ToInt32( TryParse(number, out check)==true)))
+    if ((len == 5) && isdigits == true)
     {
         // Console.WriteLine(number);
         for (index = 0; index < len / 2; index++)
@@ -820,8 +838,8 @@ void PaliCheck(string number)
     }
     else
     {
-        Console.WriteLine("the number is not in correct diapason");
+        Console.WriteLine("the number is not in correct diapason or uve entered Non-digits");
     }
 }
-int num = DigitInput("Enter a symbols");
+string num = DigitInput("Enter a symbols");
 PaliCheck(Convert.ToString(num));
