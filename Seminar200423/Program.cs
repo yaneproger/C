@@ -845,4 +845,3 @@ DigiCheck(num);
 PaliCheck(Convert.ToString(num));
 
 
-
