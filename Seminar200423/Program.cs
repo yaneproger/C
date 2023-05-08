@@ -798,11 +798,11 @@ string DigitInput(string inmessage)
     return inputmsg;
 }
 
-string Digicheck(string digits)
+string DigiCheck(string digits)
 {
     int check;
     bool isdigits = int.TryParse(digits, out check);
-    Console.WriteLine("isDigits :" + isdigits);
+    Console.WriteLine("is the number digits :" + isdigits);
     if (isdigits != true)
     {
         Console.WriteLine("the number is not a digits");
@@ -841,6 +841,8 @@ void PaliCheck(string number)
     }
 }
 string num = DigitInput("Enter a symbols");
-Digicheck(num);
+DigiCheck(num);
 PaliCheck(Convert.ToString(num));
+
+
 
