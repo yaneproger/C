@@ -788,60 +788,206 @@
 // 23432 -> да
 
 
-// to check if it palindrom
+// to check if it's a palindrom
 
-string DigitInput(string inmessage)
+// string DigitInput(string inmessage)
+// {
+//     Console.WriteLine(inmessage);
+//     // int inputmsg = Convert.ToInt32(Console.ReadLine());
+//     string inputmsg = Console.ReadLine();
+//     return inputmsg;
+// }
+
+// string DigiCheck(string digits)
+// {
+//     int check;
+//     bool isdigits = int.TryParse(digits, out check);
+//     Console.WriteLine("is the number digits :" + isdigits);
+//     if (isdigits != true)
+//     {
+//         Console.WriteLine("the number is not a digits");
+
+//     }
+//     return digits;
+// }
+
+// void PaliCheck(string number)
+// {
+//     int index = 0;
+//     int len = number.Length;
+//     // int check;
+//     // bool isdigits = int.TryParse(number, out check);
+//     // Console.WriteLine("isdigits :" + isdigits);
+//     if (len == 5)
+//     // if ((len == 5) && (Convert.ToInt32( TryParse(number, out check)==true)))
+//     // if ((len == 5) && isdigits == true)
+//     {
+//         // Console.WriteLine(number);
+//         for (index = 0; index < len / 2; index++)
+//             if (number[index] != number[len - index - 1])
+//             {
+//                 Console.WriteLine(" NO Palindrom");
+//                 break;
+//             }
+//             else
+//             {
+//                 Console.WriteLine("This is a Palindrom");
+//                 break;
+//             }
+//     }
+//     else
+//     {
+//         Console.WriteLine("the number is not in correct diapason or uve entered Non-digits");
+//     }
+// }
+// string num = DigitInput("Enter a symbols");
+// DigiCheck(num);
+// PaliCheck(Convert.ToString(num));
+
+
+// double result = Math.Pow((21), 4) % 25;
+
+// Console.WriteLine("the number is " + result);
+
+
+// (3pow5 mod29)pow8 mod29 = (3pow8mod29)pow5 mod29
+
+// (6pow25 mod50)pow45 mod50 = (6pow45 mod50)pow25 mod50
+// (6pow12 mod25)pow20 mod25 = (6pow20 mod25)pow12 mod25
+// (6pow4 mod25)pow9 mod25 = (6pow9 mod25)pow4 mod25
+
+
+
+
+
+
+
+
+// Console.WriteLine(int n = n * mult(n - 1));
+
+
+
+
+
+
+// Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
+
+
+
+// string Input(string arg1)
+// {
+//     Console.WriteLine(arg1);
+//     string input = Console.ReadLine();
+//     return input;
+
+// }
+
+// void Digitquantity(string arg2)
+// {
+//     int len = arg2.Length;
+//     Console.WriteLine("Digits quantity is : " + len);
+// }
+
+// string number = Input("Enter a number");
+// Digitquantity(number);
+
+
+
+
+
+// Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+// 4 -> 24 
+// 5 -> 120
+
+
+int input(string arg1)
 {
-    Console.WriteLine(inmessage);
-    // int inputmsg = Convert.ToInt32(Console.ReadLine());
-    string inputmsg = Console.ReadLine();
-    return inputmsg;
+    Console.WriteLine(arg1);
+    int number = Math.Abs(int.Parse(Console.ReadLine()));
+    return number;
+
 }
 
-string DigiCheck(string digits)
-{
-    int check;
-    bool isdigits = int.TryParse(digits, out check);
-    Console.WriteLine("is the number digits :" + isdigits);
-    if (isdigits != true)
-    {
-        Console.WriteLine("the number is not a digits");
 
+void PowerOfN(int arg2)
+{
+    int i;
+
+
+    for (i = 1; i <= arg2; i++)
+    {
+
+
+        double result = i * arg2;
+
+        // double result = Math.Pow((i), arg2);
+
+        Console.WriteLine(result);
     }
-    return digits;
+
 }
 
-void PaliCheck(string number)
-{
-    int index = 0;
-    int len = number.Length;
-    // int check;
-    // bool isdigits = int.TryParse(number, out check);
-    // Console.WriteLine("isdigits :" + isdigits);
-    if (len == 5)
-    // if ((len == 5) && (Convert.ToInt32( TryParse(number, out check)==true)))
-    // if ((len == 5) && isdigits == true)
-    {
-        // Console.WriteLine(number);
-        for (index = 0; index < len / 2; index++)
-            if (number[index] != number[len - index - 1])
-            {
-                Console.WriteLine(" NO Palindrom");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("This is a Palindrom");
-                break;
-            }
-    }
-    else
-    {
-        Console.WriteLine("the number is not in correct diapason or uve entered Non-digits");
-    }
-}
-string num = DigitInput("Enter a symbols");
-DigiCheck(num);
-PaliCheck(Convert.ToString(num));
+int num = input("enter a number");
+
+PowerOfN(num);
+
+
+
+// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+
+
+
+
+
+// int num = new Random().Next(-10000, 10000);
+
+
+
+// int[] array1;
+
+
+
+
+
+
+
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// 452 -> 11
+
+// 82 -> 10
+
+// 9012 -> 12
+
+
+
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+// 6, 1, 33 -> [6, 1, 33]
+
+
+
+
+
 
 
