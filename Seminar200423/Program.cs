@@ -902,60 +902,49 @@
 // 5 -> 120
 
 
-int input(string arg1)
-{
-    Console.WriteLine(arg1);
-    // Console.WriteLine("enter a number");
-    int number = Math.Abs(int.Parse(Console.ReadLine()));
-    return number;
-}
+// int input(string arg1)
+// {
+//     Console.WriteLine(arg1);
+//     // Console.WriteLine("enter a number");
+//     int number = Math.Abs(int.Parse(Console.ReadLine()));
+//     return number;
+// }
 
-int Check(int arg)
-{
-    if (arg == 0)
-    {
-        Console.WriteLine("You've entered a 0, result is 0");
-        break;
-    }
-    return arg;
-}
+// // int Check(int arg)
+// // {
+// //     if (arg == 0)
+// //     {
+// //         Console.WriteLine("You've entered a 0, result is 0");
+// //         // break;
 
-int MultipleOfN(int arg2)
-{
-    int sum = 1;
+// //     }
+// //     return arg;
+// // }
 
+// int MultipleOfN(int arg2)
+// {
+//     int sum = 1;
+//     for (int i = 1; i <= arg2; i++)
+//     {
+//         if (arg2 == 0)
+//         {
+//             Console.WriteLine("You've entered a 0, result is 0");
 
-    for (int i = 1; i <= arg2; i++)
-    {
-        sum = sum * i;
-    }
-    return sum;
+//             break;
+//         }
+//         sum = sum * i;
+//         // else
+//         // {
+//         // }
+//     }
+//     return sum;
+// }
 
-}
+// int num = input("enter a number");
 
-int num = input("enter a number");
-
-Check(num);
-// int num = input();
-Console.WriteLine($"The mutliplication of the digits of the number {num} is equals : {MultipleOfN(num)}");
-
-
-
-// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
-// [1,0,1,1,0,1,0,0]
-
-
-
-
-
-
-// int num = new Random().Next(-10000, 10000);
-
-
-
-// int[] array1;
-
-
+// // Check(num);
+// // int num = input();
+// Console.WriteLine($"The mutliplication of the digits of the number {num} is equals : {MultipleOfN(num)}");
 
 
 
@@ -972,6 +961,34 @@ Console.WriteLine($"The mutliplication of the digits of the number {num} is equa
 
 
 
+int input1()
+{
+    Console.WriteLine("enter a number1");
+    int number = Math.Abs(int.Parse(Console.ReadLine()));
+    // Console.WriteLine("enter a number2");
+    // int number2 = Math.Abs(int.Parse(Console.ReadLine()));
+    return number;
+    // return number2;
+}
+void PowOfDig(int arg1, int arg2)
+{
+
+    double result = Math.Pow((arg1), arg2);
+    Console.WriteLine($"the result of the powering operation is : {result}");
+
+}
+
+int power1 = input1();
+int power2 = input1();
+
+PowOfDig(power1, power2);
+
+
+
+
+
+
+
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
 // 452 -> 11
@@ -984,6 +1001,16 @@ Console.WriteLine($"The mutliplication of the digits of the number {num} is equa
 
 
 
+
+
+
+
+
+
+
+
+
+
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
@@ -991,6 +1018,23 @@ Console.WriteLine($"The mutliplication of the digits of the number {num} is equa
 // 6, 1, 33 -> [6, 1, 33]
 
 
+
+
+
+
+// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+
+
+
+
+
+// int num = new Random().Next(-10000, 10000);
+
+
+
+// int[] array1;
 
 
 
