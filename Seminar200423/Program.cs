@@ -882,7 +882,6 @@
 //     Console.WriteLine(arg1);
 //     string input = Console.ReadLine();
 //     return input;
-
 // }
 
 // void Digitquantity(string arg2)
@@ -906,33 +905,39 @@
 int input(string arg1)
 {
     Console.WriteLine(arg1);
+    // Console.WriteLine("enter a number");
     int number = Math.Abs(int.Parse(Console.ReadLine()));
     return number;
-
 }
 
-
-void PowerOfN(int arg2)
+int Check(int arg)
 {
-    int i;
-
-
-    for (i = 1; i <= arg2; i++)
+    if (arg == 0)
     {
-
-
-        double result = i * arg2;
-
-        // double result = Math.Pow((i), arg2);
-
-        Console.WriteLine(result);
+        Console.WriteLine("You've entered a 0, result is 0");
+        break;
     }
+    return arg;
+}
+
+int MultipleOfN(int arg2)
+{
+    int sum = 1;
+
+
+    for (int i = 1; i <= arg2; i++)
+    {
+        sum = sum * i;
+    }
+    return sum;
 
 }
 
 int num = input("enter a number");
 
-PowerOfN(num);
+Check(num);
+// int num = input();
+Console.WriteLine($"The mutliplication of the digits of the number {num} is equals : {MultipleOfN(num)}");
 
 
 
