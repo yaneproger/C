@@ -845,28 +845,6 @@
 // PaliCheck(Convert.ToString(num));
 
 
-// double result = Math.Pow((21), 4) % 25;
-
-// Console.WriteLine("the number is " + result);
-
-
-// (3pow5 mod29)pow8 mod29 = (3pow8mod29)pow5 mod29
-
-// (6pow25 mod50)pow45 mod50 = (6pow45 mod50)pow25 mod50
-// (6pow12 mod25)pow20 mod25 = (6pow20 mod25)pow12 mod25
-// (6pow4 mod25)pow9 mod25 = (6pow9 mod25)pow4 mod25
-
-
-
-
-
-
-
-
-// Console.WriteLine(int n = n * mult(n - 1));
-
-
-
 
 
 
@@ -961,29 +939,27 @@
 
 
 
-int input1()
-{
-    Console.WriteLine("enter a number1");
-    int number = Math.Abs(int.Parse(Console.ReadLine()));
-    // Console.WriteLine("enter a number2");
-    // int number2 = Math.Abs(int.Parse(Console.ReadLine()));
-    return number;
-    // return number2;
-}
-void PowOfDig(int arg1, int arg2)
-{
+// int input1()
+// {
+//     Console.WriteLine("enter a number1");
+//     int number = Math.Abs(int.Parse(Console.ReadLine()));
+//     // Console.WriteLine("enter a number2");
+//     // int number2 = Math.Abs(int.Parse(Console.ReadLine()));
+//     return number;
+//     // return number2;
+// }
+// void PowOfDig(int arg1, int arg2)
+// {
 
-    double result = Math.Pow((arg1), arg2);
-    Console.WriteLine($"the result of the powering operation is : {result}");
+//     double result = Math.Pow((arg1), arg2);
+//     Console.WriteLine($"the result of the powering operation is : {result}");
 
-}
+// }
 
-int power1 = input1();
-int power2 = input1();
+// int power1 = input1();
+// int power2 = input1();
 
-PowOfDig(power1, power2);
-
-
+// PowOfDig(power1, power2);
 
 
 
@@ -997,6 +973,98 @@ PowOfDig(power1, power2);
 
 // 9012 -> 12
 
+// string Input()
+// {
+//     Console.WriteLine("Enter an Input");
+//     string input = Console.ReadLine();
+//     // int input = Math.Abs(int.Parse(Console.ReadLine()));
+//     return input;
+// }
+// int DigiSum(string arg2)
+// {
+//     int index = 0;
+//     int sum = 0;
+//     int len = arg2.Length;
+//     int parsed = Math.Abs(int.Parse(arg2));
+//     while (index < len)
+//     {
+//         sum = sum + parsed % 10;
+//         parsed = parsed / 10;
+//         index++;
+//         Console.WriteLine(parsed % 10);
+//     }
+//     Console.WriteLine(sum);
+//     return sum;
+// }
+// string digisum = Input();
+// DigiSum(digisum);
+
+
+
+
+// string Input(string arg1)
+// {
+//     Console.WriteLine(arg1);
+//     string keyinput = Console.ReadLine();
+//     return keyinput;
+// }
+
+// void Digitquantity(string arg2)
+// {
+//     int len = arg2.Length;
+//     int[] range = new int[len];
+
+//     int sum = 0;
+//     int index = 0;
+//     // for (int i = 0; i < len; i++)
+//     while (index < len)
+//     {
+
+//         range[index] = arg2[index];
+
+//         // char n = arg2[i];
+
+//         // sum = sum + arg2[i];
+//         // sum+=arg2[i];
+//         Console.WriteLine(range[index]);
+//     }
+
+//     // return range;
+
+// }
+
+// string number = Input("Enter a number");
+// Digitquantity(number);
+
+
+
+
+
+// int xa = 1, ya = 1, xb = 1, yb = 40, xc = 80, yc = 40;
+// int x = xa, y = ya;
+// int count = 0;
+// while (count < 10000)
+// {
+//     int what = new Random().Next(0, 3);
+//     if (what == 0)
+//     {
+//         x = (x + xa) / 2;
+//         y = (y + ya) / 2;
+//     }
+//     if (what == 1)
+//     {
+//         x = (x + xb) / 2;
+//         y = (y + yb) / 2;
+//     }
+//     if (what == 2)
+//     {
+//         x = (x + xc) / 2;
+//         y = (y + yc) / 2;
+//     }
+//     Console.SetCursorPosition(x, y);
+//     Console.WriteLine("+");
+//     count++;
+// }
 
 
 
@@ -1006,37 +1074,74 @@ PowOfDig(power1, power2);
 
 
 
+// int Max(int arg1, int arg2, int arg3)
+// {
+//     int result = arg1;
+//     if (arg2 > result) result = arg2;
+//     if (arg3 > result) result = arg3;
+//     return result;
+// }
+
+
+// int a1 = 15;
+// int b1 = 21;
+// int c1 = 39;
+
+// int a2 = 15;
+// int b2 = 21;
+// int c2 = 39;
+
+// int a3 = 25;
+// int b3 = 61;
+// int c3 = 59;
+
+
+// int max = Max(Max(a1, b1, c1), Max(a2, b2, c2), Max(a3, b3, c3));
+
+// Console.WriteLine(max);
 
 
 
+int Number()
+{
+    Console.WriteLine("Enter find number");
+    int digit = int.Parse(Console.ReadLine());
+    // Console.WriteLine(digit);
+    return digit;
+}
+void Findnum(int arg1)
+{
+    Console.WriteLine("find number is " + arg1);
+    int[] array = { 11, 12, 13, 14, 15, 25, 61, 57, 81, 9 };
+    int index = 0;
+    int find = arg1; int len = array.Length;
+    while (index < len)
+    {
+        if (index == len - 1 && array[index] != find)
+        {
+            Console.WriteLine($"the : {find} is not present ");
+        }
+        else if (array[index] == find)
+        {
+            find = array[index];
+            Console.WriteLine("find is found  " + find);
+            break;
+        }
+        else if (array[index] != find)
+        {
+            Console.WriteLine($"searching for the : {find}  in next position ");
+        }
 
+        else Console.WriteLine($"the : {find} is not present ");
+        index++;
+    }
+    // return find;
+}
+// int num = Number();
 
-// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+int num = Number();
 
-// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-
-// 6, 1, 33 -> [6, 1, 33]
-
-
-
-
-
-
-// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
-// [1,0,1,1,0,1,0,0]
-
-
-
-
-
-
-// int num = new Random().Next(-10000, 10000);
-
-
-
-// int[] array1;
-
-
-
+Findnum(num);
+// Console.WriteLine("find number is present " + Findnum(num));
 
 
