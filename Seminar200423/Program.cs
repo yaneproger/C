@@ -1102,46 +1102,133 @@
 
 
 
-int Number()
-{
-    Console.WriteLine("Enter find number");
-    int digit = int.Parse(Console.ReadLine());
-    // Console.WriteLine(digit);
-    return digit;
-}
-void Findnum(int arg1)
-{
-    Console.WriteLine("find number is " + arg1);
-    int[] array = { 11, 12, 13, 14, 15, 25, 61, 57, 81, 9 };
-    int index = 0;
-    int find = arg1; int len = array.Length;
-    while (index < len)
-    {
-        if (index == len - 1 && array[index] != find)
-        {
-            Console.WriteLine($"the : {find} is not present ");
-        }
-        else if (array[index] == find)
-        {
-            find = array[index];
-            Console.WriteLine("find is found  " + find);
-            break;
-        }
-        else if (array[index] != find)
-        {
-            Console.WriteLine($"searching for the : {find}  in next position ");
-        }
+// int Number()
+// {
+//     Console.WriteLine("Enter find number");
+//     int digit = int.Parse(Console.ReadLine());
+//     // Console.WriteLine(digit);
+//     return digit;
+// }
+// void Findnum(int arg1)
+// {
+//     Console.WriteLine("find number is " + arg1);
+//     int[] array = { 11, 12, 13, 14, 15, 25, 61, 57, 81, 9 };
+//     int index = 0;
+//     int find = arg1; int len = array.Length;
+//     while (index < len)
+//     {
+//         if (index == len - 1 && array[index] != find)
+//         {
+//             Console.WriteLine($"the : {find} is not present ");
+//         }
+//         else if (array[index] == find)
+//         {
+//             find = array[index];
+//             Console.WriteLine("find is found  " + find);
+//             break;
+//         }
+//         else if (array[index] != f-ind)
+//         {
+//             Console.WriteLine($"searching for the : {find}  in next position ");
+//         }
 
-        else Console.WriteLine($"the : {find} is not present ");
-        index++;
-    }
-    // return find;
-}
+//         else Console.WriteLine($"the : {find} is not present ");
+//         index++;
+//     }
+//     // return find;
+// }
+// // int num = Number();
+
 // int num = Number();
 
-int num = Number();
+// Findnum(num);
+// // Console.WriteLine("find number is present " + Findnum(num));
 
-Findnum(num);
-// Console.WriteLine("find number is present " + Findnum(num));
+
+// int Number()
+// {
+//     Console.WriteLine("Enter find number");
+//     int digit = int.Parse(Console.ReadLine());
+//     // Console.WriteLine(digit);
+//     return digit;
+// }
+// void FillupArray(int[] collection)
+// {
+//     int count = 0; int len = collection.Length;
+//     while (count < len)
+//     {
+//         collection[count] = new Random().Next(1, 10);
+//         count++;
+//     }
+// }
+
+// void PrintArray(int[] myarray)
+// {
+//     int count = 0; int len = myarray.Length;
+//     while (count < len)
+//     {
+//         Console.WriteLine(myarray[count]);
+//         count++;
+//     }
+// }
+
+// int IndexOf(int[] array, int find)
+// {
+//     int count = 0; int len = array.Length; int element = 0;
+//     while (count < len)
+//     {
+//         if (array[count] == find)`
+//         {
+//             element = array[count];
+//             break;
+//             count++;
+//         }
+//     }
+//     return element;
+// }
+
+// // int el = Number();
+
+// int[] array = new int[10];
+// FillupArray(array);
+// PrintArray(array);
+// int pos = IndexOf(array, 5);
+// Console.WriteLine($"Now its find {pos}");
+
+
+
+
+// To sort massive - from minto max & from max to min
+
+
+
+int[] array = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+void Selectionsort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+
+    {
+        int minPosition = i;
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] > array[minPosition]) minPosition = j;
+        }
+        int Temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = Temporary;
+    }
+}
+
+PrintArray(array);
+Selectionsort(array);
+PrintArray(array);
 
 
