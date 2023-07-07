@@ -1202,33 +1202,206 @@
 
 
 
-int[] array = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }
-    Console.WriteLine();
-}
-void Selectionsort(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
+// int[] array = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+// void Selectionsort(int[] array)
+// {
+//     for (int i = 0; i < array.Length - 1; i++)
 
-    {
-        int minPosition = i;
-        for (int j = i + 1; j < array.Length; j++)
-        {
-            if (array[j] > array[minPosition]) minPosition = j;
-        }
-        int Temporary = array[i];
-        array[i] = array[minPosition];
-        array[minPosition] = Temporary;
-    }
+//     {
+//         int minPosition = i;
+//         for (int j = i + 1; j < array.Length; j++)
+//         {
+//             if (array[j] > array[minPosition]) minPosition = j;
+//         }
+//         int Temporary = array[i];
+//         array[i] = array[minPosition];
+//         array[minPosition] = Temporary;
+//     }
+// }
+
+// PrintArray(array);
+// Selectionsort(array);
+// PrintArray(array);
+
+
+// To find max from 3 number
+
+// Console.WriteLine("Enter a");
+// int a = int.Parse(Console.ReadLine());
+// Console.WriteLine("Enter b");
+// int b = int.Parse(Console.ReadLine());
+// Console.WriteLine("Enter c");
+// int c = int.Parse(Console.ReadLine());
+
+// int max = a;
+
+// if (b > max)
+// {
+//     max = b;
+// }
+// if (c > max)
+// {
+//     max = c;
+// }
+// Console.WriteLine(max);
+
+//to find an even/odd  number
+
+// Console.WriteLine("Enter a");
+// int a = int.Parse(Console.ReadLine());
+// if (a % 2 == 0)
+// {
+//     Console.WriteLine("even number");
+// }
+// else
+// {
+//     Console.WriteLine("odd number");
+// }
+
+
+
+
+// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
+
+
+// Console.WriteLine("Enter N");
+// int n = int.Parse(Console.ReadLine());
+// int count = 1;
+
+// while (count <= n)
+// {
+//     if (count % 2 == 0)
+//     {
+//         Console.WriteLine(count);
+//     }
+//     count++;
+// }
+
+
+
+
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+
+// Console.WriteLine("Enter Number");
+// var n = Math.Abs(Convert.ToInt64(Console.ReadLine()));
+
+// // if (n > 100 && n < 999)
+// // {
+// while (n > 100)
+// {
+//     n = (n / 10);
+// }
+
+// }
+
+// Console.WriteLine(n % 10);
+
+
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// 645 -> 5
+
+// 78 -> третьей цифры нет
+
+// 32679 -> 6
+
+
+// int check = 0;
+// Console.WriteLine("Enter Number");
+// var n = Math.Abs(Convert.ToInt64(Console.ReadLine()));
+// bool isdigits = int.TryParse(n, out check);
+
+// if (n <= 99)
+// {
+//     Console.WriteLine("No 3rd digit");
+// }
+// while (n > 99)
+// {
+//     if (n > 99 && n < 999)
+//     {
+//         Console.WriteLine(n % 10);
+//         // n = (n % 10);
+//     }
+//     n = n / 10;
+// }
+
+
+
+
+
+
+
+// else Console.WriteLine("no 3rd digit");
+
+
+
+
+
+
+
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+
+
+
+
+// Задача №21. Работа в группах
+// Напишите программу, которая принимает на вход
+// координаты двух точек и находит расстояние между
+// ними в 2D пространстве.
+// ● A (3,6); B (2,1) -> 5,09
+// ● A (7,-5); B (1,-1) -> 7,21
+
+
+int Input(string message)
+{
+    Console.WriteLine(message);
+    int number = int.Parse(Console.ReadLine());
+    return number;
 }
 
-PrintArray(array);
-Selectionsort(array);
-PrintArray(array);
+double FindDistance(int x1, int y1, int x2, int y2)
+{
+    double distance = Math.Round(Math.Sqrt((Math.Pow((x2 - x1), 2)) + (Math.Pow((y2 - y1), 2))), 5);
+    return distance;
+}
+
+
+int x1 = Input("enter x1");
+int y1 = Input("enter y1");
+int x2 = Input("enter x2");
+int y2 = Input("enter y2");
+
+Console.WriteLine(FindDistance(x1, y1, x2, y2));
+
+
+
+
+
+
+
+
 
 
