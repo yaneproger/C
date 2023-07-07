@@ -1375,26 +1375,26 @@
 // ● A (7,-5); B (1,-1) -> 7,21
 
 
-int Input(string message)
-{
-    Console.WriteLine(message);
-    int number = int.Parse(Console.ReadLine());
-    return number;
-}
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = int.Parse(Console.ReadLine());
+//     return number;
+// }
 
-double FindDistance(int x1, int y1, int x2, int y2)
-{
-    double distance = Math.Round(Math.Sqrt((Math.Pow((x2 - x1), 2)) + (Math.Pow((y2 - y1), 2))), 5);
-    return distance;
-}
+// double FindDistance(int x1, int y1, int x2, int y2)
+// {
+//     double distance = Math.Round(Math.Sqrt((Math.Pow((x2 - x1), 2)) + (Math.Pow((y2 - y1), 2))), 5);
+//     return distance;
+// }
 
 
-int x1 = Input("enter x1");
-int y1 = Input("enter y1");
-int x2 = Input("enter x2");
-int y2 = Input("enter y2");
+// int x1 = Input("enter x1");
+// int y1 = Input("enter y1");
+// int x2 = Input("enter x2");
+// int y2 = Input("enter y2");
 
-Console.WriteLine(FindDistance(x1, y1, x2, y2));
+// Console.WriteLine(FindDistance(x1, y1, x2, y2));
 
 
 
