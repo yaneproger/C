@@ -1399,6 +1399,38 @@
 
 
 
+
+// Задача 21: Напишите программу, которая принимает
+// на вход координаты двух точек и находит расстояние
+// между ними в 3D пространстве
+
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = int.Parse(Console.ReadLine());
+//     return number;
+// }
+// double FindDistance(int x1, int y1, int z1, int x2, int y2, int z2)
+// {
+//     double distance = Math.Round(Math.Sqrt((Math.Pow((x2 - x1), 2)) + (Math.Pow((y2 - y1), 2) + (Math.Pow((z2 - z1), 2)))), 5);
+//     return distance;
+// }
+// int x1 = Input("enter x1");
+// int y1 = Input("enter y1");
+// int z1 = Input("enter z1");
+// int x2 = Input("enter x2");
+// int y2 = Input("enter y2");
+// int z2 = Input("enter z2");
+// Console.WriteLine(FindDistance(x1, y1, z1, x2, y2, z2));
+
+
+
 // Задача №22. Работа в группах
 // Напишите программу, которая принимает на вход
 // число (N) и выдаёт таблицу квадратов чисел
@@ -1407,6 +1439,71 @@
 // ● 2 -> 1,4
 
 
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = int.Parse(Console.ReadLine());
+//     return number;
+// }
+// void SquareTable(int arg1)
+// {
+//     int a = 1;
+//     while (a <= arg1)
+//     {
+//         Console.WriteLine("square of digit  " + a);
+//         int square = a * a;
+//         Console.WriteLine(square);
+//         a++;
+//     }
+//     // return a;
+// }
+
+// int squarenumber = Input("enter a number for square");
+// // Console.WriteLine(SquareTable(squarenumber));
+// SquareTable(squarenumber);
+
+
+
+
+// Задача 23: Напишите программу, которая принимает на
+// вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 4, 9.
+// 5 -> 1, 8, 27, 64, 125
+
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = int.Parse(Console.ReadLine());
+//     return number;
+// }
+// void CubeTable(int arg1)
+// {
+//     int a = 1;
+//     while (a <= arg1)
+//     {
+//         Console.WriteLine("cube of digit  " + a);
+//         double square = Math.Pow((a), 3);
+//         Console.WriteLine(square);
+//         a++;
+//     }
+// }
+// int cubenumber = Input("enter a number for cube");
+// CubeTable(cubenumber);
+
+
+
+
+
+// Задача 19: Напишите программу, которая принимает
+// на вход пятизначное число и проверяет, является ли
+// оно палиндромом.
+
+// 14212 -> нет
+// 23432 -> да
+// 12821 -> да
 
 
 
