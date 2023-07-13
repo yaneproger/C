@@ -6,7 +6,6 @@ int input(string message)
     int result = int.Parse(Console.ReadLine());
     return result;
 }
-
 void NumberCheck(int arg1)
 {
     if (arg1 %2==0)
@@ -18,6 +17,5 @@ void NumberCheck(int arg1)
         Console.WriteLine("the number is odd");
     }
 }
-
 int numcheck=input("enter a number");
 NumberCheck(numcheck);
