@@ -1,0 +1,15 @@
+/home/user/C#/exercises110723/bin/Debug/net7.0/exercises110723
+/home/user/C#/exercises110723/bin/Debug/net7.0/exercises110723.deps.json
+/home/user/C#/exercises110723/bin/Debug/net7.0/exercises110723.runtimeconfig.json
+/home/user/C#/exercises110723/bin/Debug/net7.0/exercises110723.dll
+/home/user/C#/exercises110723/bin/Debug/net7.0/exercises110723.pdb
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.csproj.AssemblyReference.cache
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.AssemblyInfoInputs.cache
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.AssemblyInfo.cs
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.csproj.CoreCompileInputs.cache
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.dll
+/home/user/C#/exercises110723/obj/Debug/net7.0/refint/exercises110723.dll
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.pdb
+/home/user/C#/exercises110723/obj/Debug/net7.0/exercises110723.genruntimeconfig.cache
+/home/user/C#/exercises110723/obj/Debug/net7.0/ref/exercises110723.dll
