@@ -1535,10 +1535,21 @@
 
 
 
+int Input(string message)
+{
+    Console.WriteLine(message);
+    int result=int.Parse(Console.ReadLine());
+    return result;
+}
+
+void Palicheck(int arg1)
+{
+    
 
 
 
 
+}
 
 
 
