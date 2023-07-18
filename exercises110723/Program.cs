@@ -1535,21 +1535,50 @@
 
 
 
-int Input(string message)
+string Input(string message)
 {
     Console.WriteLine(message);
-    int result=int.Parse(Console.ReadLine());
+    string result = Console.ReadLine();
     return result;
 }
 
-void Palicheck(int arg1)
+bool Digicheck(string arg1)
 {
-    
-
-
-
-
+    // int index=0;
+    int len = arg1.Length;
+    bool palicheck = true; ;
+    for (int index = 0; index < len / 2; index++)
+    {
+        palicheck = (arg1[index] == arg1[len - index - 1]);
+    }
+    return palicheck;
 }
+
+// void condicheck(string arg1)
+// {
+//         if (arg1==false)
+//         {
+//            Console.WriteLine("NOpali");
+//         }
+//         Console.WriteLine("pali");
+//     // if (arg1 == false)
+//     // {
+//     //     Console.WriteLine("no palindrom");
+//     //     // break;
+//     // }
+//     // else
+//     // {
+//     //     Console.WriteLine("palindrom");
+//     //     // break;
+//     // }
+//     // return arg1;
+// }
+
+string number = Input("enter a number");
+Console.WriteLine(Digicheck(number));
+
+// Digicheck(number);
+// Console.WriteLine(condicheck(number));
 
 
 
