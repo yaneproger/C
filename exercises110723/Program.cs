@@ -1534,52 +1534,34 @@
 // 12821 -> да
 
 
-
-string Input(string message)
-{
-    Console.WriteLine(message);
-    string result = Console.ReadLine();
-    return result;
-}
-
-bool Digicheck(string arg1)
-{
-    // int index=0;
-    int len = arg1.Length;
-    bool palicheck = true; ;
-    for (int index = 0; index < len / 2; index++)
-    {
-        palicheck = (arg1[index] == arg1[len - index - 1]);
-    }
-    return palicheck;
-}
-
-// void condicheck(string arg1)
+// string Input(string message)
 // {
-//         if (arg1==false)
-//         {
-//            Console.WriteLine("NOpali");
-//         }
-//         Console.WriteLine("pali");
-//     // if (arg1 == false)
-//     // {
-//     //     Console.WriteLine("no palindrom");
-//     //     // break;
-//     // }
-//     // else
-//     // {
-//     //     Console.WriteLine("palindrom");
-//     //     // break;
-//     // }
-//     // return arg1;
+//     Console.WriteLine(message);
+//     string result = Console.ReadLine();
+//     return result;
 // }
 
-string number = Input("enter a number");
-Console.WriteLine(Digicheck(number));
-
-// Digicheck(number);
-// Console.WriteLine(condicheck(number));
-
+// string Digicheck(string arg1)
+// {
+//     int len = arg1.Length;
+//     bool palicheck = true; ;
+//     for (int index = 0; index < len / 2; index++)
+//     {
+//         palicheck = (arg1[index] == arg1[len - index - 1]);
+//     }
+//     if (palicheck == true)
+//     {
+//         Console.WriteLine("Palindrom");
+//     }
+//     else if (palicheck == false)
+//     {
+//         Console.WriteLine("No palindrom");
+//     }
+//     return arg1;
+// }
+// string number = Input("enter a symbols");
+// Console.WriteLine("Entered symbols is  ");
+// Console.WriteLine(Digicheck(number));
 
 
 
