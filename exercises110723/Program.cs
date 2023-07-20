@@ -1611,25 +1611,25 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-int Input(string message)
-{
-    Console.WriteLine(message);
-    int result = Convert.ToInt32(Console.ReadLine());
-    return result;
-}
-void CubeTable(int arg1)
-{
-    int first = 1;
-    while (first <= arg1)
-    {
-        double cube = Math.Pow((first), 3);
-        Console.WriteLine(cube);
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+// void CubeTable(int arg1)
+// {
+//     int first = 1;
+//     while (first <= arg1)
+//     {
+//         double cube = Math.Pow((first), 3);
+//         Console.WriteLine(cube);
 
-        first++;
-    }
-}
-int number = Input("enter a number");
-CubeTable(number);
+//         first++;
+//     }
+// }
+// int number = Input("enter a number");
+// CubeTable(number);
 
 
 
