@@ -1568,5 +1568,102 @@
 
 
 
+// Задача 21
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// A (3,6,8); B (2,1,-7), -> 15.84
+
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+
+// double DistFind(int x1, int y1, int z1, int x2, int y2, int z2)
+// {
+//     double distance = Math.Round(Math.Sqrt((Math.Pow(x2 - x1, 2)) + (Math.Pow(y2 - y1, 2)) + (Math.Pow(z2 - z1, 2))), 3);
+//     return distance;
+// }
+
+// int x1 = Input("enter x1");
+// int y1 = Input("enter y1");
+// int z1 = Input("enter z1");
+// int x2 = Input("enter x2");
+// int y2 = Input("enter y2");
+// int z2 = Input("enter z2");
+
+// Console.WriteLine(DistFind(x1, y1, z1, x2, y2, z2));
+
+
+
+
+
+
+// Задача 23
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+int Input(string message)
+{
+    Console.WriteLine(message);
+    int result = Convert.ToInt32(Console.ReadLine());
+    return result;
+}
+void CubeTable(int arg1)
+{
+    int first = 1;
+    while (first <= arg1)
+    {
+        double cube = Math.Pow((first), 3);
+        Console.WriteLine(cube);
+
+        first++;
+    }
+}
+int number = Input("enter a number");
+CubeTable(number);
+
+
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+
+
+
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// 452 -> 11
+
+// 82 -> 10
+
+// 9012 -> 12
+
+
+
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19, 4, 76, 3 -> [1, 2, 5, 7, 19,4,76,3]
+
+// 6, 1, 33, 43, 12, 3 ,2, 9 -> [6, 1, 33,43,12,3,2,9]
+
+
+
 
 
