@@ -1641,8 +1641,22 @@
 // 2, 4 -> 16
 
 
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
 
+// double PowDigit(int arg1, int arg2)
+// {
+//     double result = Math.Pow((arg1), arg2);
+//     return result;
+// }
 
+// int digit1 = Input("enter 1st number");
+// int digit2 = Input("enter 2nd number");
+// Console.WriteLine(PowDigit(digit1, digit2));
 
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
@@ -1652,6 +1666,46 @@
 // 82 -> 10
 
 // 9012 -> 12
+
+
+string Input(string message)
+{
+    Console.WriteLine(message);
+    string result = Console.ReadLine();
+    return result;
+}
+
+int DigitSum(string arg1)
+{
+    int numbers = int.Parse(arg1);
+    int len = arg1.Length;
+    int index = 0;
+    int sum = 0;
+    while (index < len)
+    {
+        // Console.WriteLine(arg1[index]);
+        // int tempsum = arg1[index];
+        // sum = tempsum + arg1[index];
+        // int lastdigit = numbers % 10;
+        // sum = sum + lastdigit;
+        sum = sum + (numbers % 10);
+        // Console.WriteLine(sum);
+        numbers = numbers / 10;
+        index++;
+    }
+    return sum;
+
+}
+
+string number = Input("enter a number");
+Console.WriteLine(DigitSum(number));
+
+
+
+
+
+
+
 
 
 
