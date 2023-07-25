@@ -1681,31 +1681,30 @@ int DigitSum(string arg1)
     int len = arg1.Length;
     int index = 0;
     int sum = 0;
+    // char sum;
     while (index < len)
     {
         // Console.WriteLine(arg1[index]);
-        // int tempsum = arg1[index];
-        // sum = tempsum + arg1[index];
+        // char tempsum = arg1[index];
+        // Console.WriteLine("tempsum " + tempsum);
+        // decimal digit = Convert.ToDecimal(tempsum);
+        // Console.WriteLine("digit " + digit);
+
+        // sum = sum + digit;
+        // // sum = sum + tempsum;
         // int lastdigit = numbers % 10;
         // sum = sum + lastdigit;
         sum = sum + (numbers % 10);
-        // Console.WriteLine(sum);
+        Console.WriteLine("numbers" + numbers % 10);
+        Console.WriteLine("sum  " + sum);
         numbers = numbers / 10;
         index++;
     }
     return sum;
-
 }
 
 string number = Input("enter a number");
-Console.WriteLine(DigitSum(number));
-
-
-
-
-
-
-
+Console.WriteLine($"Sum of the digits of the {number} is   {DigitSum(number)}");
 
 
 
@@ -1717,7 +1716,26 @@ Console.WriteLine(DigitSum(number));
 
 // 6, 1, 33, 43, 12, 3 ,2, 9 -> [6, 1, 33,43,12,3,2,9]
 
+void FillArray()
+{
+    // int index = 0;
+    int[] arr = new int[15];
+    // int[] arr(10);
+    int len = arr.Length;
+    // string arr;
+    for (int index = 0; index < len; index++)
+        arr[index] = new Random().Next(1, 100);
+    //    new Random().Next(1, 10);
+    // return arr;
+}
 
+void PrintArray()
+{
+
+
+
+
+}
 
 
 
