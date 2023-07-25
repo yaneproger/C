@@ -1535,22 +1535,34 @@
 
 
 
-int Input(string message)
+string Input(string message)
 {
     Console.WriteLine(message);
-    int result=int.Parse(Console.ReadLine());
+    string result = Console.ReadLine();
     return result;
 }
-
-void Palicheck(int arg1)
+void Palicheck(string arg1)
 {
-    
-
-
-
+    int len = arg1.Length;
+    int index = 0;
+    // int number = int.Parse(arg1);
+    bool digicheck = true;
+    while (index < len / 2)
+    {
+        digicheck = (arg1[index] == arg1[len - index - 1]);
+        index++;
+    }
+    if (digicheck == true)
+    {
+        Console.WriteLine("this is a palindrom");
+        // break;
+    }
+    else if (digicheck == false)
+    { Console.WriteLine("NO palindrom"); }
 
 }
-
+string number = Input("enter ur number");
+Palicheck(number);
 
 
 
