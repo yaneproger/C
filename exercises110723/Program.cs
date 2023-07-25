@@ -1534,6 +1534,139 @@
 // 12821 -> да
 
 
+// string Input(string message)
+// {
+//     Console.WriteLine(message);
+//     string result = Console.ReadLine();
+//     return result;
+// }
+
+// string Digicheck(string arg1)
+// {
+//     int len = arg1.Length;
+//     bool palicheck = true; ;
+//     for (int index = 0; index < len / 2; index++)
+//     {
+//         palicheck = (arg1[index] == arg1[len - index - 1]);
+//     }
+//     if (palicheck == true)
+//     {
+//         Console.WriteLine("Palindrom");
+//     }
+//     else if (palicheck == false)
+//     {
+//         Console.WriteLine("No palindrom");
+//     }
+//     return arg1;
+// }
+// string number = Input("enter a symbols");
+// Console.WriteLine("Entered symbols is  ");
+// Console.WriteLine(Digicheck(number));
+
+
+
+
+
+
+// Задача 21
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// A (3,6,8); B (2,1,-7), -> 15.84
+
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+
+// double DistFind(int x1, int y1, int z1, int x2, int y2, int z2)
+// {
+//     double distance = Math.Round(Math.Sqrt((Math.Pow(x2 - x1, 2)) + (Math.Pow(y2 - y1, 2)) + (Math.Pow(z2 - z1, 2))), 3);
+//     return distance;
+// }
+
+// int x1 = Input("enter x1");
+// int y1 = Input("enter y1");
+// int z1 = Input("enter z1");
+// int x2 = Input("enter x2");
+// int y2 = Input("enter y2");
+// int z2 = Input("enter z2");
+
+// Console.WriteLine(DistFind(x1, y1, z1, x2, y2, z2));
+
+
+
+
+
+
+// Задача 23
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+// void CubeTable(int arg1)
+// {
+//     int first = 1;
+//     while (first <= arg1)
+//     {
+//         double cube = Math.Pow((first), 3);
+//         Console.WriteLine(cube);
+
+//         first++;
+//     }
+// }
+// int number = Input("enter a number");
+// CubeTable(number);
+
+
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = Convert.ToInt32(Console.ReadLine());
+//     return result;
+// }
+
+// double PowDigit(int arg1, int arg2)
+// {
+//     double result = Math.Pow((arg1), arg2);
+//     return result;
+// }
+
+// int digit1 = Input("enter 1st number");
+// int digit2 = Input("enter 2nd number");
+// Console.WriteLine(PowDigit(digit1, digit2));
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// 452 -> 11
+
+// 82 -> 10
+
+// 9012 -> 12
+
 
 string Input(string message)
 {
@@ -1541,33 +1674,68 @@ string Input(string message)
     string result = Console.ReadLine();
     return result;
 }
-void Palicheck(string arg1)
+
+int DigitSum(string arg1)
 {
+    int numbers = int.Parse(arg1);
     int len = arg1.Length;
     int index = 0;
-    // int number = int.Parse(arg1);
-    bool digicheck = true;
-    while (index < len / 2)
+    int sum = 0;
+    // char sum;
+    while (index < len)
     {
-        digicheck = (arg1[index] == arg1[len - index - 1]);
+        // Console.WriteLine(arg1[index]);
+        // char tempsum = arg1[index];
+        // Console.WriteLine("tempsum " + tempsum);
+        // decimal digit = Convert.ToDecimal(tempsum);
+        // Console.WriteLine("digit " + digit);
+
+        // sum = sum + digit;
+        // // sum = sum + tempsum;
+        // int lastdigit = numbers % 10;
+        // sum = sum + lastdigit;
+        sum = sum + (numbers % 10);
+        Console.WriteLine("numbers" + numbers % 10);
+        Console.WriteLine("sum  " + sum);
+        numbers = numbers / 10;
         index++;
     }
-    if (digicheck == true)
-    {
-        Console.WriteLine("this is a palindrom");
-        // break;
-    }
-    else if (digicheck == false)
-    { Console.WriteLine("NO palindrom"); }
+    return sum;
+}
+
+string number = Input("enter a number");
+Console.WriteLine($"Sum of the digits of the {number} is   {DigitSum(number)}");
+
+
+
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19, 4, 76, 3 -> [1, 2, 5, 7, 19,4,76,3]
+
+// 6, 1, 33, 43, 12, 3 ,2, 9 -> [6, 1, 33,43,12,3,2,9]
+
+void FillArray()
+{
+    // int index = 0;
+    int[] arr = new int[15];
+    // int[] arr(10);
+    int len = arr.Length;
+    // string arr;
+    for (int index = 0; index < len; index++)
+        arr[index] = new Random().Next(1, 100);
+    //    new Random().Next(1, 10);
+    // return arr;
+}
+
+void PrintArray()
+{
+
+
+
 
 }
-string number = Input("enter ur number");
-Palicheck(number);
-
-
-
-
-
 
 
 
