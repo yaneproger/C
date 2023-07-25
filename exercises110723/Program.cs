@@ -1668,43 +1668,43 @@
 // 9012 -> 12
 
 
-string Input(string message)
-{
-    Console.WriteLine(message);
-    string result = Console.ReadLine();
-    return result;
-}
+// string Input(string message)
+// {
+//     Console.WriteLine(message);
+//     string result = Console.ReadLine();
+//     return result;
+// }
 
-int DigitSum(string arg1)
-{
-    int numbers = int.Parse(arg1);
-    int len = arg1.Length;
-    int index = 0;
-    int sum = 0;
-    // char sum;
-    while (index < len)
-    {
-        // Console.WriteLine(arg1[index]);
-        // char tempsum = arg1[index];
-        // Console.WriteLine("tempsum " + tempsum);
-        // decimal digit = Convert.ToDecimal(tempsum);
-        // Console.WriteLine("digit " + digit);
+// int DigitSum(string arg1)
+// {
+//     int numbers = int.Parse(arg1);
+//     int len = arg1.Length;
+//     int index = 0;
+//     int sum = 0;
+//     // char sum;
+//     while (index < len)
+//     {
+//         // Console.WriteLine(arg1[index]);
+//         // char tempsum = arg1[index];
+//         // Console.WriteLine("tempsum " + tempsum);
+//         // decimal digit = Convert.ToDecimal(tempsum);
+//         // Console.WriteLine("digit " + digit);
 
-        // sum = sum + digit;
-        // // sum = sum + tempsum;
-        // int lastdigit = numbers % 10;
-        // sum = sum + lastdigit;
-        sum = sum + (numbers % 10);
-        Console.WriteLine("numbers" + numbers % 10);
-        Console.WriteLine("sum  " + sum);
-        numbers = numbers / 10;
-        index++;
-    }
-    return sum;
-}
+//         // sum = sum + digit;
+//         // // sum = sum + tempsum;
+//         // int lastdigit = numbers % 10;
+//         // sum = sum + lastdigit;
+//         sum = sum + (numbers % 10);
+//         Console.WriteLine("numbers" + numbers % 10);
+//         Console.WriteLine("sum  " + sum);
+//         numbers = numbers / 10;
+//         index++;
+//     }
+//     return sum;
+// }
 
-string number = Input("enter a number");
-Console.WriteLine($"Sum of the digits of the {number} is   {DigitSum(number)}");
+// string number = Input("enter a number");
+// Console.WriteLine($"Sum of the digits of the {number} is   {DigitSum(number)}");
 
 
 
