@@ -1744,27 +1744,6 @@ PrintArray(numbers);
 Console.WriteLine();
 
 
-//  void FillArray(int[] array1)
-// {
-//     int length1 = array1.Length;
-//     int index = 0;
-//     while (index < length1)
-//     {
-//         array1[index] = new Random().Next(1, 10);
-//         index++;
-//     }
-// }
-
-// void PrintArray(int[] array2)
-// {
-//     int length2 = array2.Length;
-//     int index = 0;
-//     while (index < length2)
-//     {
-//         Console.WriteLine(array2[index]);
-//         index++;
-//     }
-// }
 
 // int IndexOf(int[] array1, int find)
 // {
