@@ -2,7 +2,7 @@
 
 Console.Write("Enter your name  ");
 string username = Console.ReadLine();
-Console.WriteLine("Privet, " + username);
+// Console.WriteLine("Privet, " + username);
 Console.WriteLine(username);
 
 
@@ -14,16 +14,6 @@ else
 {
     Console.WriteLine("Hello " + username);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
