@@ -1716,32 +1716,30 @@
 
 // 6, 1, 33, 43, 12, 3 ,2, 9 -> [6, 1, 33,43,12,3,2,9]
 
-void FillArray(int[] arr)
-{
-    // int index = 0;
-    // int[] arr = new int[15];
-    // int[] arr(10);
-    int len = arr.Length;
-    // string arr;
-    for (int index = 0; index < len; index++)
-        arr[index] = new Random().Next(1, 100);
-    //    new Random().Next(1, 10);
-    // return arr[];
-}
-
-void PrintArray(int[] arr)
-{
-    int len = arr.Length;
-    for (int index = 0; index < len; index++)
-    {
-        Console.Write($"{arr[index]} ,  ");
-    }
-}
-
-int[] numbers = new int[15];
-FillArray(numbers);
-PrintArray(numbers);
-Console.WriteLine();
+// void FillArray(int[] arr)
+// {
+//     // int index = 0;
+//     // int[] arr = new int[15];
+//     // int[] arr(10);
+//     // int len = arr.Length;
+//     // string arr;
+//     for (int index = 0; index < arr.Length; index++)
+//         arr[index] = new Random().Next(1, 100);
+//     //    new Random().Next(1, 10);
+//     // return arr[];
+// }
+// void PrintArray(int[] arr)
+// {
+//     int len = arr.Length;
+//     for (int index = 0; index < len; index++)
+//     {
+//         Console.Write($"{arr[index]} ,  ");
+//     }
+// }
+// int[] numbers = new int[15];
+// FillArray(numbers);
+// PrintArray(numbers);
+// Console.WriteLine();
 
 
 
@@ -1771,5 +1769,56 @@ Console.WriteLine();
 // Console.WriteLine();
 // Console.WriteLine("number's index is " + pos);
 // Console.WriteLine("the find is " + find);
+
+
+
+// Задача 30: Напишите программу, которая
+// выводит массив из 8 элементов, заполненный
+// нулями и единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+// void FillArray(int[] arr, int arrlength)
+// {
+//     int index = 0;
+//     int len = arrlength;
+//     for (index = 0; index < arrlength; index++)
+//         arr[index] = new Random().Next(0, 2);
+// }
+// void PrintArray(int[] arr)
+// {
+//     int len = arr.Length;
+//     for (int index = 0; index < len; index++)
+//     {
+//         Console.Write($"{arr[index]} ,  ");
+//     }
+// }
+// Console.WriteLine("Enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] numbers = new int[arrlength];
+// FillArray(numbers, arrlength);
+// PrintArray(numbers);
+// Console.WriteLine();
+
+
+
+
+// Урок 5. Функции и одномерные массивы
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// [345, 897, 568, 234] -> 2
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+
+
+
+
 
 
