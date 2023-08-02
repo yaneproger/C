@@ -1811,7 +1811,35 @@
 
 
 
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(100, 1001);
+//     }
+// }
 
+// void EvenDigits(int[] arr)
+// {
+//     int sum = 0;
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         // Console.WriteLine(arr[index]);
+//         Console.Write($"{arr[index]} ,  ");
+
+//         if (arr[index] % 2 == 0)
+//             sum = sum + 1;
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"the sum of even elements is = {sum} ");
+// }
+
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
+
+// FillArray(array, arrlength);
+// EvenDigits(array);
 
 
 
