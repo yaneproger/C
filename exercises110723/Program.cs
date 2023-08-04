@@ -1843,13 +1843,51 @@
 
 
 
-
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. 
 // Найдите сумму элементов, стоящих на нечётных позициях.
 
 // [3, 7, 23, 12] -> 19
 
 // [-4, -6, 89, 6] -> 0
+
+void FillArray(int[] arr, int arg2)
+{
+    for (int index = 0; index < arr.Length; index++)
+    {
+        arr[index] = new Random().Next(0, 99);
+    }
+}
+
+void PrintArray(int[] arr)
+{
+    for (int index = 0; index < arr.Length; index++)
+    {
+        Console.Write($" {arr[index]} , ");
+    }
+}
+
+void OddSum(int[] arr)
+{
+    int sum = 0;
+
+    for (int index = 0; index < arr.Length; index++)
+    {
+        if (index % 2 != 0)
+        {
+            sum = sum + arr[index];
+        }
+    }
+    Console.WriteLine($"sum {sum} ");
+}
+
+Console.WriteLine("enter array's length");
+int arrlength = int.Parse(Console.ReadLine());
+int[] array = new int[arrlength];
+
+FillArray(array, arrlength);
+PrintArray(array);
+Console.WriteLine();
+OddSum(array);
 
 
 
@@ -1873,59 +1911,59 @@
 // [3 7 22 2 78] -> 76
 
 
-void FillArray(int[] arr, int arg2)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        arr[index] = new Random().Next(0, 99);
-    }
-}
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
 
-void PrintArray(int[] arr)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        Console.Write($" {arr[index]} , ");
-        // Console.WriteLine();
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} , ");
+//         // Console.WriteLine();
 
-    }
+//     }
 
-}
-
-
-void MaxMinDiffer(int[] arr)
-{
-    int max = arr[0];
-    int min = arr[0];
-
-    for (int index = 0; index < arr.Length; index++)
-    {
-        // max = arr[0];
-        // min = arr[0];
-
-        if (arr[index] > max)
-            max = arr[index];
-        if (arr[index] < min)
-            min = arr[index];
-    }
-
-    int differ = max - min;
-    Console.WriteLine($"  max is {max} ");
-    Console.WriteLine($"  min is {min} ");
-
-    Console.WriteLine($"  Diffenrence is {differ} ");
-
-}
+// }
 
 
-Console.WriteLine("enter array's length");
-int arrlength = int.Parse(Console.ReadLine());
-int[] array = new int[arrlength];
+// void MaxMinDiffer(int[] arr)
+// {
+//     int max = arr[0];
+//     int min = arr[0];
 
-FillArray(array, arrlength);
-PrintArray(array);
-Console.WriteLine();
-MaxMinDiffer(array);
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         // max = arr[0];
+//         // min = arr[0];
+
+//         if (arr[index] > max)
+//             max = arr[index];
+//         if (arr[index] < min)
+//             min = arr[index];
+//     }
+
+//     int differ = max - min;
+//     Console.WriteLine($"  max is {max} ");
+//     Console.WriteLine($"  min is {min} ");
+
+//     Console.WriteLine($"  Diffenrence is {differ} ");
+
+// }
+
+
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
+
+// FillArray(array, arrlength);
+// PrintArray(array);
+// Console.WriteLine();
+// MaxMinDiffer(array);
 
 
 
