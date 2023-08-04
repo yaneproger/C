@@ -1850,58 +1850,44 @@
 
 // [-4, -6, 89, 6] -> 0
 
-void FillArray(int[] arr, int arg2)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        arr[index] = new Random().Next(0, 99);
-    }
-}
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
 
-void PrintArray(int[] arr)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        Console.Write($" {arr[index]} , ");
-    }
-}
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} , ");
+//     }
+// }
 
-void OddSum(int[] arr)
-{
-    int sum = 0;
+// void OddSum(int[] arr)
+// {
+//     int sum = 0;
 
-    for (int index = 0; index < arr.Length; index++)
-    {
-        if (index % 2 != 0)
-        {
-            sum = sum + arr[index];
-        }
-    }
-    Console.WriteLine($"sum {sum} ");
-}
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         if (index % 2 != 0)
+//         {
+//             sum = sum + arr[index];
+//         }
+//     }
+//     Console.WriteLine($"sum {sum} ");
+// }
 
-Console.WriteLine("enter array's length");
-int arrlength = int.Parse(Console.ReadLine());
-int[] array = new int[arrlength];
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
 
-FillArray(array, arrlength);
-PrintArray(array);
-Console.WriteLine();
-OddSum(array);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// FillArray(array, arrlength);
+// PrintArray(array);
+// Console.WriteLine();
+// OddSum(array);
 
 
 
@@ -1964,6 +1950,10 @@ OddSum(array);
 // PrintArray(array);
 // Console.WriteLine();
 // MaxMinDiffer(array);
+
+
+
+
 
 
 
