@@ -1926,3 +1926,10 @@ FillArray(array, arrlength);
 PrintArray(array);
 Console.WriteLine();
 MaxMinDiffer(array);
+
+
+
+
+
+
+
