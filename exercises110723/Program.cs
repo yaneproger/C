@@ -1908,7 +1908,7 @@ void PrintArray(int[] arr)
 {
     for (int index = 0; index < arr.Length; index++)
     {
-        Console.Write($" {arr[index]} , ");
+       Console.Write($" {arr[index]} , ");
     }
 }
 

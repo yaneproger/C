@@ -1473,25 +1473,25 @@
 
 
 
-// int Input(string message)
-// {
-//     Console.WriteLine(message);
-//     int number = int.Parse(Console.ReadLine());
-//     return number;
-// }
-// void CubeTable(int arg1)
-// {
-//     int a = 1;
-//     while (a <= arg1)
-//     {
-//         Console.WriteLine("cube of digit  " + a);
-//         double square = Math.Pow((a), 3);
-//         Console.WriteLine(square);
-//         a++;
-//     }
-// }
-// int cubenumber = Input("enter a number for cube");
-// CubeTable(cubenumber);
+int Input(string message)
+{
+    Console.WriteLine(message);
+    int number = int.Parse(Console.ReadLine());
+    return number;
+}
+void CubeTable(int arg1)
+{
+    int a = 1;
+    while (a <= arg1)
+    {
+        Console.WriteLine("cube of digit  " + a);
+        double square = Math.Pow((a), 3);
+        Console.WriteLine(square);
+        a++;
+    }
+}
+int cubenumber = Input("enter a number for cube");
+CubeTable(cubenumber);
 
 
 
