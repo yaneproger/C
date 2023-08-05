@@ -1,0 +1,4 @@
+{
+  "editor.formatOnSave": false,
+  "dotnet.defaultSolution": "C#.sln"
+}

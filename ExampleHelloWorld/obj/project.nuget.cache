@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1niyZ2UlK+q6JS1rRslSPEIt+swP2NwqSmCsN0NsTSFtx3PdkVd2pIowOrJBQC+zd76OMD+4nqO/fHCcaHv87w==",
+  "dgSpecHash": "cLKQXfcBTT2qV6K4kxuXiMpzkszjaFjMjuUJTLET5u/lrFPUBsKdVrl6UHVbXfKI1abzX/TCKQWnVL2HPfPUFg==",
   "success": true,
-  "projectFilePath": "/home/user/C#/C#.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/user/C#/ExampleHelloWorld/C#.csproj",
+  "expectedPackageFiles": [
+    "/home/user/.nuget/packages/microsoft.netcore.app.ref/6.0.20/microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
+    "/home/user/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.20/microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512",
+    "/home/user/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.20/microsoft.netcore.app.host.linux-x64.6.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

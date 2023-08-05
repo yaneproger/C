@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/user/C#/C#.csproj",
+      "projectUniqueName": "/home/user/C#/ExampleHelloWorld/C#.csproj",
       "projectName": "C#",
-      "projectPath": "/home/user/C#/C#.csproj",
+      "projectPath": "/home/user/C#/ExampleHelloWorld/C#.csproj",
       "packagesPath": "/home/user/.nuget/packages/",
-      "outputPath": "/home/user/C#/obj/",
+      "outputPath": "/home/user/C#/ExampleHelloWorld/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/user/.nuget/NuGet/NuGet.Config"
@@ -54,12 +54,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/user/.dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
       }
     }
   }
