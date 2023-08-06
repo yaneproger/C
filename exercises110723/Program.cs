@@ -1896,51 +1896,51 @@
 
 // [3 7 22 2 78] -> 76
 
-void FillArray(int[] arr, int arg2)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        arr[index] = new Random().Next(0, 99);
-    }
-}
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
 
-void PrintArray(int[] arr)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-       Console.Write($" {arr[index]} , ");
-    }
-}
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//        Console.Write($" {arr[index]} , ");
+//     }
+// }
 
-void MaxMinDiffer(int[] arr)
-{
-    int max = arr[0];
-    int min = arr[0];
+// void MaxMinDiffer(int[] arr)
+// {
+//     int max = arr[0];
+//     int min = arr[0];
 
-    for (int index = 0; index < arr.Length; index++)
-    {
-        if (arr[index] > max)
-            max = arr[index];
-        if (arr[index] < min)
-            min = arr[index];
-    }
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         if (arr[index] > max)
+//             max = arr[index];
+//         if (arr[index] < min)
+//             min = arr[index];
+//     }
 
-    int differ = max - min;
-    Console.WriteLine($"  max is {max} ");
-    Console.WriteLine($"  min is {min} ");
+//     int differ = max - min;
+//     Console.WriteLine($"  max is {max} ");
+//     Console.WriteLine($"  min is {min} ");
 
-    Console.WriteLine($"  Diffenrence is {differ} ");
+//     Console.WriteLine($"  Diffenrence is {differ} ");
 
-}
+// }
 
-Console.WriteLine("enter array's length");
-int arrlength = int.Parse(Console.ReadLine());
-int[] array = new int[arrlength];
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
 
-FillArray(array, arrlength);
-PrintArray(array);
-Console.WriteLine();
-MaxMinDiffer(array);
+// FillArray(array, arrlength);
+// PrintArray(array);
+// Console.WriteLine();
+// MaxMinDiffer(array);
 
 
 
