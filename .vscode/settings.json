@@ -1,5 +1,14 @@
 {
   "editor.formatOnSave": true,
   "dotnet.defaultSolution": "C#.sln",
-  "editor.formatOnType": true
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": null,
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  }
 }

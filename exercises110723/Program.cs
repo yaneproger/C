@@ -1908,7 +1908,7 @@ void PrintArray(int[] arr)
 {
     for (int index = 0; index < arr.Length; index++)
     {
-       Console.Write($" {arr[index]} , ");
+        Console.Write($" {arr[index]} , ");
     }
 }
 
@@ -1926,6 +1926,7 @@ void MaxMinDiffer(int[] arr)
     }
 
     int differ = max - min;
+
     Console.WriteLine($"  max is {max} ");
     Console.WriteLine($"  min is {min} ");
 
@@ -1941,6 +1942,7 @@ FillArray(array, arrlength);
 PrintArray(array);
 Console.WriteLine();
 MaxMinDiffer(array);
+
 
 
 
