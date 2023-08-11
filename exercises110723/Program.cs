@@ -1896,53 +1896,78 @@
 
 // [3 7 22 2 78] -> 76
 
-void FillArray(int[] arr, int arg2)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        arr[index] = new Random().Next(0, 99);
-    }
-}
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
 
-void PrintArray(int[] arr)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        Console.Write($" {arr[index]} , ");
-    }
-}
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} , ");
+//     }
+// }
 
-void MaxMinDiffer(int[] arr)
-{
-    int max = arr[0];
-    int min = arr[0];
+// void MaxMinDiffer(int[] arr)
+// {
+//     int max = arr[0];
+//     int min = arr[0];
 
-    for (int index = 0; index < arr.Length; index++)
-    {
-        if (arr[index] > max)
-            max = arr[index];
-        if (arr[index] < min)
-            min = arr[index];
-    }
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         if (arr[index] > max)
+//             max = arr[index];
+//         if (arr[index] < min)
+//             min = arr[index];
+//     }
 
-    int differ = max - min;
+//     int differ = max - min;
 
-    Console.WriteLine($"  max is {max} ");
-    Console.WriteLine($"  min is {min} ");
+//     Console.WriteLine($"  max is {max} ");
+//     Console.WriteLine($"  min is {min} ");
 
-    Console.WriteLine($"  Diffenrence is {differ} ");
+//     Console.WriteLine($"  Diffenrence is {differ} ");
 
-}
+// }
 
-Console.WriteLine("enter array's length");
-int arrlength = int.Parse(Console.ReadLine());
-int[] array = new int[arrlength];
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
 
-FillArray(array, arrlength);
-PrintArray(array);
-Console.WriteLine();
-MaxMinDiffer(array);
+// FillArray(array, arrlength);
+// PrintArray(array);
+// Console.WriteLine();
+// MaxMinDiffer(array);
 
+
+
+
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+// 0, 7, 8, -2, -2 -> 2
+
+// 1, -7, 567, 89, 223-> 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 
 
