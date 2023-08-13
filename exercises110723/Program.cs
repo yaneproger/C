@@ -2031,7 +2031,8 @@
 
 
 
-// Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. 
+// Результат запишите в новом массиве.
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
@@ -2048,35 +2049,92 @@
 
 
 
+
+
+
+
 // Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
-// 0, 7, 8, -2, -2 -> 2
+// 0, 7, 8, -2, -2 -> 2   
 
 // 1, -7, 567, 89, 223-> 3
 
+// void FillArray(int[] arg1, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         Console.WriteLine("enter digits one by one");
+//         arg1[index] = int.Parse(Console.ReadLine());
+//         Console.WriteLine();
+//         Console.Write($"{arg1[index]} , ");
+//     }
+// }
+// void CheckArray(int[] arg1)
+// {
+//     int sum = 0;
+//     for (int index = 0; index < arg1.Length; index++)
+//     {
+//         if (arg1[index] > 0)
+//         {
+//             sum = sum + 1;
+//         }
+//         Console.WriteLine(sum);
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"summ of digits. which more than 0 is {sum} ");
+// }
+
+// Console.WriteLine("enter array's size");
+// int size = int.Parse(Console.ReadLine());
+// int[] array = new int[size];
+
+// FillArray(array, size);
+// CheckArray(array);
 
 
 
-
-
-
-
-
-
-
-
-
-// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// Задача 43: Напишите программу, 
+// которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 
 
 
+void FullAndPrintArray(int rowsize, int columnsize, string random)
+{
+    int rows = 0;
+    int columns = 0;
+
+    string[,] newtable = new string[rowsize, columnsize];
+
+    for (rows = 0; rows < rowsize; rows++)
+    {
+        for (columns = 0; columns < columnsize; columns++)
+        {
+            Console.WriteLine("enter element");
+            newtable[rows, columns] = random;      //  Console.ReadLine();
+            Console.WriteLine();
+        }
+    }
+
+    for (rows = 0; rows < rowsize; rows++)
+    {
+        for (columns = 0; columns < columnsize; columns++)
+        {
+            Console.Write($"-{newtable[rows, columns]}- , ");
+        }
+    }
+}
+
+Console.WriteLine("enter  rowsize");
+int rowsize = int.Parse(Console.ReadLine());
+Console.WriteLine("enter  columnsize");
+int columnsize = int.Parse(Console.ReadLine());
+string random = Convert.ToString(new Random().Next(-100000, 10000000));
 
 
-
-
-
-
+FullAndPrintArray(rowsize, columnsize, random);
+Console.WriteLine();
 
