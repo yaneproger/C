@@ -1991,13 +1991,59 @@
 
 
 
+// Double sized Array - full up and print
 
+
+
+// void FullAndPrintArray(int rowsize, int columnsize, string random)
+// {
+//     int rows = 0;
+//     int columns = 0;
+
+//     string[,] newtable = new string[rowsize, columnsize];
+
+//     for (rows = 0; rows < rowsize; rows++)
+//     {
+//         for (columns = 0; columns < columnsize; columns++)
+//         {
+//             Console.WriteLine("enter element");
+//             newtable[rows, columns] = random;      //  Console.ReadLine();
+//             Console.WriteLine();
+//         }
+//     }
+
+//     for (rows = 0; rows < rowsize; rows++)
+//     {
+//         for (columns = 0; columns < columnsize; columns++)
+//         {
+//             Console.Write($"-{newtable[rows, columns]}- , ");
+//         }
+//     }
+// }
+
+// Console.WriteLine("enter  rowsize");
+// int rowsize = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter  columnsize");
+// int columnsize = int.Parse(Console.ReadLine());
+// string random = Convert.ToString(new Random().Next(-100000, 10000000));
+
+
+// FullAndPrintArray(rowsize, columnsize, random);
+// Console.WriteLine();
 
 
 
 
 // Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+
+
+
+
+
+
+
+
 
 
 
@@ -2036,10 +2082,51 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
+void FillArray(int[] array, int size)
+{
+    // int arrsize = array.Length;
+    for (int index = 0; index < size; index++)
+    {
+        array[index] = new Random().Next(-10, 10);
+        Console.Write($"array {array[index]}, ");
+    }
+}
 
+void MultArray(int[] array, int size)
+{
+    int mult = 0;
+    int index = 0;
+    int[] newarr = new int[size];
 
+    if (array.Length % 2 != 0)
+    {
+        for (index = 0; index < (size / 2) + 1; index++)
+        {
+            newarr[index] = array[index] * array[array.Length - index - 1];
+            Console.WriteLine($" -lastEl-{array[(index / 2) + 1]}");
+            newarr[newarr.Length - 1] = array[((index / 2) + 1)];
+            Console.Write($"mult-{newarr[index]}");
+        }
+    }
+    else
+    {
+        for (index = 0; index < (size / 2); index++)
+        {
+            newarr[index] = array[index] * array[array.Length - index - 1];
+            newarr[newarr.Length - 1] = array[(index / 2) + 1];
+            Console.Write($"mult-{newarr[index]}");
+        }
 
+    }
 
+}
+Console.WriteLine("enter array's size");
+int size = int.Parse(Console.ReadLine());
+Console.WriteLine(size);
+int[] array = new int[size];
+FillArray(array, size);
+Console.WriteLine();
+MultArray(array, size);
 
 
 
@@ -2102,39 +2189,12 @@
 
 
 
-void FullAndPrintArray(int rowsize, int columnsize, string random)
-{
-    int rows = 0;
-    int columns = 0;
-
-    string[,] newtable = new string[rowsize, columnsize];
-
-    for (rows = 0; rows < rowsize; rows++)
-    {
-        for (columns = 0; columns < columnsize; columns++)
-        {
-            Console.WriteLine("enter element");
-            newtable[rows, columns] = random;      //  Console.ReadLine();
-            Console.WriteLine();
-        }
-    }
-
-    for (rows = 0; rows < rowsize; rows++)
-    {
-        for (columns = 0; columns < columnsize; columns++)
-        {
-            Console.Write($"-{newtable[rows, columns]}- , ");
-        }
-    }
-}
-
-Console.WriteLine("enter  rowsize");
-int rowsize = int.Parse(Console.ReadLine());
-Console.WriteLine("enter  columnsize");
-int columnsize = int.Parse(Console.ReadLine());
-string random = Convert.ToString(new Random().Next(-100000, 10000000));
 
 
-FullAndPrintArray(rowsize, columnsize, random);
-Console.WriteLine();
+
+
+
+
+
+
 
