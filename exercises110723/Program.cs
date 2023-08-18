@@ -2092,7 +2092,7 @@ void FillArray(int[] array, int size)
     }
 }
 
-void MultArray(int[] array, int size)
+int[] MultArray(int[] array, int size)
 {
     int mult = 0;
     int index = 0;
@@ -2102,7 +2102,9 @@ void MultArray(int[] array, int size)
     {
         for (index = 0; index < (size / 2) + 1; index++)
         {
-            newarr[index] = array[index] * array[array.Length - index - 1];
+            if (index == array.Length - index - 1) newarr[index] = array[index];
+            else
+                newarr[index] = array[index] * array[array.Length - index - 1];
             Console.WriteLine($" -lastEl-{array[(index / 2) + 1]}");
             newarr[newarr.Length - 1] = array[((index / 2) + 1)];
             Console.Write($"mult-{newarr[index]}");
@@ -2118,6 +2120,7 @@ void MultArray(int[] array, int size)
         }
 
     }
+    return newarr;
 
 }
 Console.WriteLine("enter array's size");
