@@ -1969,14 +1969,70 @@
 
 
 
-
-
-
-
-
 // Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
 // 4; массив [6, 7, 19, 345, 3] -> нет
 // -3; массив [6, 7, 19, 345, 3] -> да
+
+
+// void FillupArray(int[] array, int size)
+// {
+//     // int[] array = new int[size];
+//     for (int index = 0; index < size; index++)
+//     {
+//         array[index] = new Random().Next(-1, 10);
+//         Console.Write($" {array[index]}, ");
+//     }
+// }
+
+// void FindNum(int[] array, int digit)
+// {
+//     bool boolcheck = true;
+//     foreach (int el in array)
+//     {
+//         if (digit == el)
+//         {
+//             boolcheck = true;
+//             Console.WriteLine($"boolcheck {boolcheck} ");
+//             // Console.WriteLine($"entered digit {digit} is present");
+//             break;
+//         }
+//         else
+//         {
+//             boolcheck = false;
+//             Console.WriteLine($"boolcheck {boolcheck} ");
+//             // Console.WriteLine($"entered digit {digit} is not found");
+//             // // break;
+//         }
+//     }
+//     if (boolcheck == true)
+//     {
+//         Console.WriteLine($"2 if -boolcheck {boolcheck} ");
+//         Console.WriteLine($"entered digit {digit} is present");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"2 if -boolcheck {boolcheck} ");
+//         Console.WriteLine($"entered digit {digit} is not found");
+//     }
+// }
+
+// Console.WriteLine("enter array's  size");
+// int arraysize = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter desired digit");
+// int digit = int.Parse(Console.ReadLine());
+// int[] array = new int[arraysize];
+// FillupArray(array, arraysize);
+// Console.WriteLine();
+// FindNum(array, digit);
+
+
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
 
 
 void FillupArray(int[] array, int size)
@@ -1989,42 +2045,10 @@ void FillupArray(int[] array, int size)
     }
 }
 
-void FindNum(int[] array, int digit)
-{
-    foreach (int el in array)
-    {
-        if (digit == el)
-        {
-            Console.WriteLine($"entered digit {digit} is present");
-            break;
-        }
-        else
-        {
-            Console.WriteLine($"entered digit {digit} is not found");
-            // break;
-        }
-    }
-}
-
-Console.WriteLine("enter array's  size");
-int arraysize = int.Parse(Console.ReadLine());
-Console.WriteLine("enter desired digit");
-int digit = int.Parse(Console.ReadLine());
-int[] array = new int[arraysize];
-FillupArray(array, arraysize);
-Console.WriteLine();
-FindNum(array, digit);
 
 
 
 
-
-// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
-// Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
-// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
-// [5, 18, 123, 6, 2] -> 1
-// [1, 2, 3, 6, 2] -> 0
-// [10, 11, 12, 13, 14] -> 5
 
 
 
