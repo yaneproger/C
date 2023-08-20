@@ -1891,66 +1891,10 @@
 
 
 
-// Задача 38: Задайте массив вещественных чисел. 
-// Найдите разницу между максимальным и минимальным элементов массива.
-
-// [3 7 22 2 78] -> 76
-
-// void FillArray(int[] arr, int arg2)
-// {
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         arr[index] = new Random().Next(0, 99);
-//     }
-// }
-
-// void PrintArray(int[] arr)
-// {
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         Console.Write($" {arr[index]} , ");
-//     }
-// }
-
-// void MaxMinDiffer(int[] arr)
-// {
-//     int max = arr[0];
-//     int min = arr[0];
-
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         if (arr[index] > max)
-//             max = arr[index];
-//         if (arr[index] < min)
-//             min = arr[index];
-//     }
-
-//     int differ = max - min;
-
-//     Console.WriteLine($"  max is {max} ");
-//     Console.WriteLine($"  min is {min} ");
-
-//     Console.WriteLine($"  Diffenrence is {differ} ");
-
-// }
-
-// Console.WriteLine("enter array's length");
-// int arrlength = int.Parse(Console.ReadLine());
-// int[] array = new int[arrlength];
-
-// FillArray(array, arrlength);
-// PrintArray(array);
-// Console.WriteLine();
-// MaxMinDiffer(array);
-
-
-
-
-
-
-
-// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
-// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
+// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. 
+// Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
+// сумма положительных чисел равна 29, сумма отрицательных равна -20.
 
 // int[] GetArray(int size, int minValue, int maxValue)
 // {
@@ -1991,57 +1935,36 @@
 
 
 
-// Double sized Array - full up and print
-
-
-
-// void FullAndPrintArray(int rowsize, int columnsize, string random)
-// {
-//     int rows = 0;
-//     int columns = 0;
-
-//     string[,] newtable = new string[rowsize, columnsize];
-
-//     for (rows = 0; rows < rowsize; rows++)
-//     {
-//         for (columns = 0; columns < columnsize; columns++)
-//         {
-//             Console.WriteLine("enter element");
-//             newtable[rows, columns] = random;      //  Console.ReadLine();
-//             Console.WriteLine();
-//         }
-//     }
-
-//     for (rows = 0; rows < rowsize; rows++)
-//     {
-//         for (columns = 0; columns < columnsize; columns++)
-//         {
-//             Console.Write($"-{newtable[rows, columns]}- , ");
-//         }
-//     }
-// }
-
-// Console.WriteLine("enter  rowsize");
-// int rowsize = int.Parse(Console.ReadLine());
-// Console.WriteLine("enter  columnsize");
-// int columnsize = int.Parse(Console.ReadLine());
-// string random = Convert.ToString(new Random().Next(-100000, 10000000));
-
-
-// FullAndPrintArray(rowsize, columnsize, random);
-// Console.WriteLine();
-
-
-
 
 // Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2] 
 
 
+// void FillupArray(int[] array, int size)
+// {
+//     // int[] array = new int[size];
+//     for (int index = 0; index < size; index++)
+//     {
+//         array[index] = new Random().Next(-1000, 1000);
+//         Console.Write($" {array[index]}, ");
+//     }
+// }
 
+// void Changemean(int[] array)
+// {
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = array[index] * -1;
+//         Console.Write($" {array[index]}, ");
+//     }
+// }
 
-
-
+// Console.WriteLine("enter array's  size");
+// int arraysize = int.Parse(Console.ReadLine());
+// int[] array = new int[arraysize];
+// FillupArray(array, arraysize);
+// Console.WriteLine();
+// Changemean(array);
 
 
 
@@ -2056,22 +1979,52 @@
 // -3; массив [6, 7, 19, 345, 3] -> да
 
 
+void FillupArray(int[] array, int size)
+{
+    // int[] array = new int[size];
+    for (int index = 0; index < size; index++)
+    {
+        array[index] = new Random().Next(-1, 10);
+        Console.Write($" {array[index]}, ");
+    }
+}
+
+void FindNum(int[] array, int digit)
+{
+    foreach (int el in array)
+    {
+        if (digit == el)
+        {
+            Console.WriteLine($"entered digit {digit} is present");
+            break;
+        }
+        else
+        {
+            Console.WriteLine($"entered digit {digit} is not found");
+            // break;
+        }
+    }
+}
+
+Console.WriteLine("enter array's  size");
+int arraysize = int.Parse(Console.ReadLine());
+Console.WriteLine("enter desired digit");
+int digit = int.Parse(Console.ReadLine());
+int[] array = new int[arraysize];
+FillupArray(array, arraysize);
+Console.WriteLine();
+FindNum(array, digit);
 
 
 
 
 
-
-
-// Задача 35: Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
 // Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
 // [5, 18, 123, 6, 2] -> 1
 // [1, 2, 3, 6, 2] -> 0
 // [10, 11, 12, 13, 14] -> 5
-
-
-
-
 
 
 
@@ -2082,64 +2035,143 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-void FillArray(int[] array, int size)
-{
-    // int arrsize = array.Length;
-    for (int index = 0; index < size; index++)
-    {
-        array[index] = new Random().Next(-10, 10);
-        Console.Write($"array {array[index]}, ");
-    }
-}
 
-int[] MultArray(int[] array, int size)
-{
-    int mult = 0;
-    int index = 0;
-    int[] newarr = new int[size];
+// void FillArray(int[] array, int size)
+// {
+//     // int arrsize = array.Length;
+//     for (int index = 0; index < size; index++)
+//     {
+//         array[index] = new Random().Next(-10, 10);
+//         Console.Write($"array {array[index]}, ");
+//     }
+// }
 
-    if (array.Length % 2 != 0)
-    {
-        for (index = 0; index < (size / 2) + 1; index++)
-        {
-            if (index == array.Length - index - 1) newarr[index] = array[index];
-            else
-                newarr[index] = array[index] * array[array.Length - index - 1];
-            Console.WriteLine($" -lastEl-{array[(index / 2) + 1]}");
-            newarr[newarr.Length - 1] = array[((index / 2) + 1)];
-            Console.Write($"mult-{newarr[index]}");
-        }
-    }
-    else
-    {
-        for (index = 0; index < (size / 2); index++)
-        {
-            newarr[index] = array[index] * array[array.Length - index - 1];
-            newarr[newarr.Length - 1] = array[(index / 2) + 1];
-            Console.Write($"mult-{newarr[index]}");
-        }
+// int[] MultArray(int[] array, int size)
+// {
+//     int mult = 0;
+//     int index = 0;
+//     int[] newarr = new int[size];
 
-    }
-    return newarr;
+//     if (array.Length % 2 != 0)
+//     {
+//         for (index = 0; index < (size / 2) + 1; index++)
+//         {
+//             if (index == array.Length - index - 1) newarr[index] = array[index];
+//             else
+//                 newarr[index] = array[index] * array[array.Length - index - 1];
+//             Console.WriteLine($" -lastEl-{array[(index / 2) + 1]}");
+//             newarr[newarr.Length - 1] = array[((index / 2) + 1)];
+//             Console.Write($"mult-{newarr[index]}");
+//         }
+//     }
+//     else
+//     {
 
-}
-Console.WriteLine("enter array's size");
-int size = int.Parse(Console.ReadLine());
-Console.WriteLine(size);
-int[] array = new int[size];
-FillArray(array, size);
-Console.WriteLine();
-MultArray(array, size);
+//         for (index = 0; index < (size / 2); index++)
+//         {
+//             if (index == array.Length - index - 1) newarr[index] = array[index];
+//             else
+//                 newarr[index] = array[index] * array[array.Length - index - 1];
+//             newarr[newarr.Length - 1] = array[(index / 2) + 1];
+//             Console.Write($"mult-{newarr[index]}");
+//         }
 
+//     }
+//     return newarr;
 
-
-
-
-
+// }
+// Console.WriteLine("enter array's size");
+// int size = int.Parse(Console.ReadLine());
+// Console.WriteLine(size);
+// int[] array = new int[size];
+// FillArray(array, size);
+// Console.WriteLine();
+// MultArray(array, size);
 
 
 
+// Задача 38: Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
 
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} , ");
+//     }
+// }
+
+// void MaxMinDiffer(int[] arr)
+// {
+//     int max = arr[0];
+//     int min = arr[0];
+
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         if (arr[index] > max)
+//             max = arr[index];
+//         if (arr[index] < min)
+//             min = arr[index];
+//     }
+//     int differ = max - min;
+//     Console.WriteLine($"  max is {max} ");
+//     Console.WriteLine($"  min is {min} ");
+//     Console.WriteLine($"  Diffenrence is {differ} ");
+// }
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
+
+// FillArray(array, arrlength);
+// PrintArray(array);
+// Console.WriteLine();
+// MaxMinDiffer(array);
+
+
+// Задача 39: Напишите программу, которая перевернёт одномерный массив (последний элемент будет на первом месте, а первый - на последнем и т.д.)
+// [1 2 3 4 5] -> [5 4 3 2 1]
+// [6 7 3 6] -> [6 3 7 6]
+
+
+// void FillArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//         Console.Write($" {arr[index]}, ");
+//     }
+// }
+
+// int[] Reversearray(int[] arr, int size)
+// {
+//     int[] newarr = new int[size];
+
+//     for (int index = size - 1; index >= 0; index--)
+//     {
+//         newarr[index] = arr[index];
+//         Console.Write($"{newarr[index]} , ");
+//     }
+
+//     return arr;
+// }
+
+
+// Console.WriteLine("enter array's size");
+// int size = int.Parse(Console.ReadLine());
+// Console.WriteLine();
+// int[] reverse = new int[size];
+// FillArray(reverse);
+// Console.WriteLine();
+// Reversearray(reverse, size);
 
 
 
@@ -2191,6 +2223,48 @@ MultArray(array, size);
 
 
 
+
+
+
+// Double sized Array - full up and print
+
+
+
+// void FullAndPrintArray(int rowsize, int columnsize, string random)
+// {
+//     int rows = 0;
+//     int columns = 0;
+
+//     string[,] newtable = new string[rowsize, columnsize];
+
+//     for (rows = 0; rows < rowsize; rows++)
+//     {
+//         for (columns = 0; columns < columnsize; columns++)
+//         {
+//             Console.WriteLine("enter element");
+//             newtable[rows, columns] = random;      //  Console.ReadLine();
+//             Console.WriteLine();
+//         }
+//     }
+
+//     for (rows = 0; rows < rowsize; rows++)
+//     {
+//         for (columns = 0; columns < columnsize; columns++)
+//         {
+//             Console.Write($"-{newtable[rows, columns]}- , ");
+//         }
+//     }
+// }
+
+// Console.WriteLine("enter  rowsize");
+// int rowsize = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter  columnsize");
+// int columnsize = int.Parse(Console.ReadLine());
+// string random = Convert.ToString(new Random().Next(-100000, 10000000));
+
+
+// FullAndPrintArray(rowsize, columnsize, random);
+// Console.WriteLine();
 
 
 
