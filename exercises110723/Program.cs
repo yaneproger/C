@@ -2036,44 +2036,45 @@
 
 
 // void FillupArray(int[] array, int size)
+
+// int[] FillupArray(int size)
 // {
-//     // int[] array = new int[size];
+//     int[] array = new int[size];
 //     for (int index = 0; index < size; index++)
 //     {
 //         array[index] = new Random().Next(0, 200);
 //         Console.Write($" {array[index]}, ");
 //     }
+//     return array;
 // }
 
+// // int AmountofElements(int[] array)
 // int AmountofElements(int[] array)
 // {
 //     int summ = 0;
-//     int summa = 1;
-//     int index = 0;
-//     // foreach (int el in array)
-//     for (index = 0; index < array.Length; index++)
+//     foreach (int el in array)
 //     {
 //         // Console.WriteLine($"{array[index]} ,");
 
-//         if ((array[index] > 9) && (array[index] < 100))
+//         if (el > 9 && el < 100)
 //         {
-//             summ = summa++;
-//             Console.WriteLine($"summ is {summ} ");
+//             summ++;
 //         }
 //         else
 //         {
-//             // Console.WriteLine($"there is no elements between 10 and 99");
+//             Console.WriteLine($"this element is not between 10 and 99");
 //         }
 //     }
+//     // Console.WriteLine($"summ is {summ} ");
 //     return summ;
 // }
 // Console.WriteLine("enter array's size");
 // int size = int.Parse(Console.ReadLine());
 // Console.WriteLine(size);
-// int[] array = new int[size];
-// FillupArray(array, size);
+// // int[] array = new int[size];
+// int[] array = FillupArray(size);
 // Console.WriteLine();
-// AmountofElements(array);
+// // AmountofElements(array);
 // Console.WriteLine($"количество элементов массива, значения которых лежат в отрезке [10,99] {AmountofElements(array)} ");
 
 
@@ -2269,6 +2270,12 @@
 // заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+
+
+
+
+
 
 
 
