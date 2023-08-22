@@ -1804,91 +1804,6 @@
 
 // Урок 5. Функции и одномерные массивы
 // 
-// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
-// Напишите программу, которая покажет количество чётных чисел в массиве.
-
-// [345, 897, 568, 234] -> 2
-
-
-
-// void FillArray(int[] arr, int arg2)
-// {
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         arr[index] = new Random().Next(100, 1001);
-//     }
-// }
-
-// void EvenDigits(int[] arr)
-// {
-//     int sum = 0;
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         // Console.WriteLine(arr[index]);
-//         Console.Write($"{arr[index]} ,  ");
-
-//         if (arr[index] % 2 == 0)
-//             sum = sum + 1;
-//     }
-//     Console.WriteLine();
-//     Console.WriteLine($"the sum of even elements is = {sum} ");
-// }
-
-// Console.WriteLine("enter array's length");
-// int arrlength = int.Parse(Console.ReadLine());
-// int[] array = new int[arrlength];
-
-// FillArray(array, arrlength);
-// EvenDigits(array);
-
-
-
-// Задача 36: Задайте одномерный массив, заполненный случайными числами. 
-// Найдите сумму элементов, стоящих на нечётных позициях.
-
-// [3, 7, 23, 12] -> 19
-
-// [-4, -6, 89, 6] -> 0
-
-// void FillArray(int[] arr, int arg2)
-// {
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         arr[index] = new Random().Next(0, 99);
-//     }
-// }
-
-// void PrintArray(int[] arr)
-// {
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         Console.Write($" {arr[index]} , ");
-//     }
-// }
-
-// void OddSum(int[] arr)
-// {
-//     int sum = 0;
-
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         if (index % 2 != 0)
-//         {
-//             sum = sum + arr[index];
-//         }
-//     }
-//     Console.WriteLine($"sum {sum} ");
-// }
-
-// Console.WriteLine("enter array's length");
-// int arrlength = int.Parse(Console.ReadLine());
-// int[] array = new int[arrlength];
-
-// FillArray(array, arrlength);
-// PrintArray(array);
-// Console.WriteLine();
-// OddSum(array);
-
 
 
 // Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. 
@@ -2027,6 +1942,51 @@
 
 
 
+
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+// Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// [345, 897, 568, 234] -> 2
+
+
+
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(100, 1001);
+//     }
+// }
+
+// void EvenDigits(int[] arr)
+// {
+//     int sum = 0;
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         // Console.WriteLine(arr[index]);
+//         Console.Write($"{arr[index]} ,  ");
+
+//         if (arr[index] % 2 == 0)
+//             sum = sum + 1;
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"the sum of even elements is = {sum} ");
+// }
+
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
+
+// FillArray(array, arrlength);
+// EvenDigits(array);
+
+
+
+
+
+
+
+
 // Задача 35: Задайте одномерный массив из 123 случайных чисел. 
 // Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
 // Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
@@ -2076,6 +2036,56 @@
 // Console.WriteLine();
 // // AmountofElements(array);
 // Console.WriteLine($"количество элементов массива, значения которых лежат в отрезке [10,99] {AmountofElements(array)} ");
+
+
+
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
+
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} , ");
+//     }
+// }
+
+// void OddSum(int[] arr)
+// {
+//     int sum = 0;
+
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         if (index % 2 != 0)
+//         {
+//             sum = sum + arr[index];
+//         }
+//     }
+//     Console.WriteLine($"sum {sum} ");
+// }
+
+// Console.WriteLine("enter array's length");
+// int arrlength = int.Parse(Console.ReadLine());
+// int[] array = new int[arrlength];
+
+// FillArray(array, arrlength);
+// PrintArray(array);
+// Console.WriteLine();
+// OddSum(array);
 
 
 
@@ -2321,11 +2331,6 @@
 
 // FullAndPrintArray(rowsize, columnsize, random);
 // Console.WriteLine();
-
-
-
-
-
 
 
 
