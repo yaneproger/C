@@ -4,5 +4,8 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.defaultFormatter": "formulahendry.code-runner",
+		"editor.formatOnSave": false
+	}
 }

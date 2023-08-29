@@ -2292,6 +2292,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // void FindPoint(int b1, int k1, int b2, int k2)
 // {
 //     int x;
@@ -2365,13 +2378,30 @@
 
 
 
-
-
 // Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, 
 // может ли существовать треугольник с сторонами такой длины.
 // Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
 
 
+void CheckTriangle(int a, int b, int c)
+{
+    if (a < (b + c))
+    {
+        Console.WriteLine("A triangle is possible");
+    }
+    else if (b < (a + c))
+    {
+        Console.WriteLine("B triangle is possible");
+    }
+    else if (c < (a + b))
+    {
+        Console.WriteLine("C triangle is possible");
+    }
+    else
+    {
+        Console.WriteLine("triangle is NOT possible");
+    }
+}
 
 int Input(string message)
 {
@@ -2380,21 +2410,10 @@ int Input(string message)
     return result;
 }
 
-void CheckTriangle(int a, int b, int c)
-{
-    if (a < (b + c) || b < (a + c) || c < (a + b))
-    {
-        Console.WriteLine("triangle is possible");
-    }
-    else
-    {
-        Console.WriteLine("triangle is NOT possible");
-    }
-}
+int a = Input("enter triangle a side's size");
+int b = Input("enter triangle b side's size");
+int c = Input("enter triangle c side's size");
 
-int a = Input("enter triangle side's size");
-int b = Input("enter triangle side's size");
-int c = Input("enter triangle side's size");
 
 CheckTriangle(a, b, c);
 
