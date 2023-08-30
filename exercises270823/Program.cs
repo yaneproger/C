@@ -2288,47 +2288,30 @@
 // y=9x+4
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// void FindPoint(int b1, int k1, int b2, int k2)
+// void FindPoint(double b1, double k1, double b2, double k2)
 // {
-//     int x;
-
-//     int y = k1 * x + b1;
-
-//     int y1 = k2 * x + b2;
-
-
-
-
+//     if ((k1 == k2) && (b1 == b2))
+//         Console.WriteLine("Прямые совпадают");
+//     else if (k1 == k2)
+//         Console.WriteLine("Прямые параллельны");
+//     else
+//     {
+//         double x = (-b2 + b1) / (-k1 + k2);
+//         double y = k2 * x + b2;
+//         Console.WriteLine($"point coordinates is X ={x} , Y ={y}");
+//     }
 // }
 
-
 // Console.Clear();
-
 // Console.WriteLine("enter b1");
-// int b1 = (int.Parse(Console.ReadLine()));
+// double b1 = (int.Parse(Console.ReadLine()));
 // Console.WriteLine("enter k1");
-// int k1 = (int.Parse(Console.ReadLine()));
+// double k1 = (int.Parse(Console.ReadLine()));
 // Console.WriteLine("enter b2");
-// int b2 = (int.Parse(Console.ReadLine()));
+// double b2 = (int.Parse(Console.ReadLine()));
 // Console.WriteLine("enter k2");
-// int k2 = (int.Parse(Console.ReadLine()));
+// double k2 = (int.Parse(Console.ReadLine()));
+// FindPoint(b1, k1, b2, k2);
 
 
 
@@ -2383,39 +2366,39 @@
 // Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
 
 
-void CheckTriangle(int a, int b, int c)
-{
-    if (a < (b + c))
-    {
-        Console.WriteLine("A triangle is possible");
-    }
-    else if (b < (a + c))
-    {
-        Console.WriteLine("B triangle is possible");
-    }
-    else if (c < (a + b))
-    {
-        Console.WriteLine("C triangle is possible");
-    }
-    else
-    {
-        Console.WriteLine("triangle is NOT possible");
-    }
-}
+// void CheckTriangle(int a, int b, int c)
+// {
+//     if (a < (b + c))
+//     {
+//         Console.WriteLine("A triangle is possible");
+//     }
+//     else if (b < (a + c))
+//     {
+//         Console.WriteLine("B triangle is possible");
+//     }
+//     else if (c < (a + b))
+//     {
+//         Console.WriteLine("C triangle is possible");
+//     }
+//     else
+//     {
+//         Console.WriteLine("triangle is NOT possible");
+//     }
+// }
 
-int Input(string message)
-{
-    Console.WriteLine(message);
-    int result = int.Parse(Console.ReadLine());
-    return result;
-}
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = int.Parse(Console.ReadLine());
+//     return result;
+// }
 
-int a = Input("enter triangle a side's size");
-int b = Input("enter triangle b side's size");
-int c = Input("enter triangle c side's size");
+// int a = Input("enter triangle a side's size");
+// int b = Input("enter triangle b side's size");
+// int c = Input("enter triangle c side's size");
 
 
-CheckTriangle(a, b, c);
+// CheckTriangle(a, b, c);
 
 
 
