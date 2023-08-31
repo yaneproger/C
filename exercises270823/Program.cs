@@ -2408,6 +2408,58 @@
 // 3  -> 11
 // 2  -> 10
 
+void Fillarray(int[] array)
+{
+    for (int index = 0; index < array.Length; index++)
+    {
+        Console.WriteLine("enter binary number's digit one by one");
+        array[index] = int.Parse(Console.ReadLine());
+        Console.Write(array[index]);
+    }
+}
+
+int[] Convertarray(int[] array)
+{
+    int[] number = new int[array.Length];
+    for (int index = 0; index < array.Length; index++)
+    {
+        // for (int jindex=0;jindex<array.Length;
+        if (array[array.Length - index - 1] == 0)
+        {
+            number[index] = 0;
+        }
+        if (array[array.Length - index - 1] == 1)
+        {
+            number[index] = array[index * 2];
+        }
+    }
+    return number;
+}
+
+
+void Printarray(int[] array)
+{
+    for (int index = 0; index < array.Length; index++)
+    {
+
+        Console.Write(array[index]);
+    }
+}
+
+int Input(string message)
+{
+    Console.WriteLine(message);
+    int result = int.Parse(Console.ReadLine());
+    return result;
+}
+
+Console.Clear();
+int size = Input("enter binary number's Size");
+int[] array = new int[size];
+Fillarray(array);
+Convertarray(array);
+Printarray(array);
+
 
 
 
