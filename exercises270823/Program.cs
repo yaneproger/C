@@ -2397,10 +2397,7 @@
 // int b = Input("enter triangle b side's size");
 // int c = Input("enter triangle c side's size");
 
-
 // CheckTriangle(a, b, c);
-
-
 
 
 // Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
@@ -2408,9 +2405,9 @@
 // 3  -> 11
 // 2  -> 10
 
-void Fillarray(int[] array)
+void Fillarray(int[] array, int size)
 {
-    for (int index = 0; index < array.Length; index++)
+    for (int index = 0; index < size; index++)
     {
         Console.WriteLine("enter binary number's digit one by one");
         array[index] = int.Parse(Console.ReadLine());
@@ -2418,48 +2415,45 @@ void Fillarray(int[] array)
     }
 }
 
-int[] Convertarray(int[] array)
+void Convertarray(int[] array)
 {
     int[] number = new int[array.Length];
-    for (int index = 0; index < array.Length; index++)
+    for (int index = 128; index > 0; index--)
     {
-        // for (int jindex=0;jindex<array.Length;
+        // for (int jindex=0;jindex<array.Length);
         if (array[array.Length - index - 1] == 0)
         {
             number[index] = 0;
         }
         if (array[array.Length - index - 1] == 1)
         {
-            number[index] = array[index * 2];
+            Console.Write($"( A{array[index]})");
+            number[index] = array[index] * 2;
+            Console.Write(number[index]);
         }
     }
-    return number;
+    // return number;
 }
 
-
-void Printarray(int[] array)
+void Convertarray(int[] array)
 {
+    int[] number = new int[array.Length];
     for (int index = 0; index < array.Length; index++)
     {
-
-        Console.Write(array[index]);
+        // for (int jindex=0;jindex<array.Length;jindex++);
+        if (array[array.Length - index - 1] == 0)
+        {
+            number[index] = 0;
+        }
+        if (array[array.Length - index - 1] == 1)
+        {
+            Console.Write($"( A{array[index]})");
+            number[index] = array[index] * 2;
+            Console.Write(number[index]);
+        }
     }
+    // return number;
 }
-
-int Input(string message)
-{
-    Console.WriteLine(message);
-    int result = int.Parse(Console.ReadLine());
-    return result;
-}
-
-Console.Clear();
-int size = Input("enter binary number's Size");
-int[] array = new int[size];
-Fillarray(array);
-Convertarray(array);
-Printarray(array);
-
 
 
 
@@ -2471,16 +2465,45 @@ Printarray(array);
 
 
 
-
-
-
 //  Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
 
 
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
 
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} , ");
+//     }
+// }
 
+// void Copyarray(int[] arr)
+// {
+//     int[] copy = new int[arr.Length];
 
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         copy[index] = arr[index];
+//         Console.Write($"A {copy[index]} , ");
+//     }
+// }
 
+// Console.Clear();
+// Console.WriteLine("enter array size");
+// int size = int.Parse(Console.ReadLine());
+// int[] newarr = new int[size];
+
+// FillArray(newarr, size);
+// PrintArray(newarr);
+// Console.WriteLine();
+// Copyarray(newarr);
 
 
 
