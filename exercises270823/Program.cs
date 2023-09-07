@@ -2418,7 +2418,7 @@ void Fillarray(int[] array, int size)
 void Convertarray(int[] array)
 {
     int[] number = new int[array.Length];
-    for (int index = 128; index > 0; index--)
+    for (int index = 0; index < array.Length; index++)
     {
         // for (int jindex=0;jindex<array.Length);
         if (array[array.Length - index - 1] == 0)
@@ -2435,25 +2435,33 @@ void Convertarray(int[] array)
     // return number;
 }
 
-void Convertarray(int[] array)
+
+void PrintArray(int[] arr)
 {
-    int[] number = new int[array.Length];
-    for (int index = 0; index < array.Length; index++)
+    for (int index = 0; index < arr.Length; index++)
     {
-        // for (int jindex=0;jindex<array.Length;jindex++);
-        if (array[array.Length - index - 1] == 0)
-        {
-            number[index] = 0;
-        }
-        if (array[array.Length - index - 1] == 1)
-        {
-            Console.Write($"( A{array[index]})");
-            number[index] = array[index] * 2;
-            Console.Write(number[index]);
-        }
+        Console.Write($" B{arr[index]} , ");
     }
-    // return number;
 }
+
+Console.Clear();
+Console.WriteLine("enter array size");
+int size = int.Parse(Console.ReadLine());
+int[] newarr = new int[size];
+
+Fillarray(newarr, size);
+Console.WriteLine();
+Convertarray(newarr);
+Console.WriteLine();
+PrintArray(newarr);
+
+
+
+
+
+
+
+
 
 
 
