@@ -2405,55 +2405,60 @@
 // 3  -> 11
 // 2  -> 10
 
-void Fillarray(int[] array, int size)
-{
-    for (int index = 0; index < size; index++)
-    {
-        Console.WriteLine("enter binary number's digit one by one");
-        array[index] = int.Parse(Console.ReadLine());
-        Console.Write(array[index]);
-    }
-}
+// void Fillarray(int[] array, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         Console.WriteLine("enter binary number's digit one by one");
+//         array[index] = int.Parse(Console.ReadLine());
+//         Console.Write(array[index]);
+//     }
+// }
 
-void Convertarray(int[] array)
-{
-    int[] number = new int[array.Length];
-    for (int index = 0; index < array.Length; index++)
-    {
-        // for (int jindex=0;jindex<array.Length);
-        if (array[array.Length - index - 1] == 0)
-        {
-            number[index] = 0;
-        }
-        if (array[array.Length - index - 1] == 1)
-        {
-            Console.Write($"( A{array[index]})");
-            number[index] = array[index] * 2;
-            Console.Write(number[index]);
-        }
-    }
-    // return number;
-}
+// void Convertarray(int[] array)
+// {
+//     int[] number = new int[array.Length];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         // for (int jindex=0;jindex<array.Length);
+//         if (array[array.Length - index - 1] == 0)
+//         {
+//             number[index] = 0;
+//         }
+//         if (array[array.Length - index - 1] == 1)
+//         {
+//             Console.Write($"( A{array[index]})");
+//             number[index] = array[index] * 2;
+//             Console.Write(number[index]);
+//         }
+//     }
+//     // return number;
+// }
 
 
-void PrintArray(int[] arr)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        Console.Write($" B{arr[index]} , ");
-    }
-}
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" B{arr[index]} , ");
+//     }
+// }
 
-Console.Clear();
-Console.WriteLine("enter array size");
-int size = int.Parse(Console.ReadLine());
-int[] newarr = new int[size];
+// Console.Clear();
+// Console.WriteLine("enter array size");
+// int size = int.Parse(Console.ReadLine());
+// int[] newarr = new int[size];
 
-Fillarray(newarr, size);
-Console.WriteLine();
-Convertarray(newarr);
-Console.WriteLine();
-PrintArray(newarr);
+// Fillarray(newarr, size);
+// Console.WriteLine();
+// Convertarray(newarr);
+// Console.WriteLine();
+// PrintArray(newarr);
+
+
+
+
+
 
 
 
@@ -2513,6 +2518,86 @@ PrintArray(newarr);
 // PrintArray(newarr);
 // Console.WriteLine();
 // Copyarray(newarr);
+
+
+
+
+
+
+// to combine array form high number, from left to right, and right to left available
+
+
+// void FillArray(int[] arr, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         arr[index] = new Random().Next(0, 100);
+//         // Console.Write(arr[index]);
+//         Console.Write($" {arr[index]} ");
+//     }
+// }
+
+// void SwapEl(int[] arr, int size)
+// {
+//     // for (int index = 0; index < size - 1; index++)
+//     for (int index = size - 1; index > 0; index--)
+//     {
+//         // for (int jindex = 0; jindex < size - index - 1; jindex++)
+//         for (int jindex = size - index; jindex > 0; jindex--)
+//         {
+//             if (arr[jindex] > arr[jindex - 1])
+//             {
+
+//                 //  swap operation
+
+//                 int temp = arr[jindex];
+//                 arr[jindex] = arr[jindex - 1];
+//                 arr[jindex - 1] = temp;
+//             }
+//         }
+//     }
+// }
+
+// void SwapArr(int[] arr, int size)
+// {
+//     for (int index = 0; index < arr.Length / 2; index++)
+//     {
+//         for (int jindex = size - 1; jindex < arr.Length / 2; jindex++)
+//         {
+//             arr[index] = arr[size - index - 1];
+//             Console.Write($" {arr[index]} ");
+//         }
+//     }
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} ");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array size");
+// int size = int.Parse(Console.ReadLine());
+// int[] arr = new int[size];
+// Console.WriteLine();
+// FillArray(arr, size);
+// Console.WriteLine();
+// SwapEl(arr, size);
+// Console.WriteLine();
+// PrintArray(arr);
+// Console.WriteLine();
+// SwapArr(arr, size);
+
+
+
+
+
+
+
+
 
 
 
