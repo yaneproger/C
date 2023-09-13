@@ -2316,12 +2316,7 @@
 
 
 
-
-
-
 // Double sized Array - full up and print
-
-
 
 // void FullAndPrintArray(int rowsize, int columnsize, string random)
 // {
@@ -2398,66 +2393,6 @@
 // int c = Input("enter triangle c side's size");
 
 // CheckTriangle(a, b, c);
-
-
-// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
-// 45 -> 101101
-// 3  -> 11
-// 2  -> 10
-
-// void Fillarray(int[] array, int size)
-// {
-//     for (int index = 0; index < size; index++)
-//     {
-//         Console.WriteLine("enter binary number's digit one by one");
-//         array[index] = int.Parse(Console.ReadLine());
-//         Console.Write(array[index]);
-//     }
-// }
-
-// void Convertarray(int[] array)
-// {
-//     int[] number = new int[array.Length];
-//     for (int index = 0; index < array.Length; index++)
-//     {
-//         // for (int jindex=0;jindex<array.Length);
-//         if (array[array.Length - index - 1] == 0)
-//         {
-//             number[index] = 0;
-//         }
-//         if (array[array.Length - index - 1] == 1)
-//         {
-//             Console.Write($"( A{array[index]})");
-//             number[index] = array[index] * 2;
-//             Console.Write(number[index]);
-//         }
-//     }
-//     // return number;
-// }
-
-
-// void PrintArray(int[] arr)
-// {
-//     for (int index = 0; index < arr.Length; index++)
-//     {
-//         Console.Write($" B{arr[index]} , ");
-//     }
-// }
-
-// Console.Clear();
-// Console.WriteLine("enter array size");
-// int size = int.Parse(Console.ReadLine());
-// int[] newarr = new int[size];
-
-// Fillarray(newarr, size);
-// Console.WriteLine();
-// Convertarray(newarr);
-// Console.WriteLine();
-// PrintArray(newarr);
-
-
-
-
 
 
 
@@ -2598,9 +2533,66 @@
 
 
 
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+
+void Fillarray(int[] array, int size)
+{
+    for (int index = 0; index < size; index++)
+    {
+        Console.WriteLine("enter binary number's digit one by one");
+        array[index] = int.Parse(Console.ReadLine());
+        Console.Write(array[index]);
+    }
+}
+
+void Convertarray(int[] array)
+{
+    int[] number = new int[array.Length];
+    for (int index = 0; index < array.Length; index++)
+    {
+        // for (int jindex=0;jindex<array.Length);
+        if (array[array.Length - index - 1] == 0)
+        {
+            number[index] = 0;
+        }
+        if (array[array.Length - index - 1] == 1)
+        {
+            // int temp = array[index];
+            // Console.Write($"( A{array[index]})");
+            // number[index] = array[index] * 2;
+            number[index] = index * index;
+            // Console.Write($" D {temp * temp} , ");
+            Console.Write($" C {number[index]} , ");
+        }
+    }
+    // return number;
+}
+
+void PrintArray(int[] arr)
+{
+    for (int index = 0; index < arr.Length; index++)
+    {
+        Console.Write($" B{arr[index]} , ");
+    }
+}
+
+Console.Clear();
+Console.WriteLine("enter array size");
+int size = int.Parse(Console.ReadLine());
+int[] newarr = new int[size];
 
 
+Console.Clear();
+Fillarray(newarr, size);
+Console.WriteLine();
+Convertarray(newarr);
+Console.WriteLine();
+PrintArray(newarr);
 
-
+// Console.WriteLine();
+// PrintArray(number);
 
 
