@@ -8,7 +8,7 @@
 >>>>>citate to test
 * git checkout -b "name" -creates branch with "name" and check out  to it
 * git merge "branch name" - merges branch with "branch name" with current branch
-
+* git checkout - Switching branches and restoring working tree files
 
 
 
