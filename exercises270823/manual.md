@@ -12,6 +12,7 @@
 * git branch -v -a - displaying branches with all info
 ## 3. Working with remote branches
 * git remote -v - displays remote branches
+* git fetch --all - fetches all remotes
 
 
 
