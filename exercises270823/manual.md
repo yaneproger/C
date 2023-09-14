@@ -12,7 +12,7 @@
 * git branch -v -a - displaying branches with all info
 ## 3. Working with remote branches
 * git remote -v - displays remote branches
-* git fetch --all - fetches all remotes
+* git fetch --all - fetches all remotes - even if your updated file not in git initialized repository, but in repository some level under
 * git remote add origin https://github.com/yaneproger/C.git - Adds remote reposiroty named "origin" 
 
   
