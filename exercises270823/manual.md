@@ -10,6 +10,9 @@
 * git merge "branch name" - merges branch with "branch name" with current branch
 * git checkout - Switching branches and restoring working tree files
 * git branch -v -a - displaying branches with all info
+## 3. Working with remote branches
+* git remote -v - displays remote branches
+
 
 
 
