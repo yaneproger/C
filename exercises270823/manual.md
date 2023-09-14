@@ -13,7 +13,8 @@
 ## 3. Working with remote branches
 * git remote -v - displays remote branches
 * git fetch --all - fetches all remotes
-* git remote add https://github.com/yaneproger/C.git
+* git remote add origin https://github.com/yaneproger/C.git - Adds remote reposiroty named "origin" 
+
   
 
 
