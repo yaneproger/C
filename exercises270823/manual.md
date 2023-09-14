@@ -13,7 +13,9 @@
 ## 3. Working with remote branches
 * git remote -v - displays remote branches
 * git fetch --all - fetches all remotes - even if your updated file not in git initialized repository, but in repository some level under
-* git remote add origin https://github.com/yaneproger/C.git - Adds remote reposiroty named "origin" 
+* git remote add origin https://github.com/yaneproger/C.git - Adds remote reposiroty named "origin"
+* git pull origin master - downloads all changes made on remote repo, in to your local repo, before this, if you got an error, you may enter "git fetch -all" command
+  
 
   
 
