@@ -18,6 +18,10 @@
 * git reset commit_name - moves both the HEAD and branch refs to the specified commit.
 * git reset HEAD~2 command moves the current branch backward by two commits, effectively removing the two snapshots we just created from the project history. Remember that this kind of reset should only be used on unpublished commits. Never perform the above operation if you’ve already pushed your commits to a shared repository.
 * git pull --rebase - this command compiles 2 commands git pull (which consist of 2 commands -git fetch and git merge), and git rebase command
+* git rebase --abort - Alternatively, you can undo the git rebase with this command
+* git rebase --continue - After resolving the conflict manually and updating the index with the desired resolution, you can continue the rebasing process
+* In case of conflict, git rebase will stop at the first problematic commit and leave conflict markers in the tree. You can use git diff to locate the markers (<<<<<<) and make edits to resolve the conflict. For each file you edit, you need to tell Git that the conflict has been resolved, typically this would be done with - git add  filename
+
 
   
 
