@@ -15,6 +15,8 @@
 * git fetch --all - fetches all remotes - even if your updated file not in git initialized repository, but in repository some level under
 * git remote add origin https://github.com/yaneproger/C.git - Adds remote reposiroty named "origin"
 * git pull origin master - downloads all changes made on remote repo, in to your local repo, before this, if you got an error, you may enter "git fetch -all" command
+* git reset commit_name - moves both the HEAD and branch refs to the specified commit.
+* git reset HEAD~2 command moves the current branch backward by two commits, effectively removing the two snapshots we just created from the project history. Remember that this kind of reset should only be used on unpublished commits. Never perform the above operation if you’ve already pushed your commits to a shared repository.
   
 
   
