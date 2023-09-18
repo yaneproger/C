@@ -2538,59 +2538,160 @@
 // 3  -> 11
 // 2  -> 10
 
-void Fillarray(int[] array, int size)
+
+// void Fillarray(int[] array, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         Console.WriteLine("enter binary number's digit one by one");
+//         array[index] = int.Parse(Console.ReadLine());
+//         Console.Write(array[index]);
+//     }
+// }
+
+
+
+
+
+// 375 / 2 = 187 (остаток 1)      256/2 =128
+// 187 / 2 = 93 (остаток 1)
+// 93 / 2 = 46 (остаток 1)
+// 46 / 2 = 23 (остаток 0)
+// 23 / 2 = 11 (остаток 1)
+// 11 / 2 = 5 (остаток 1)
+// 5 / 2 = 2 (остаток 1)
+// 2 / 2 = 1 (остаток 0)
+// 1 / 2 = 0 (остаток 1)
+
+
+Console.WriteLine("enter a number");
+int number = int.Parse(Console.ReadLine());
+int binary = 0;
+
+
+int convert(int number, int binary)
 {
-    for (int index = 0; index < size; index++)
+
+    int temp = 0;
+    int tempindex = 0;
+    binary = 0;
+    for (int index = 0; number > 0; index++)
     {
-        Console.WriteLine("enter binary number's digit one by one");
-        array[index] = int.Parse(Console.ReadLine());
-        Console.Write(array[index]);
+
+
+        binary = number % 2;
+        number = number / 2;
+        temp = binary;
+        tempindex = index + 1;
+        Console.Write(binary);
+
     }
+    Console.WriteLine();
+    Console.WriteLine($"arr size is : {tempindex} ");
+    return tempindex;
 }
 
-void Convertarray(int[] array)
+
+
+void reverse(int[] arr, int binary)
 {
-    int[] number = new int[array.Length];
-    for (int index = 0; index < array.Length; index++)
+    for (int jindex = arr.Length - 1; jindex >= 0; jindex--)
     {
-        // for (int jindex=0;jindex<array.Length);
-        if (array[array.Length - index - 1] == 0)
-        {
-            number[index] = 0;
-        }
-        if (array[array.Length - index - 1] == 1)
-        {
-            // int temp = array[index];
-            // Console.Write($"( A{array[index]})");
-            // number[index] = array[index] * 2;
-            number[index] = index * index;
-            // Console.Write($" D {temp * temp} , ");
-            Console.Write($" C {number[index]} , ");
-        }
+        Console.WriteLine("temp " + binary);
+        Console.WriteLine();
+        arr[jindex] = binary;
+        Console.WriteLine("arr " + arr[jindex]);
+
     }
-    // return number;
+
 }
 
-void PrintArray(int[] arr)
-{
-    for (int index = 0; index < arr.Length; index++)
-    {
-        Console.Write($" B{arr[index]} , ");
-    }
-}
 
-Console.Clear();
-Console.WriteLine("enter array size");
-int size = int.Parse(Console.ReadLine());
-int[] newarr = new int[size];
+int size = convert(number, binary);
+int[] arr = new int[size];
+
+// convert(number, binary);
+
+reverse(arr, binary);
 
 
-Console.Clear();
-Fillarray(newarr, size);
-Console.WriteLine();
-Convertarray(newarr);
-Console.WriteLine();
-PrintArray(newarr);
+// string Input(string arg1)
+// {
+//     Console.WriteLine(arg1);
+//     string input = Console.ReadLine();
+//     return input;
+// }
+
+// void Digitquantity(string arg2)
+// {
+//     int len = arg2.Length;
+//     Console.WriteLine("Digits quantity is : " + len);
+// }
+
+// string number = Input("Enter a number");
+// Digitquantity(number);
+
+
+
+
+
+
+
+
+
+// void Fillarray(int[] array, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         Console.WriteLine("enter binary number's digit one by one");
+//         array[index] = int.Parse(Console.ReadLine());
+//         Console.Write(array[index]);
+//     }
+// }
+
+// void Convertarray(int[] array)
+// {
+//     int[] number = new int[array.Length];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         // for (int jindex=0;jindex<array.Length);
+//         if (array[array.Length - index - 1] == 0)
+//         {
+//             number[index] = 0;
+//         }
+//         if (array[array.Length - index - 1] == 1)
+//         {
+//             // int temp = array[index];
+//             // Console.Write($"( A{array[index]})");
+//             // number[index] = array[index] * 2;
+//             number[index] = index * index;
+//             // Console.Write($" D {temp * temp} , ");
+//             Console.Write($" C {number[index]} , ");
+//         }
+//     }
+//     // return number;
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" B{arr[index]} , ");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array size");
+// int size = int.Parse(Console.ReadLine());
+// int[] newarr = new int[size];
+
+
+// Console.Clear();
+// Fillarray(newarr, size);
+// Console.WriteLine();
+// Convertarray(newarr);
+// Console.WriteLine();
+// PrintArray(newarr);
 
 // Console.WriteLine();
 // PrintArray(number);
