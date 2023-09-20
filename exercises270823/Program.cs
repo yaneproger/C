@@ -2615,21 +2615,21 @@ int[] arr = new int[size];
 reverse(arr, binary);
 
 
-string Input(string arg1)
-{
-    Console.WriteLine(arg1);
-    string input = Console.ReadLine();
-    return input;
-}
+// string Input(string arg1)
+// {
+//     Console.WriteLine(arg1);
+//     string input = Console.ReadLine();
+//     return input;
+// }
 
-void Digitquantity(string arg2)
-{
-    int len = arg2.Length;
-    Console.WriteLine("Digits quantity is : " + len);
-}
+// void Digitquantity(string arg2)
+// {
+//     int len = arg2.Length;
+//     Console.WriteLine("Digits quantity is : " + len);
+// }
 
-string number = Input("Enter a number");
-Digitquantity(number);
+// string number = Input("Enter a number");
+// Digitquantity(number);
 
 
 
