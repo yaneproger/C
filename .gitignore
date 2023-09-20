@@ -1,4 +1,6 @@
 
+*.json
+.vscode
 .gitignore
 
 ## Ignore Visual Studio temporary files, build results, and

@@ -6,6 +6,10 @@
 
 
 
+
+
+
+
 //Returns a square of a number
 
 
