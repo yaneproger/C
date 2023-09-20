@@ -2628,6 +2628,8 @@ reverse(arr, binary);
 //     Console.WriteLine("Digits quantity is : " + len);
 // }
 
+
+
 // string number = Input("Enter a number");
 // Digitquantity(number);
 
