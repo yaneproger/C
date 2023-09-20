@@ -153,9 +153,13 @@
 //     {
 //         Console.WriteLine("the bigger number is  " + number1);
 //     }
-//     else if (number2 > number1)
+//     else if (number1 < number2)
 //     {
 //         Console.WriteLine("the bigger number is  " + number2);
+//     }
+//     else if (number1== number2)
+//     {
+//         Console.WriteLine("the numbers is  equals" + number1+ number2);
 //     }
 //     else
 //     {
@@ -176,69 +180,70 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-// string Input(string message)
+string Input(string message)
+{
+    Console.WriteLine(message);
+    string input = Console.ReadLine();
+    return input;
+}
+int Check(string input)
+{
+    bool check = int.TryParse(input, out int output);
+    if (check != true)
+    {
+        Console.WriteLine("wrong input");
+        return (int)-1;
+    }
+    int number = Convert.ToInt32(int.Parse(input));
+    return number;
+}
+// int ConvertToNumber(string arg1)
 // {
-//     Console.WriteLine(message);
-//     string input = Console.ReadLine();
-//     return input;
-// }
-// int Check(string input)
-// {
-//     // int number = 0;
-//     int output;
-//     bool check = int.TryParse(input, out output);
-//     if (check != true)
-//     {
-//         Console.WriteLine(" 1 wrong input , enter a  number" + output);
-//     }
-//     // else if (check == false && check != true && check != false)
-//     // {
-//     //     Console.WriteLine(" 1 wrong input , enter a  number");
-//     // }
-//     // else
-//     // {
-//     //     Console.WriteLine(" 2 wrong input , enter a  number");
-
-//     // }
-//     // else
-//     // {
-//     int number = Convert.ToInt32(int.Parse(input));
-//     // Console.WriteLine(" the  number is " + number);
-//     // }
+//     int number = Convert.ToInt32(int.Parse(arg1));
 //     return number;
 // }
 
-// void CheckNumber(int number1, int number2, int number3)
-// {
-//     if (number1 > number2 && number1 > number3)
-//     {
-//         Console.WriteLine("the bigger number is  " + number1);
-//     }
-//     else if (number2 > number1 && number2 > number3)
-//     {
-//         Console.WriteLine("the bigger number is  " + number3);
-//     }
-//     else if (number3 > number1 && number3 > number2)
-//     {
-//         Console.WriteLine("the bigger number is  " + number3);
-//     }
-//     else if (number3 == number1 && number3 == number2 && number1 == number2)
-//     {
-//         Console.WriteLine("the numbers equals ");
-//     }
-//     else
-//     {
-//         Console.WriteLine("wrong input ");
-//     }
-// }
-// Console.Clear();
-// string number1 = Input("Enter 1st number");
-// string number2 = Input("Enter 2nd number");
-// string number3 = Input("Enter 3rd number");
-// int temp1 = Check(number1);
-// int temp2 = Check(number2);
-// int temp3 = Check(number3);
-// CheckNumber(temp1, temp2, temp3);
+void CheckNumber(int number1, int number2, int number3)
+{
+    if (number1 > number2 && number1 > number3)
+    {
+        Console.WriteLine("the bigger number is  " + number1);
+    }
+    else if (number2 > number1 && number2 > number3)
+    {
+        Console.WriteLine("the bigger number is  " + number3);
+    }
+    else if (number3 > number1 && number3 > number2)
+    {
+        Console.WriteLine("the bigger number is  " + number3);
+    }
+    else if (number3 == number1 && number3 == number2 && number1 == number2)
+    {
+        Console.WriteLine(" " + number1, number2, number3);
+        Console.WriteLine("the numbers equals ");
+    }
+    else
+    {
+        Console.WriteLine("wrong input ");
+    }
+}
+Console.Clear();
+string number1 = Input("Enter 1st number");
+string number2 = Input("Enter 2nd number");
+string number3 = Input("Enter 3rd number");
+
+int temp1 = Check(number1);
+int temp2 = Check(number2);
+int temp3 = Check(number3);
+
+CheckNumber(temp1, temp2, temp3);
+
+
+// ConvertToNumber(number1);
+// ConvertToNumber(number2);
+// ConvertToNumber(number3);
+// CheckNumber(number1, number2, number3);
+
 
 
 
@@ -270,32 +275,31 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-int Input(string message)
-{
-    Console.WriteLine(message);
-    string input = Console.ReadLine();
-    // int output;
-    bool check = int.TryParse(input, out int output);
-    if (check != true)
-    {
-        Console.WriteLine(" 1 wrong input , enter a  number" + output);
-    }
-    int number = Math.Abs(Convert.ToInt32((input)));
-    return number;
-}
-
-void ShowNumber(int start, int number)
-{
-    while (start <= number)
-    {
-        if (start % 2 == 0)
-        {
-            Console.WriteLine("the next even number is " + start);
-        }
-        start++;
-    }
-}
-Console.Clear();
-int number1 = Input("enter 1st number");
-int number2 = Input("enter 2nd number");
-ShowNumber(number1, number2);
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     string input = Console.ReadLine();
+//     bool check = int.TryParse(input, out int output);
+//     if (check != true)
+//     {
+//         Console.WriteLine("wrong input , enter a  number  ");
+//         return (int)-1;
+//     }
+//     int number = Math.Abs(Convert.ToInt32((input)));
+//     return number;
+// }
+// void ShowNumber(int start, int number)
+// {
+//     while (start <= number)
+//     {
+//         if (start % 2 == 0)
+//         {
+//             Console.WriteLine("the next even number is " + start);
+//         }
+//         start++;
+//     }
+// }
+// Console.Clear();
+// int number1 = Input("enter 1st number");
+// int number2 = Input("enter 2nd number");
+// ShowNumber(number1, number2);
