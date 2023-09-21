@@ -2568,6 +2568,8 @@
 // 1 / 2 = 0 (остаток 1)
 
 
+
+
 Console.WriteLine("enter a number");
 int number = int.Parse(Console.ReadLine());
 int binary = 0;
@@ -2702,4 +2704,109 @@ reverse(arr, binary);
 // Console.WriteLine();
 // PrintArray(number);
 
+
+
+
+
+
+
+//     if (check != true)
+//     {
+//         Console.WriteLine("wrong input");
+//         // return (int)-1;
+//         throw new Exception("Ошибка ввода числа");
+//     }
+// int number = Convert.ToInt32(int.Parse(input));
+// Console.WriteLine(output + "  it's output");
+// return output;
+
+
+
+
+// Console.WriteLine("Enter 1st number");
+// bool result1 = int.TryParse(Console.ReadLine(), out int number1);
+// Console.WriteLine("Enter 2nd number");
+// bool result2 = int.TryParse(Console.ReadLine(), out int number2);
+// Console.WriteLine(number1 + "number1");
+// Console.WriteLine(number2 + "number2");
+
+
+// if (result1 == true && result2 == true) { работа с нормальными числами}
+// else { ваша ошибка о неправильном вводе}
+
+// int ConvertToNumber(string arg1)
+// {
+//     int number = Convert.ToInt32(int.Parse(arg1));
+//     return number;
+// }
+
+
+
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
+
+// string Input(string message)
+// {
+//     Console.WriteLine(message);
+//     string input = Console.ReadLine();
+//     return input;
+// }
+
+
+// int Check(string input)
+// {
+//     int number = 0;
+//     int output;
+//     bool check = int.TryParse(input, out output);
+//     if (check != true)
+//     {
+//         Console.WriteLine("enter a  number");
+//     }
+//     else
+//     {
+//         number = int.Parse(input);
+//     }
+//     return number;
+// }
+// int temp1 = Check(number1);
+// int temp2 = Check(number2);
+
+
+
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     string input = Console.ReadLine();
+//     bool check = int.TryParse(input, out int output);
+//     if (check != true)
+//     {
+//         Console.WriteLine("wrong input , enter a  number  ");
+//         return (int)-1;
+//     }
+//     int number = Math.Abs(Convert.ToInt32((input)));
+//     return number;
+// }
+
+
+// int InputAndCheck(string message)
+// {
+//     bool check = false;
+//     int output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = int.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+
+//         Console.WriteLine(output + " output");
+//     }
+//     return output;
+// }
 
