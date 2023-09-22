@@ -6,6 +6,10 @@
 
 
 
+
+
+
+
 //Returns a square of a number
 
 
@@ -2288,44 +2292,35 @@
 // y=9x+4
 
 
-
-
-
-
-// void FindPoint(int b1, int k1, int b2, int k2)
+// void FindPoint(double b1, double k1, double b2, double k2)
 // {
-//     int x;
-
-//     int y = k1 * x + b1;
-
-//     int y1 = k2 * x + b2;
-
-
-
-
+//     if ((k1 == k2) && (b1 == b2))
+//         Console.WriteLine("Прямые совпадают");
+//     else if (k1 == k2)
+//         Console.WriteLine("Прямые параллельны");
+//     else
+//     {
+//         double x = (-b2 + b1) / (-k1 + k2);
+//         double y = k2 * x + b2;
+//         Console.WriteLine($"point coordinates is X ={x} , Y ={y}");
+//     }
 // }
 
-
 // Console.Clear();
-
 // Console.WriteLine("enter b1");
-// int b1 = (int.Parse(Console.ReadLine()));
+// double b1 = (int.Parse(Console.ReadLine()));
 // Console.WriteLine("enter k1");
-// int k1 = (int.Parse(Console.ReadLine()));
+// double k1 = (int.Parse(Console.ReadLine()));
 // Console.WriteLine("enter b2");
-// int b2 = (int.Parse(Console.ReadLine()));
+// double b2 = (int.Parse(Console.ReadLine()));
 // Console.WriteLine("enter k2");
-// int k2 = (int.Parse(Console.ReadLine()));
-
-
-
+// double k2 = (int.Parse(Console.ReadLine()));
+// FindPoint(b1, k1, b2, k2);
 
 
 
 
 // Double sized Array - full up and print
-
-
 
 // void FullAndPrintArray(int rowsize, int columnsize, string random)
 // {
@@ -2365,46 +2360,52 @@
 
 
 
-
-
 // Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, 
 // может ли существовать треугольник с сторонами такой длины.
 // Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
 
 
+// void CheckTriangle(int a, int b, int c)
+// {
+//     if (a < (b + c))
+//     {
+//         Console.WriteLine("A triangle is possible");
+//     }
+//     else if (b < (a + c))
+//     {
+//         Console.WriteLine("B triangle is possible");
+//     }
+//     else if (c < (a + b))
+//     {
+//         Console.WriteLine("C triangle is possible");
+//     }
+//     else
+//     {
+//         Console.WriteLine("triangle is NOT possible");
+//     }
+// }
 
-int Input(string message)
-{
-    Console.WriteLine(message);
-    int result = int.Parse(Console.ReadLine());
-    return result;
-}
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int result = int.Parse(Console.ReadLine());
+//     return result;
+// }
 
-void CheckTriangle(int a, int b, int c)
-{
-    if (a < (b + c) || b < (a + c) || c < (a + b))
-    {
-        Console.WriteLine("triangle is possible");
-    }
-    else
-    {
-        Console.WriteLine("triangle is NOT possible");
-    }
-}
+// int a = Input("enter triangle a side's size");
+// int b = Input("enter triangle b side's size");
+// int c = Input("enter triangle c side's size");
 
-int a = Input("enter triangle side's size");
-int b = Input("enter triangle side's size");
-int c = Input("enter triangle side's size");
-
-CheckTriangle(a, b, c);
+// CheckTriangle(a, b, c);
 
 
 
 
-// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
-// 45 -> 101101
-// 3  -> 11
-// 2  -> 10
+
+
+
+
+
 
 
 
@@ -2417,12 +2418,117 @@ CheckTriangle(a, b, c);
 
 
 
-
-
-
 //  Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
 
 
+// void FillArray(int[] arr, int arg2)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         arr[index] = new Random().Next(0, 99);
+//     }
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} , ");
+//     }
+// }
+
+// void Copyarray(int[] arr)
+// {
+//     int[] copy = new int[arr.Length];
+
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         copy[index] = arr[index];
+//         Console.Write($"A {copy[index]} , ");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array size");
+// int size = int.Parse(Console.ReadLine());
+// int[] newarr = new int[size];
+
+// FillArray(newarr, size);
+// PrintArray(newarr);
+// Console.WriteLine();
+// Copyarray(newarr);
+
+
+
+
+
+
+// to combine array form high number, from left to right, and right to left available
+
+
+// void FillArray(int[] arr, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         arr[index] = new Random().Next(0, 100);
+//         // Console.Write(arr[index]);
+//         Console.Write($" {arr[index]} ");
+//     }
+// }
+
+// void SwapEl(int[] arr, int size)
+// {
+//     // for (int index = 0; index < size - 1; index++)
+//     for (int index = size - 1; index > 0; index--)
+//     {
+//         // for (int jindex = 0; jindex < size - index - 1; jindex++)
+//         for (int jindex = size - index; jindex > 0; jindex--)
+//         {
+//             if (arr[jindex] > arr[jindex - 1])
+//             {
+
+//                 //  swap operation
+
+//                 int temp = arr[jindex];
+//                 arr[jindex] = arr[jindex - 1];
+//                 arr[jindex - 1] = temp;
+//             }
+//         }
+//     }
+// }
+
+// void SwapArr(int[] arr, int size)
+// {
+//     for (int index = 0; index < arr.Length / 2; index++)
+//     {
+//         for (int jindex = size - 1; jindex < arr.Length / 2; jindex++)
+//         {
+//             arr[index] = arr[size - index - 1];
+//             Console.Write($" {arr[index]} ");
+//         }
+//     }
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" {arr[index]} ");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array size");
+// int size = int.Parse(Console.ReadLine());
+// int[] arr = new int[size];
+// Console.WriteLine();
+// FillArray(arr, size);
+// Console.WriteLine();
+// SwapEl(arr, size);
+// Console.WriteLine();
+// PrintArray(arr);
+// Console.WriteLine();
+// SwapArr(arr, size);
 
 
 
@@ -2431,4 +2537,276 @@ CheckTriangle(a, b, c);
 
 
 
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+
+
+// void Fillarray(int[] array, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         Console.WriteLine("enter binary number's digit one by one");
+//         array[index] = int.Parse(Console.ReadLine());
+//         Console.Write(array[index]);
+//     }
+// }
+
+
+
+
+
+// 375 / 2 = 187 (остаток 1)      256/2 =128
+// 187 / 2 = 93 (остаток 1)
+// 93 / 2 = 46 (остаток 1)
+// 46 / 2 = 23 (остаток 0)
+// 23 / 2 = 11 (остаток 1)
+// 11 / 2 = 5 (остаток 1)
+// 5 / 2 = 2 (остаток 1)
+// 2 / 2 = 1 (остаток 0)
+// 1 / 2 = 0 (остаток 1)
+
+
+
+
+Console.WriteLine("enter a number");
+int number = int.Parse(Console.ReadLine());
+int binary = 0;
+
+
+int convert(int number, int binary)
+{
+
+    int temp = 0;
+    int tempindex = 0;
+    binary = 0;
+    for (int index = 0; number > 0; index++)
+    {
+
+
+        binary = number % 2;
+        number = number / 2;
+        temp = binary;
+        tempindex = index + 1;
+        Console.Write(binary);
+
+    }
+    Console.WriteLine();
+    Console.WriteLine($"arr size is : {tempindex} ");
+    return tempindex;
+}
+
+
+
+void reverse(int[] arr, int binary)
+{
+    for (int jindex = arr.Length - 1; jindex >= 0; jindex--)
+    {
+        Console.WriteLine("temp " + binary);
+        Console.WriteLine();
+        arr[jindex] = binary;
+        Console.WriteLine("arr " + arr[jindex]);
+
+    }
+
+}
+
+
+int size = convert(number, binary);
+int[] arr = new int[size];
+
+// convert(number, binary);
+
+reverse(arr, binary);
+
+
+// string Input(string arg1)
+// {
+//     Console.WriteLine(arg1);
+//     string input = Console.ReadLine();
+//     return input;
+// }
+
+// void Digitquantity(string arg2)
+// {
+//     int len = arg2.Length;
+//     Console.WriteLine("Digits quantity is : " + len);
+// }
+
+
+
+// string number = Input("Enter a number");
+// Digitquantity(number);
+
+
+
+
+
+
+
+
+
+// void Fillarray(int[] array, int size)
+// {
+//     for (int index = 0; index < size; index++)
+//     {
+//         Console.WriteLine("enter binary number's digit one by one");
+//         array[index] = int.Parse(Console.ReadLine());
+//         Console.Write(array[index]);
+//     }
+// }
+
+// void Convertarray(int[] array)
+// {
+//     int[] number = new int[array.Length];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         // for (int jindex=0;jindex<array.Length);
+//         if (array[array.Length - index - 1] == 0)
+//         {
+//             number[index] = 0;
+//         }
+//         if (array[array.Length - index - 1] == 1)
+//         {
+//             // int temp = array[index];
+//             // Console.Write($"( A{array[index]})");
+//             // number[index] = array[index] * 2;
+//             number[index] = index * index;
+//             // Console.Write($" D {temp * temp} , ");
+//             Console.Write($" C {number[index]} , ");
+//         }
+//     }
+//     // return number;
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int index = 0; index < arr.Length; index++)
+//     {
+//         Console.Write($" B{arr[index]} , ");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array size");
+// int size = int.Parse(Console.ReadLine());
+// int[] newarr = new int[size];
+
+
+// Console.Clear();
+// Fillarray(newarr, size);
+// Console.WriteLine();
+// Convertarray(newarr);
+// Console.WriteLine();
+// PrintArray(newarr);
+
+// Console.WriteLine();
+// PrintArray(number);
+
+
+
+
+
+
+
+//     if (check != true)
+//     {
+//         Console.WriteLine("wrong input");
+//         // return (int)-1;
+//         throw new Exception("Ошибка ввода числа");
+//     }
+// int number = Convert.ToInt32(int.Parse(input));
+// Console.WriteLine(output + "  it's output");
+// return output;
+
+
+
+
+// Console.WriteLine("Enter 1st number");
+// bool result1 = int.TryParse(Console.ReadLine(), out int number1);
+// Console.WriteLine("Enter 2nd number");
+// bool result2 = int.TryParse(Console.ReadLine(), out int number2);
+// Console.WriteLine(number1 + "number1");
+// Console.WriteLine(number2 + "number2");
+
+
+// if (result1 == true && result2 == true) { работа с нормальными числами}
+// else { ваша ошибка о неправильном вводе}
+
+// int ConvertToNumber(string arg1)
+// {
+//     int number = Convert.ToInt32(int.Parse(arg1));
+//     return number;
+// }
+
+
+
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
+
+// string Input(string message)
+// {
+//     Console.WriteLine(message);
+//     string input = Console.ReadLine();
+//     return input;
+// }
+
+
+// int Check(string input)
+// {
+//     int number = 0;
+//     int output;
+//     bool check = int.TryParse(input, out output);
+//     if (check != true)
+//     {
+//         Console.WriteLine("enter a  number");
+//     }
+//     else
+//     {
+//         number = int.Parse(input);
+//     }
+//     return number;
+// }
+// int temp1 = Check(number1);
+// int temp2 = Check(number2);
+
+
+
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     string input = Console.ReadLine();
+//     bool check = int.TryParse(input, out int output);
+//     if (check != true)
+//     {
+//         Console.WriteLine("wrong input , enter a  number  ");
+//         return (int)-1;
+//     }
+//     int number = Math.Abs(Convert.ToInt32((input)));
+//     return number;
+// }
+
+
+// int InputAndCheck(string message)
+// {
+//     bool check = false;
+//     int output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = int.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+
+//         Console.WriteLine(output + " output");
+//     }
+//     return output;
+// }
 
