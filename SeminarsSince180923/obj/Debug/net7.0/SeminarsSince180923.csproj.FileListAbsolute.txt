@@ -1,0 +1,14 @@
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/SeminarsSince180923.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/SeminarsSince180923.AssemblyInfoInputs.cache
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/SeminarsSince180923.AssemblyInfo.cs
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/SeminarsSince180923.csproj.CoreCompileInputs.cache
+/home/user/c#/SeminarsSince180923/bin/Debug/net7.0/SeminarsSince180923
+/home/user/c#/SeminarsSince180923/bin/Debug/net7.0/SeminarsSince180923.deps.json
+/home/user/c#/SeminarsSince180923/bin/Debug/net7.0/SeminarsSince180923.runtimeconfig.json
+/home/user/c#/SeminarsSince180923/bin/Debug/net7.0/SeminarsSince180923.dll
+/home/user/c#/SeminarsSince180923/bin/Debug/net7.0/SeminarsSince180923.pdb
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/SeminarsSince180923.dll
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/refint/SeminarsSince180923.dll
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/SeminarsSince180923.pdb
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/SeminarsSince180923.genruntimeconfig.cache
+/home/user/c#/SeminarsSince180923/obj/Debug/net7.0/ref/SeminarsSince180923.dll

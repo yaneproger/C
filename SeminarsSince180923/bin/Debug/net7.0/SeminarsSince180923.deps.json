@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "SeminarsSince180923/1.0.0": {
+        "runtime": {
+          "SeminarsSince180923.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SeminarsSince180923/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
