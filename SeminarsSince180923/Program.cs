@@ -174,7 +174,6 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-
 // int InputAndCheck(string message)
 // {
 //     bool check = false;
@@ -190,6 +189,25 @@
 //         }
 //     }
 //     return output;
+// }
+
+// void FindMax(int number1, int number2, int number3)
+// {
+//     int max = number1;
+//     if (number2 > max)
+//     {
+//         max = number2;
+//         Console.WriteLine($"max number is {max}");
+//     }
+//     else if (number3 > max)
+//     {
+//         max = number3;
+//         Console.WriteLine($"max number is {max}");
+//     }
+//     else
+//     {
+//         Console.WriteLine("wrong input");
+//     }
 // }
 
 // void CheckNumber(int number1, int number2, int number3)
@@ -221,8 +239,8 @@
 // int number1 = InputAndCheck("Enter 1st number");
 // int number2 = InputAndCheck("Enter 2nd number");
 // int number3 = InputAndCheck("Enter 3rd number");
-// CheckNumber(number1, number2, number3);
-
+// // CheckNumber(number1, number2, number3);
+// FindMax(number1, number2, number3);
 
 
 
@@ -284,3 +302,323 @@
 // int number1 = InputAndCheck("enter 1st number");
 // int number2 = InputAndCheck("enter 2nd number");
 // ShowNumber(number1, number2);
+
+
+
+
+
+
+
+
+// Console.WriteLine("enter a number");
+// int input = int.Parse(Console.ReadLine());
+
+// int number1 = input / 100;
+
+// int number2 = input % 10;
+
+// int result = number1 * 10 + number2;
+
+// Console.WriteLine(result);
+
+
+
+
+// Console.WriteLine("enter 1 number");
+// int input1 = int.Parse(Console.ReadLine());
+
+
+// Console.WriteLine("enter 2 number");
+// int input2 = int.Parse(Console.ReadLine());
+
+
+
+// if (input2 % input1 == 0)
+// {
+
+//     Console.WriteLine(" number2 is multiple of number1");
+// }
+// else
+// {
+//     Console.WriteLine(" division result is" + input2 % input1);
+
+// }
+
+
+
+
+
+
+
+
+// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+// Например:
+// 78 -> 8
+// 12-> 2
+// 85 -> 8
+
+
+// int number = Random.Shared.Next(10, 100);
+// Console.WriteLine(" number" + number);
+
+// int lastdigit = number % 10;
+// Console.WriteLine(" lastdigit " + lastdigit);
+
+// int firstdigit = number / 10;
+// Console.WriteLine($ " firstdigit  { firstdigit}");
+
+// if (firstdigit > lastdigit)
+// {
+//     Console.WriteLine($" firstdigit is bigger { firstdigit } " );
+// }
+
+// else if (firstdigit < lastdigit)
+// {
+//     Console.WriteLine($" lastdigit  is bigger {lastdigit} ");
+// }
+// else
+// {
+//     Console.WriteLine($" the digits is equals  {firstdigit + lastdigit}");
+// }
+
+
+
+// 11. Напишите программу, которая принимает на вход
+// трёхзначное число и на выходе показывает вторую
+// цифру этого числа.
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+// int input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = Random.Shared.Next(100, 1000);
+//     return number;
+// }
+// void SecondDigit(int arg1)
+// {
+//     if (arg1 >= 100 && arg1 < 1000)
+//     {
+//         int number = (arg1 / 100) * 10 + arg1 % 10;
+//         Console.WriteLine($" result is  {number} ");
+//     }
+//     Console.WriteLine($" no 3 digit number entered  {arg1} ");
+// }
+// int number = input("Enter a 3dgit number");
+// Console.WriteLine($"Random number is {number}");
+// SecondDigit(number);
+
+
+
+// Напишите программу, которая будет принимать на вход два числа и выводить, 
+// является ли второе число кратным первому. Если число 2 не кратно числу 1, то программа выводит остаток от деления.
+
+// 34, 5 -> не кратно, остаток 4 
+// 16, 4 -> кратно
+
+
+// Console.WriteLine("enter 1st number");
+// int number1 = int.Parse(Console.ReadLine());
+
+
+// Console.WriteLine("enter 2nd number");
+// int number2 = int.Parse(Console.ReadLine());
+
+
+// if (number1 % number2 == 0)
+// {
+//     Console.WriteLine("number1 is multiple of number2");
+// }
+// else
+// {
+//     Console.WriteLine($"number is not  multiple {number1 % number2}");
+// }
+
+
+// Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 
+// 7 и 23.
+
+// 14 -> нет 
+// 46 -> нет 
+// 161 -> да
+
+// Console.WriteLine("enter 1st number");
+// int number1 = int.Parse(Console.ReadLine());
+
+// if (number1 % 7 == 0 && number1 % 23 == 0)
+// {
+//     Console.WriteLine("number1 is multiple of 7 and 23");
+// }
+// else
+// {
+//     Console.WriteLine($"number is not  multiple {number1}");
+// }
+
+
+
+// Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+// 5, 25  ->  да
+// -4, 16  ->  да
+// 25, 5  ->  да
+// 8,9  ->  нет
+
+// Console.WriteLine("enter 1st number");
+// int number1 = Math.Abs(int.Parse(Console.ReadLine()));
+
+// Console.WriteLine("enter 2nd number");
+// int number2 = Math.Abs(int.Parse(Console.ReadLine()));
+
+// if (number1 == number2 * number2 || number2 == number1 * number1)
+// {
+//     Console.WriteLine("yes");
+// }
+// else if (number2 == number1 * number1)
+// {
+//     Console.WriteLine("yes");
+// }
+// else
+// {
+//     Console.WriteLine("no");
+// }
+
+
+// Задача 10: Напишите программу, которая принимает на
+// вход трёхзначное число и на выходе показывает вторую
+// цифру этого числа.
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+// int InputAndCheck(string message)
+// {
+//     bool check = false;
+//     int output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = int.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+//     }
+//     return output;
+// }
+
+// void SecondDigitFind(int arg1)
+// {
+//     if (arg1 < 100 || arg1 > 1000)
+//     {
+//         Console.WriteLine($"incorrect number {arg1}  ");
+//     }
+//     else
+//     {
+//         while (arg1 > 100)
+//         {
+//             arg1 = arg1 / 10;
+//         }
+//         Console.WriteLine($"result is  {arg1 % 10}");
+//     }
+// }
+// int number = InputAndCheck("enter a number");
+// SecondDigitFind(number);
+
+
+
+// Задача 13: Напишите программу, которая выводит
+// третью цифру заданного числа или сообщает, что третьей
+// цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+// long InputAndCheck(string message)
+// {
+//     bool check = false;
+//     long output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = long.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+//     }
+//     return output;
+// }
+// void ThirddDigitFind(long arg1)
+// {
+//     if (arg1 < 100)
+//     {
+//         Console.WriteLine($"the number {arg1} has two digits only  ");
+//     }
+//     else
+//     {
+//         while (arg1 > 1000)
+//         {
+//             arg1 = arg1 / 10;
+//         }
+//         Console.WriteLine($"result is  {arg1 % 10}");
+//     }
+// }
+// long number = InputAndCheck("enter a number");
+// ThirddDigitFind(number);
+
+
+
+
+
+// Задача 15: Напишите программу, которая принимает на
+// вход цифру, обозначающую день недели, и проверяет,
+// является ли этот день выходным.
+
+// Console.Clear();
+// int InputAndCheck(string message)
+// {
+//     bool check = false;
+//     int output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = int.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+//     }
+//     return output;
+// }
+
+// void DayCheck(int arg1)
+// {
+//     if (arg1 >= 1 && arg1 <= 7)
+//     {
+//         if (arg1 == 6 || arg1 == 7)
+//         {
+//             Console.WriteLine("its weekend, partytime!");
+//         }
+//         else if (arg1 >= 1 && arg1 <= 5)
+//         {
+
+//             for (arg1 = 1; arg1 <= 5; arg1++)
+//             {
+//                 Console.WriteLine("its weekday, go to work");
+//                 break;
+//             }
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("wrong input");
+//     }
+// }
+// int number = InputAndCheck("enter a number");
+// DayCheck(number);
+
+
