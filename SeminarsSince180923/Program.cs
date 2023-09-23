@@ -526,6 +526,7 @@
 //         Console.WriteLine($"result is  {arg1 % 10}");
 //     }
 // }
+// Console.Clear();
 // int number = InputAndCheck("enter a number");
 // SecondDigitFind(number);
 
@@ -569,10 +570,9 @@
 //         Console.WriteLine($"result is  {arg1 % 10}");
 //     }
 // }
+// Console.Clear();
 // long number = InputAndCheck("enter a number");
 // ThirddDigitFind(number);
-
-
 
 
 
@@ -580,7 +580,6 @@
 // вход цифру, обозначающую день недели, и проверяет,
 // является ли этот день выходным.
 
-// Console.Clear();
 // int InputAndCheck(string message)
 // {
 //     bool check = false;
@@ -621,6 +620,7 @@
 //         Console.WriteLine("wrong input");
 //     }
 // }
+// Console.Clear();
 // int number = InputAndCheck("enter a number");
 // DayCheck(number);
 

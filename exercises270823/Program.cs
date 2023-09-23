@@ -2543,17 +2543,6 @@
 // 2  -> 10
 
 
-// void Fillarray(int[] array, int size)
-// {
-//     for (int index = 0; index < size; index++)
-//     {
-//         Console.WriteLine("enter binary number's digit one by one");
-//         array[index] = int.Parse(Console.ReadLine());
-//         Console.Write(array[index]);
-//     }
-// }
-
-
 
 
 
@@ -2568,11 +2557,27 @@
 // 1 / 2 = 0 (остаток 1)
 
 
+// void Fillarray(string[] array)
+// {
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         Console.WriteLine("enter binary number's digit one by one");
+//         array[index] = int.Parse(Console.ReadLine());
+//         Console.Write(array[index]);
+//     }
+// }
 
 
-Console.WriteLine("enter a number");
-int number = int.Parse(Console.ReadLine());
-int binary = 0;
+
+
+
+string Input(string message)
+{
+    Console.WriteLine("enter a number");
+    string array = Console.ReadLine();
+    return array;
+
+}
 
 
 int convert(int number, int binary)
@@ -2583,8 +2588,6 @@ int convert(int number, int binary)
     binary = 0;
     for (int index = 0; number > 0; index++)
     {
-
-
         binary = number % 2;
         number = number / 2;
         temp = binary;
