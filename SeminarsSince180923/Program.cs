@@ -764,61 +764,61 @@
 // вход пятизначное число и проверяет, является ли оно
 // палиндромом
 
-// string InputAndCheck(string message)
-// {
-//     Console.WriteLine(message);
-//     string number = Console.ReadLine();
-//     while ((!int.TryParse(number, out int output)) || (output > 100000))
-//     {
-//         Console.WriteLine("InputAndCheck method check false - wrong input");
-//         break;
-//     }
-//     return number;
-// }
+string InputAndCheck(string message)
+{
+    Console.WriteLine(message);
+    string number = Console.ReadLine();
+    while ((!int.TryParse(number, out int output)) || (output > 100000))
+    {
+        Console.WriteLine("InputAndCheck method check false - wrong input");
+        break;
+    }
+    return number;
+}
 
-// bool CheckPalindrom(string arg1)
-// {
-//     bool palicheck = false;
+bool CheckPalindrom(string arg1)
+{
+    bool palicheck = false;
 
-//     if (arg1.Length == 5)
-//     {
-//         for (int index = 0; index < arg1.Length / 2; index++)
-//         {
-//             if (arg1[index] == arg1[arg1.Length - 1 - index])
-//             {
-//                 Console.WriteLine($"the {arg1} is palindrom ");
-//                 palicheck = true;
-//             }
-//             // else
-//             // {
-//             //     Console.WriteLine($"the {arg1} is No palindrom ");
-//             //     palicheck = false;
-//             // }
-//         }
-//     }
-//     else
-//     {
-//         Console.WriteLine($"CheckPalindrom method check false - enter 5 digit number ");
-//     }
-//     return palicheck;
-// }
+    if (arg1.Length == 5)
+    {
+        for (int index = 0; index < arg1.Length / 2; index++)
+        {
+            if (arg1[index] == arg1[arg1.Length - 1 - index])
+            {
+                Console.WriteLine($"the {arg1} is palindrom ");
+                palicheck = true;
+            }
+            // else
+            // {
+            //     Console.WriteLine($"the {arg1} is No palindrom ");
+            //     palicheck = false;
+            // }
+        }
+    }
+    else
+    {
+        Console.WriteLine($"CheckPalindrom method check false - enter 5 digit number ");
+    }
+    return palicheck;
+}
 
-// void Result(bool arg1)
-// {
-//     if (arg1 == true)
-//     {
-//         Console.WriteLine($"entered symbols return - {arg1}-  is palindrom ");
-//     }
-//     else
-//     {
-//         Console.WriteLine($"entered symbols return - {arg1} - is No palindrom ");
-//     }
+void Result(bool arg1)
+{
+    if (arg1 == true)
+    {
+        Console.WriteLine($"entered symbols return - {arg1}-  is palindrom ");
+    }
+    else
+    {
+        Console.WriteLine($"entered symbols return - {arg1} - is No palindrom ");
+    }
 
-// }
+}
 
-// Console.Clear();
-// string number = InputAndCheck("Введите число");
-// bool check = CheckPalindrom(number);
-// Result(check);
+Console.Clear();
+string number = InputAndCheck("Введите число");
+bool check = CheckPalindrom(number);
+Result(check);
 
 
