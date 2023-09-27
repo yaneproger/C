@@ -643,27 +643,45 @@
 
 
 
-// int PointRequest(string message)
+// Напишите программу, которая принимает на вход кординаты двух точек 
+// и находит расстояние между ними в 2D пространстве. A(3.6); B(2.1); -> 5.09
+// A(7,-5);B(1,-1)->7.21
+
+// Формула вычисления расстояния между двумя точками A(xa, ya) и B(xb, yb) на плоскости:
+// AB = √(xb - xa)2 + (yb - ya)2
+// Формула вычисления расстояния между двумя точками A(xa, ya, za) и B(xb, yb, zb) в пространстве:
+// AB = √(xb - xa)2 + (yb - ya)2 + (zb - za)2
+
+
+// int InputAndCheck(string message)
 // {
-//     Console.WriteLine(message);
-//     int PointCoordinate = int.Parse(Console.ReadLine());
-//     return PointCoordinate;
+//     bool check = false;
+//     int output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = int.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+//     }
+//     return output;
 // }
 
-// double PointDistance(int x1, int y1, int x2, int y2)
+// double FindDistance(double x1, double y1, double x2, double y2)
 // {
-//     double distance = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+//     double distance = Math.Round(Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)), 3);
 //     return distance;
 // }
 
-// int x1 = PointRequest("Enter x1 coodinate : ");
-// int y1 = PointRequest("Enter y1 coodinate : ");
+// double x1 = InputAndCheck("enter point1 x1");
+// double y1 = InputAndCheck("enter point 1 y1");
+// double x2 = InputAndCheck("enter point2 x2");
+// double y2 = InputAndCheck("enter point2 y2");
+// Console.WriteLine(FindDistance(x1, y1, x2, y2));
 
-// int x2 = PointRequest("Enter x2 coodinate : ");
-// int y2 = PointRequest("Enter y2 coodinate : ");
-
-// // double result = PointDistance(x1, y1, x2, y2);
-// Console.WriteLine(PointDistance(x1, y1, x2, y2));
 
 
 
@@ -2568,60 +2586,113 @@
 // }
 
 
-
-
-
-string Input(string message)
+int Input(string message)
 {
-    Console.WriteLine("enter a number");
-    string array = Console.ReadLine();
+    Console.WriteLine(message);
+    int array = int.Parse(Console.ReadLine());
     return array;
-
 }
 
-
-int convert(int number, int binary)
+int convert(int number)
 {
+    // int temp = 0;
+    int numbersize = 0;
+    int binarydigit = 0;
+    int index = 0;
+    for (index = 0; number > 0; index++)
+    {
+        binarydigit = number % 2;
+        number = number / 2;
+        // temp = binary;
+        numbersize = index + 1;
+        Console.Write(binarydigit);
+    }
+    Console.WriteLine();
+    // Console.WriteLine($"index {index}");
+    Console.WriteLine($"arr size is : {numbersize} ");
+    int[] array = new int[numbersize];
 
-    int temp = 0;
-    int tempindex = 0;
-    binary = 0;
+    for (int jindex = numbersize - jindex - 1; jindex < 0; jindex++)
+    {
+        Console.WriteLine(binarydigit);
+        array[jindex] = binarydigit;
+        Console.Write($"CheckArray : {array[jindex]}");
+    }
+
+    // return numbersize;
+    return binarydigit;
+}
+
+int arrsize(int number)
+{
+    // int temp = 0;
+    int numbersize = 0;
+    int binarydigit = 0;
     for (int index = 0; number > 0; index++)
     {
-        binary = number % 2;
+        binarydigit = number % 2;
         number = number / 2;
-        temp = binary;
-        tempindex = index + 1;
-        Console.Write(binary);
+        // temp = binary;
+        numbersize = index + 1;
+        Console.Write(binarydigit);
 
     }
     Console.WriteLine();
-    Console.WriteLine($"arr size is : {tempindex} ");
-    return tempindex;
+    Console.WriteLine($"arr size is : {numbersize} ");
+    return numbersize;
+    // return binarydigit;
 }
 
 
 
-void reverse(int[] arr, int binary)
+void Fillarray(int[] array, int binarydigit)
 {
-    for (int jindex = arr.Length - 1; jindex >= 0; jindex--)
+    for (int index = 0; index < array.Length - index - 1; index++)
     {
-        Console.WriteLine("temp " + binary);
-        Console.WriteLine();
-        arr[jindex] = binary;
-        Console.WriteLine("arr " + arr[jindex]);
-
+        // Console.WriteLine("enter binary number's digit one by one");
+        array[index] = binarydigit;
+        Console.Write(array[index]);
     }
-
 }
 
 
-int size = convert(number, binary);
-int[] arr = new int[size];
+
+
+int number = Input("enter a number");
+
+int binarydigit = convert(number);
+// int size = arrsize(number);
+
+// int[] arr = new int[size];
+
+// Console.WriteLine("Fillarray");
+
+// Fillarray(arr, binarydigit);
+
+
+
+
+// void reverse(int[] arr, int binary)
+
+// void reverse(int[] arr)
+// {
+//     for (int jindex = arr.Length - 1; jindex > 0; jindex++)
+//     {
+//         // Console.WriteLine("temp " + binary);
+
+//         Console.WriteLine();
+//         int swap = arr[jindex];
+//         Console.WriteLine("arr " + arr[jindex]);
+//         arr[jindex] = arr[arr.Length - jindex - 1];
+//         arr[arr.Length - jindex - 1] = swap;
+
+//     }
+// }
+// reverse(arr, binary);
+
+
 
 // convert(number, binary);
-
-reverse(arr, binary);
 
 
 // string Input(string arg1)
@@ -2636,7 +2707,6 @@ reverse(arr, binary);
 //     int len = arg2.Length;
 //     Console.WriteLine("Digits quantity is : " + len);
 // }
-
 
 
 // string number = Input("Enter a number");

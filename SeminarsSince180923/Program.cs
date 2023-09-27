@@ -629,3 +629,196 @@
 //
 
 
+
+//This method checks for number and digits quantity - 5 digits
+
+// int InputAndCheck(string message)
+// {
+//     int output;
+//     Console.WriteLine(message);
+//     while ((!int.TryParse(Console.ReadLine(), out output)) || (output >= 100000))
+//     {
+//         Console.WriteLine("wrong input");
+//     }
+//     return output;
+// }
+// int number = InputAndCheck("Введите число");
+
+
+
+
+
+
+
+
+// 250923 Seminar 3
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+
+// A (3,6); B (2,1) -> 5,09 
+// A (7,-5); B (1,-1) -> 7,21
+// AB = √(xb - xa)2 + (yb - ya)2
+
+
+// int GetInt(string message)
+// {
+//     int result;
+//     Console.WriteLine(message);
+//     while (!int.TryParse(Console.ReadLine(), out result))
+//     {
+//         Console.WriteLine("Ошибка ввода. Введите число");
+//     }
+//     return result;
+// }
+
+
+
+// int InputAndCheck(string message)
+// {
+//     int output;
+//     Console.WriteLine(message);
+//     while ((!int.TryParse(Console.ReadLine(), out output)) || (output >= 100000))
+//     {
+//         Console.WriteLine("wrong input");
+//     }
+//     return output;
+// }
+// int number = InputAndCheck("Введите число");
+
+
+
+
+
+
+// int InputAndCheck(string message)
+// {
+//     bool check = false;
+//     int output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = int.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+//     }
+//     return output;
+// }
+
+
+// void Distance(int x1, int y1, int x2, int y2)
+// {
+//     double result = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+//     Console.WriteLine(Math.Round(result, 3));
+// }
+// Console.Clear();
+// int x1 = InputAndCheck("enter x1");
+// int y1 = InputAndCheck("enter y1");
+// int x2 = InputAndCheck("enter x2");
+// int y2 = InputAndCheck("enter y2");
+// Distance(x1, y1, x2, y2);
+
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел 
+// от 1 до N.
+
+// 5 -> 1, 4, 9, 16, 25.
+// 2 -> 1,4
+
+
+// int InputAndCheck(string message)
+// {
+//     bool check = false;
+//     int output = 0;
+//     while (check != true)
+//     {
+//         Console.WriteLine(message);
+//         string input = Console.ReadLine();
+//         check = int.TryParse(input, out output);
+//         if (check == false)
+//         {
+//             Console.WriteLine("wrong input");
+//         }
+//     }
+//     return output;
+// }
+
+// void SquareTable(int N)
+// {
+//     for (int start = 1; start <= N; start++)
+//     {
+//         Console.WriteLine(Math.Pow(start, 3));
+//     }
+// }
+
+// Console.Clear();
+// int number = InputAndCheck("enter a number");
+// SquareTable(number);
+
+
+
+// Задача 19: Напишите программу, которая принимает на
+// вход пятизначное число и проверяет, является ли оно
+// палиндромом
+
+string InputAndCheck(string message)
+{
+    Console.WriteLine(message);
+    string number = Console.ReadLine();
+    while ((!int.TryParse(number, out int output)) || (output > 100000))
+    {
+        Console.WriteLine("InputAndCheck method check false - wrong input");
+        break;
+    }
+    return number;
+}
+
+bool CheckPalindrom(string arg1)
+{
+    bool palicheck = false;
+
+    if (arg1.Length == 5)
+    {
+        for (int index = 0; index < arg1.Length / 2; index++)
+        {
+            if (arg1[index] == arg1[arg1.Length - 1 - index])
+            {
+                Console.WriteLine($"the {arg1} is palindrom ");
+                palicheck = true;
+            }
+            // else
+            // {
+            //     Console.WriteLine($"the {arg1} is No palindrom ");
+            //     palicheck = false;
+            // }
+        }
+    }
+    else
+    {
+        Console.WriteLine($"CheckPalindrom method check false - enter 5 digit number ");
+    }
+    return palicheck;
+}
+
+void Result(bool arg1)
+{
+    if (arg1 == true)
+    {
+        Console.WriteLine($"entered symbols return - {arg1}-  is palindrom ");
+    }
+    else
+    {
+        Console.WriteLine($"entered symbols return - {arg1} - is No palindrom ");
+    }
+
+}
+
+Console.Clear();
+string number = InputAndCheck("Введите число");
+bool check = CheckPalindrom(number);
+Result(check);
+
+
