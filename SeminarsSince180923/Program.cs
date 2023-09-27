@@ -821,4 +821,9 @@ string number = InputAndCheck("Введите число");
 bool check = CheckPalindrom(number);
 Result(check);
 
+//
+//
+//
+
+
 
