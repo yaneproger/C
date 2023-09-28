@@ -2258,7 +2258,8 @@
 //     {
 //         if (arg1[index] > 0)
 //         {
-//             sum = sum + 1;
+//             //sum = 
+//                  sum++;
 //         }
 //         Console.WriteLine(sum);
 //     }
@@ -2266,25 +2267,53 @@
 //     Console.WriteLine($"summ of digits. which more than 0 is {sum} ");
 // }
 
+// Console.Clear();
 // Console.WriteLine("enter array's size");
 // int size = int.Parse(Console.ReadLine());
 // int[] array = new int[size];
-
 // FillArray(array, size);
 // CheckArray(array);
+// Console.WriteLine(string.Join(" , ", array));
+
 
 
 
 // Задача 43: Напишите программу, 
 // которая найдёт точку пересечения двух прямых, 
 // заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+// y=5x+2     
+// y=9x+4
 
 
 
 
 
+
+// void FindPoint(int b1, int k1, int b2, int k2)
+// {
+//     int x;
+
+//     int y = k1 * x + b1;
+
+//     int y1 = k2 * x + b2;
+
+
+
+
+// }
+
+
+// Console.Clear();
+
+// Console.WriteLine("enter b1");
+// int b1 = (int.Parse(Console.ReadLine()));
+// Console.WriteLine("enter k1");
+// int k1 = (int.Parse(Console.ReadLine()));
+// Console.WriteLine("enter b2");
+// int b2 = (int.Parse(Console.ReadLine()));
+// Console.WriteLine("enter k2");
+// int k2 = (int.Parse(Console.ReadLine()));
 
 
 
@@ -2331,6 +2360,66 @@
 
 // FullAndPrintArray(rowsize, columnsize, random);
 // Console.WriteLine();
+
+
+
+
+
+// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, 
+// может ли существовать треугольник с сторонами такой длины.
+// Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
+
+
+
+int Input(string message)
+{
+    Console.WriteLine(message);
+    int result = int.Parse(Console.ReadLine());
+    return result;
+}
+
+void CheckTriangle(int a, int b, int c)
+{
+    if (a < (b + c) || b < (a + c) || c < (a + b))
+    {
+        Console.WriteLine("triangle is possible");
+    }
+    else
+    {
+        Console.WriteLine("triangle is NOT possible");
+    }
+}
+
+int a = Input("enter triangle side's size");
+int b = Input("enter triangle side's size");
+int c = Input("enter triangle side's size");
+
+CheckTriangle(a, b, c);
+
+
+
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+
+
+
+
+
+// Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+// Если N = 5 -> 0 1 1 2 3
+// Если N = 3 -> 0 1 1
+// Если N = 7 -> 0 1 1 2 3 5 8
+
+
+
+
+
+
+//  Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+
 
 
 
