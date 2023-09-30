@@ -2612,7 +2612,7 @@ int convert(int number)
     Console.WriteLine($"arr size is : {numbersize} ");
     int[] array = new int[numbersize];
 
-    for (int jindex = numbersize - jindex - 1; jindex < 0; jindex++)
+    for (int jindex = numbersize - jindex - 1; jindex > 0; jindex++)
     {
         Console.WriteLine(binarydigit);
         array[jindex] = binarydigit;

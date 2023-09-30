@@ -764,66 +764,563 @@
 // вход пятизначное число и проверяет, является ли оно
 // палиндромом
 
-string InputAndCheck(string message)
-{
-    Console.WriteLine(message);
-    string number = Console.ReadLine();
-    while ((!int.TryParse(number, out int output)) || (output > 100000))
-    {
-        Console.WriteLine("InputAndCheck method check false - wrong input");
-        break;
-    }
-    return number;
-}
+// string InputAndCheck(string message)
+// {
+//     Console.WriteLine(message);
+//     string number = Console.ReadLine();
+//     while ((!int.TryParse(number, out int output)) || (output > 100000))
+//     {
+//         Console.WriteLine("InputAndCheck method check false - wrong input");
+//         break;
+//     }
+//     return number;
+// }
 
-bool CheckPalindrom(string arg1)
-{
-    bool palicheck = false;
+// bool CheckPalindrom(string arg1)
+// {
+//     bool palicheck = false;
 
-    if (arg1.Length == 5)
-    {
-        for (int index = 0; index < arg1.Length / 2; index++)
-        {
-            if (arg1[index] == arg1[arg1.Length - 1 - index])
-            {
-                Console.WriteLine($"the {arg1} is palindrom ");
-                palicheck = true;
-            }
-            // else
-            // {
-            //     Console.WriteLine($"the {arg1} is No palindrom ");
-            //     palicheck = false;
-            // }
-        }
-    }
-    else
-    {
-        Console.WriteLine($"CheckPalindrom method check false - enter 5 digit number ");
-    }
-    return palicheck;
-}
+//     if (arg1.Length == 5)
+//     {
+//         for (int index = 0; index < arg1.Length / 2; index++)
+//         {
+//             if (arg1[index] == arg1[arg1.Length - 1 - index])
+//             {
+//                 Console.WriteLine($"the {arg1} is palindrom ");
+//                 palicheck = true;
+//             }
+//             else
+//             {
+//                 Console.WriteLine($"the {arg1} is No palindrom ");
+//                 palicheck = false;
+//             }
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine($"CheckPalindrom method check false - enter 5 digit number ");
+//     }
+//     return palicheck;
+// }
 
-void Result(bool arg1)
-{
-    if (arg1 == true)
-    {
-        Console.WriteLine($"entered symbols return - {arg1}-  is palindrom ");
-    }
-    else
-    {
-        Console.WriteLine($"entered symbols return - {arg1} - is No palindrom ");
-    }
+// void Result(bool arg1)
+// {
+//     if (arg1 == true)
+//     {
+//         Console.WriteLine($"entered symbols return - {arg1}-  is palindrom ");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"entered symbols return - {arg1} - is No palindrom ");
+//     }
 
-}
+// }
 
-Console.Clear();
-string number = InputAndCheck("Введите число");
-bool check = CheckPalindrom(number);
-Result(check);
+// Console.Clear();
+// string number = InputAndCheck("Введите число");
+// bool check = CheckPalindrom(number);
+// Result(check);
 
 //
 //
 //
 // from 100
+
+
+
+
+// bool CheckPalindrom(string arg1)
+// {
+//     bool palicheck = false;
+//     bool digicheck;
+
+//     if (!int.TryParse(arg1, out int output))
+//     {
+//         digicheck = false;
+//     }
+//     else digicheck = true;
+
+//     if ((arg1.Length == 5) && (digicheck == true))
+//     {
+//         for (int index = 0; index < arg1.Length / 2; index++)
+//         {
+//             if (arg1[index] == arg1[arg1.Length - 1 - index])
+//             {
+//                 palicheck = true;
+//             }
+//             else
+//             {
+//                 palicheck = false;
+//             }
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Число не пятизначное");
+//     }
+//     return palicheck;
+// }
+
+// Console.Clear();
+// Console.WriteLine("Введите число");
+// string number = Console.ReadLine();
+// bool check = CheckPalindrom(number);
+// Console.WriteLine(check);
+
+
+
+//280923-exercise 15-Check using Autocheck in gb.ru
+
+
+// bool CheckPalindrom(int number)
+// {
+//     string arg1 = number.ToString();
+//     bool palicheck = false;
+//     bool digicheck;
+
+//     if (!int.TryParse(arg1, out int output))
+//     {
+//         digicheck = false;
+//     }
+//     else digicheck = true;
+
+//     if ((arg1.Length == 5) && (digicheck == true))
+//     {
+//         for (int index = 0; index < arg1.Length / 2; index++)
+//         {
+//             if (arg1[index] == arg1[arg1.Length - 1 - index])
+//             {
+//                 palicheck = true;
+//             }
+//             else
+//             {
+//                 palicheck = false;
+//             }
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Число не пятизначное");
+//     }
+//     return palicheck;
+// }
+
+// Console.Clear();
+// Console.WriteLine("Введите число");
+// int number = int.Parse(Console.ReadLine());
+// bool check = CheckPalindrom(number);
+// Console.WriteLine(check);
+
+
+
+
+
+// Внутри класса Answer напишите метод DistanceBetweenPoints, 
+// который принимает на вход координаты двух точек pointA и pointB в виде массива целых чисел,
+//  и возвращает расстояние между ними в 3D пространстве.
+
+
+// A (3,6,8); B (2,1,-7) -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+// Формула вычисления расстояния между 
+// двумя точками A(xa, ya, za) и B(xb, yb, zb) в пространстве:
+// AB = √(xb - xa)2 + (yb - ya)2 + (zb - za)2
+
+
+
+
+// using System;
+
+// public class Answer
+// {
+
+//     private static int Square(int number)
+//     {
+//         return number * number;
+//     }
+
+//     private static int SumSquare(int[] pointA, int[] pointB)
+//     {
+//         int sum = 0;
+//         for (int i = 0; i < pointA.Length; i++)
+//         {
+//             sum += Square(pointA[i] - pointB[i]);
+//         }
+//         return sum;
+//     }
+
+//     private static double Length(int[] pointA, int[] pointB)
+//     {
+//         double result = Math.Sqrt(SumSquare(pointA, pointB));
+//         return result;
+//     }
+
+//     // Не удаляйте и не меняйте метод Main! 
+//     public static void Main(string[] args)
+//     {
+//         int x1, x2, x3, y1, y2, y3;
+
+//         if (args.Length >= 6)
+//         {
+//             x1 = int.Parse(args[0]);
+//             x2 = int.Parse(args[1]);
+//             x3 = int.Parse(args[2]);
+//             y1 = int.Parse(args[3]);
+//             y2 = int.Parse(args[4]);
+//             y3 = int.Parse(args[5]);
+//         }
+//         else
+//         {
+//             // Здесь вы можете поменять значения для отправки кода на Выполнение
+//             x1 = 3;
+//             x2 = 6;
+//             x3 = 8;
+//             y1 = 2;
+//             y2 = 1;
+//             y3 = -7;
+//         }
+
+//         // Не удаляйте строки ниже
+//         double result = Length(new int[] { x1, x2, x3 }, new int[] { y1, y2, y3 });
+//         Console.WriteLine($"{result:F2}");
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+
+// public class Answer
+// {
+//     private static double Length(int[] pointA, int[] pointB)
+//     {
+//         // Введите свое решение ниже
+//         double distance = Math.Round(Math.Sqrt((Math.Pow(pointB[0] - pointA[0], 2)) + (Math.Pow(pointB[1] - pointA[1], 2)) + (Math.Pow(pointB[2] - pointA[2], 2))), 2);
+//         return distance;
+
+//     }
+
+// Не удаляйте и не меняйте метод Main! 
+//     public static void Main(string[] args)
+//     {
+//         int x1, x2, x3, y1, y2, y3;
+
+//         if (args.Length >= 6)
+//         {
+//             x1 = int.Parse(args[0]);
+//             x2 = int.Parse(args[1]);
+//             x3 = int.Parse(args[2]);
+//             y1 = int.Parse(args[3]);
+//             y2 = int.Parse(args[4]);
+//             y3 = int.Parse(args[5]);
+//         }
+//         else
+//         {
+//             // Здесь вы можете поменять значения для отправки кода на Выполнение
+//             x1 = 3;
+//             x2 = 6;
+//             x3 = 8;
+//             y1 = 2;
+//             y2 = 1;
+//             y3 = -7;
+//         }
+
+//         // Не удаляйте строки ниже
+//         double result = Length(new int[] { x1, x2, x3 }, new int[] { y1, y2, y3 });
+//         Console.WriteLine($"{result:F2}");
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = Convert.ToInt32(Console.ReadLine());
+//     return number;
+// }
+
+
+// private static double Length(int[] pointA, int[] pointB)
+
+// {
+//     double distance = Math.Round(Math.Sqrt((Math.Pow(pointB[0] - pointA[0], 2)) + (Math.Pow(pointB[1] - pointA[1], 2)) + (Math.Pow(pointB[2] - pointA[2], 2))), 2);
+//     return distance;
+
+// }
+
+
+// x1 = int.Parse(args[0]);
+// x2 = int.Parse(args[1]);
+// x3 = int.Parse(args[2]);
+// y1 = int.Parse(args[3]);
+// y2 = int.Parse(args[4]);
+// y3 = int.Parse(args[5]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// double FindDistance(int x1, int x2, int x3, int y1, int y2, int y3)
+// {
+//     double distance = Math.Round(Math.Sqrt((Math.Pow(y1 - x1, 2)) + (Math.Pow(y2 - x2, 2)) + (Math.Pow(y3 - x3, 2))), 2);
+//     return distance;
+// }
+
+// int x1 = Input("enter x1");
+// int x2 = Input("enter x2");
+// int x3 = Input("enter x3");
+// int y1 = Input("enter y1");
+// int y2 = Input("enter y2");
+// int y3 = Input("enter y3");
+
+// Console.WriteLine(FindDistance(x1, x2, x3, y1, y2, y3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = Convert.ToInt32(Console.ReadLine());
+//     return number;
+// }
+
+// int DigiQuantity(int number)
+// {
+//     int digicount = 0;
+//     // while (number > 0)
+//     for (digicount = 0; number > 0; digicount++)
+//     {
+//         number = number / 10;
+//         // digicount++;
+//     }
+//     return digicount;
+// }
+
+// int number = Input("enter a number");
+// Console.WriteLine(DigiQuantity(number));
+
+
+
+
+
+
+// Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+// 4 -> 24 
+// 5 -> 120
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = int.Parse(Console.ReadLine());
+//     return number;
+// }
+
+// int NumQuantity(int arg1)
+// {
+//     int sum = 1;
+//     for (int start = 2; start <= arg1; start++)
+//     {
+//         sum = sum * start;
+//     }
+//     return sum;
+// }
+
+// int number = Input("enter a number");
+// Console.WriteLine(NumQuantity(number));
+
+
+// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];
+
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = new Random().Next(0, 111);
+//         Console.Write($" {array[index]}, ");
+//     }
+//     return array;
+// }
+
+// int[] SummArray(int[] arr1, int[] arr2)
+// {
+//     int[] array = new int[arr1.Length];
+
+//     for (int index = 0; index < arr1.Length; index++)
+//     {
+//         array[index] = arr1[index] + arr2[index];
+//         Console.Write($" {array[index]}, ");
+//     }
+//     return array;
+// }
+
+// Console.WriteLine("enter array1 size");
+// int size = int.Parse(Console.ReadLine());
+
+// int[] array1 = FillArray(size);
+// Console.WriteLine();
+// int[] array2 = FillArray(size);
+// Console.WriteLine();
+// int[] array3 = SummArray(array1, array2);
+// Console.WriteLine();
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+
+
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = int.Parse(Console.ReadLine());
+//     return number;
+// }
+
+// int Multiple(int num1, int num2)
+// {
+//     int sum = 1;
+//     for (int count = 0; count < num2; count++)
+//     {
+//         sum = sum * num1;
+//     }
+//     return sum;
+// }
+
+// int number1 = Input("enter 1 number");
+// int number2 = Input("enter 2 number");
+// Console.WriteLine(Multiple(number1, number2));
+
+
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
+
+int Input(string message)
+{
+    Console.WriteLine(message);
+    int number = int.Parse(Console.ReadLine());
+    return number;
+}
+int Multiple(int num)
+{
+    int sum = 0;
+
+    for (int count = 0; num > 0; count++)
+    {
+        int lastdigit = num % 10;
+        Console.WriteLine(lastdigit);
+        num = num / 10;
+        Console.WriteLine(num);
+        sum = sum + lastdigit;
+    }
+    return sum;
+}
+int number = Input("enter  number");
+int result = Multiple(number);
+Console.WriteLine($"the summ of the digits of the number {number} equals {result} ");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+
+
+
+
+
 
 

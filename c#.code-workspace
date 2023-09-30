@@ -1,14 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"editor.defaultFormatter": "formulahendry.code-runner",
-		"editor.formatOnSave": false,
-		"editor.hover.delay": 3000,
-		"workbench.hover.delay": 5000,
-		"workbench.sash.hoverDelay": 300
-	}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }

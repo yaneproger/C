@@ -7,11 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-<<<<<<< HEAD
                 "${workspaceFolder}/C#.sln",
-=======
-                "${workspaceFolder}/exercises270823/exercises270823.csproj",
->>>>>>> 2b72dc0ffc4465b7f109aea1c58666225987d624
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -23,11 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-<<<<<<< HEAD
                 "${workspaceFolder}/C#.sln",
-=======
-                "${workspaceFolder}/exercises270823/exercises270823.csproj",
->>>>>>> 2b72dc0ffc4465b7f109aea1c58666225987d624
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -41,11 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-<<<<<<< HEAD
                 "${workspaceFolder}/C#.sln"
-=======
-                "${workspaceFolder}/exercises270823/exercises270823.csproj"
->>>>>>> 2b72dc0ffc4465b7f109aea1c58666225987d624
             ],
             "problemMatcher": "$msCompile"
         }
