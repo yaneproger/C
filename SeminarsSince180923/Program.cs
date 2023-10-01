@@ -1277,9 +1277,9 @@
 //     for (int count = 0; num > 0; count++)
 //     {
 //         int lastdigit = num % 10;
-//         Console.WriteLine(lastdigit);
+//         Console.WriteLine($" lastdigit is {lastdigit} ");
 //         num = num / 10;
-//         Console.WriteLine(num);
+//         Console.WriteLine($" rest number is {num} ");
 //         sum = sum + lastdigit;
 //     }
 //     return sum;
@@ -1287,7 +1287,6 @@
 // int number = Input("enter  number");
 // int result = Multiple(number);
 // Console.WriteLine($"the summ of the digits of the number {number} equals {result} ");
-
 
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
