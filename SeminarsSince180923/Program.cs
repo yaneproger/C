@@ -1230,15 +1230,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 // Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
@@ -1273,43 +1264,29 @@
 // 82 -> 10
 // 9012 -> 12
 
-int Input(string message)
-{
-    Console.WriteLine(message);
-    int number = int.Parse(Console.ReadLine());
-    return number;
-}
-int Multiple(int num)
-{
-    int sum = 0;
+// int Input(string message)
+// {
+//     Console.WriteLine(message);
+//     int number = int.Parse(Console.ReadLine());
+//     return number;
+// }
+// int Multiple(int num)
+// {
+//     int sum = 0;
 
-    for (int count = 0; num > 0; count++)
-    {
-        int lastdigit = num % 10;
-        Console.WriteLine(lastdigit);
-        num = num / 10;
-        Console.WriteLine(num);
-        sum = sum + lastdigit;
-    }
-    return sum;
-}
-int number = Input("enter  number");
-int result = Multiple(number);
-Console.WriteLine($"the summ of the digits of the number {number} equals {result} ");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     for (int count = 0; num > 0; count++)
+//     {
+//         int lastdigit = num % 10;
+//         Console.WriteLine(lastdigit);
+//         num = num / 10;
+//         Console.WriteLine(num);
+//         sum = sum + lastdigit;
+//     }
+//     return sum;
+// }
+// int number = Input("enter  number");
+// int result = Multiple(number);
+// Console.WriteLine($"the summ of the digits of the number {number} equals {result} ");
 
 
 
@@ -1317,7 +1294,33 @@ Console.WriteLine($"the summ of the digits of the number {number} equals {result
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
+// string[] FillArray(int size)
+// {
+//     string[] array = new string[size];
 
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         Console.WriteLine($"enter array's {index} 's element ");
+//         array[index] = Convert.ToString(Console.ReadLine()!);
+//     }
+//     return array;
+// }
+
+// void PrintArray(string[] array)
+// {
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         Console.Write($" {array[index]}, ");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array's  size");
+// int size = int.Parse(Console.ReadLine());
+
+// string[] array1 = FillArray(size);
+// Console.WriteLine();
+// PrintArray(array1);
 
 
 
