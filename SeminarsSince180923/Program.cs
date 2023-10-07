@@ -1326,3 +1326,612 @@
 
 
 
+
+
+
+// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = new Random().Next(-10, 10);
+//         Console.Write($" {array[index]} ");
+//     }
+//     return array;
+// }
+
+
+// int[] PrintArray(int[] array)
+// {
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = array[index] * -1;
+//         Console.Write($" {array[index]} ");
+//     }
+//     return array;
+// }
+
+
+// Console.Clear();
+// Console.WriteLine("enter array's  size");
+// int size = int.Parse(Console.ReadLine());
+
+
+
+// int[] array = FillArray(size);
+// Console.WriteLine("");
+// PrintArray(array);
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// 3; массив [6, 7, 19, 345, 3] -> да
+
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = new Random().Next(0, 10);
+//         Console.Write($" {array[index]} ");
+//     }
+//     return array;
+// }
+
+// bool FindNum(int[] array, int num)
+// {
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         if (array[index] == num)
+//         {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// void Result(bool arg1, int num)
+// {
+//     if (arg1 == true)
+//     {
+//         Console.WriteLine($" Selected number {num} is present ");
+//     }
+//     else Console.WriteLine($" Selected number {num} is Not present ");
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter searching number");
+// int num = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter array's  size");
+// int size = int.Parse(Console.ReadLine());
+
+// int[] array = FillArray(size);
+// Console.WriteLine("");
+
+// bool check = FindNum(array, num);
+
+// Result(check, num);
+
+
+
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. 
+// Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
+
+
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = new Random().Next(0, 10);
+//         // Console.Write($" FillArray {array[index]} ");
+//         Console.Write($"  {array[index]} ");
+//     }
+//     return array;
+// }
+
+// void MultipleArray(int[] array)
+
+// // int[] MultipleArray(int[] array)
+// {
+
+//     // int[] newarray = new int[array.Length];
+
+//     int[] newarray;
+
+//     Console.WriteLine($" array {array.Length}   ");
+
+//     if (array.Length % 2 != 0)
+//     {
+//         newarray = new int[array.Length / 2 + 1];
+
+//         Console.WriteLine($" newarray {newarray.Length}   ");
+
+//         for (int index = 0; index < newarray.Length; index++)
+//         {
+//             if (array[index] == array[(array.Length - 1) - index])
+//             {
+//                 newarray[index] = array[index];
+//             }
+//             else
+//             {
+//                 newarray[index] = array[index] * array[array.Length - 1 - index];
+//             }
+//             Console.Write($" {newarray[index]} ");
+//         }
+//     }
+//     else
+//     {
+//         newarray = new int[array.Length / 2];
+
+//         Console.WriteLine($" newarray {newarray.Length}   ");
+
+//         for (int index = 0; index < newarray.Length; index++)
+//         {
+//             newarray[index] = array[index] * array[array.Length - 1 - index];
+
+//             Console.Write($" {newarray[index]} ");
+//         }
+//     }
+//     // return newarray;
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array's  size");
+// int size = int.Parse(Console.ReadLine());
+
+// int[] array = FillArray(size);
+// Console.WriteLine();
+// // Console.WriteLine(FillArray(size));
+
+// MultipleArray(array);
+
+// // Console.WriteLine(MultipleArray(array));
+
+// Console.WriteLine();
+
+
+
+
+
+
+
+
+
+
+
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+// Напишите программу, которая покажет количество чётных чисел в массиве. [345, 897, 568, 234] -> 2
+
+
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = new Random().Next(100, 1000);
+
+//         Console.Write($"  {array[index]} ");
+//     }
+//     return array;
+// }
+
+
+// int CountEvenElements(int[] array)
+// {
+//     int summ = 0;
+
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         if (array[index] % 2 == 0)
+//         {
+//             Console.WriteLine($" result {summ++} ");
+//         }
+//     }
+//     return summ;
+// }
+
+
+
+// void PrintArray(int[] array)
+// {
+//     Console.WriteLine("  Массив: ");
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         Console.Write($" ! {array[index]} ! ");
+//     }
+// }
+
+
+// Console.Clear();
+// Console.WriteLine("enter array's  size");
+// int size = int.Parse(Console.ReadLine());
+// int[] array = FillArray(size);
+// Console.WriteLine(" ");
+// PrintArray(array);
+// // Console.WriteLine(PrintArray(array));
+// Console.WriteLine();
+// Console.WriteLine(CountEvenElements(array));
+
+
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях. [3, 7, 23, 12] -> 19 [-4, -6, 89, 6] -> 0
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = new Random().Next(-10, 10);
+//         // Console.Write($" FillArray {array[index]} ");
+//         // Console.Write($"  {array[index]} ");
+//     }
+//     return array;
+// }
+
+// int SumOddElements(int[] array)
+// {
+//     int summ = 0;
+
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         if (index % 2 != 0)
+//         {
+//             Console.WriteLine($" result {summ = summ + array[index]} ");
+//         }
+//     }
+//     return summ;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     // Console.WriteLine("  Массив: ");
+//     // for (int index = 0; index < array.Length; index++)
+//     // {
+//     //     // Console.Write($" ! {array[index]} ! ");
+//     // }
+//     Console.WriteLine($"{string.Join("\t", array)}\t");
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array's  size");
+// int size = int.Parse(Console.ReadLine());
+// int[] array = FillArray(size);
+// Console.WriteLine();
+// Console.WriteLine(SumOddElements(array));
+// PrintArray(array);
+
+
+
+
+
+// Задача 38: Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива. [3 7 22 2 78] -> 76
+
+
+
+// double[] FillArray(int size)
+// {
+//     // double[] array = new double[size];
+//     double[] array = { 1.345, 6.567, 4.5678, 7.4567, 9.2344 };
+//     // for (int index = 0; index < array.Length; index++)
+//     // {
+//     //     // array[index] = new Random().Next(-100, 100);
+//     //     // Console.Write($" FillArray {array[index]} ");
+//     //     Console.Write($"  {array[index]} ");
+//     // }
+//     return array;
+// }
+
+// double FindMax(double[] array)
+// {
+//     int index = 0;
+//     double max = array[index];
+//     for (index = 0; index < array.Length; index++)
+//     {
+//         if (array[index] > max)
+//         {
+//             max = Math.Round(array[index], 2);
+//         }
+//     }
+//     return max;
+// }
+
+// double FindMin(double[] array)
+// {
+//     int index = 0;
+//     double min = array[index];
+//     for (index = 0; index < array.Length; index++)
+//     {
+//         if (array[index] < min)
+//         {
+//             min = Math.Round(array[index], 2);
+//         }
+//     }
+//     return min;
+// }
+
+// double MaxMinDifference(double[] array)
+// {
+//     int index = 0;
+//     double diff = 0;
+//     double max = array[index];
+//     double min = array[index];
+//     for (index = 0; index < array.Length; index++)
+//     {
+//         if (array[index] > max)
+//         {
+//             max = Math.Round(array[index], 2);
+//         }
+//         if (array[index] < min)
+//         {
+//             min = Math.Round(array[index], 2);
+//         }
+//     }
+//     Console.WriteLine($" max is {max} ");
+//     Console.WriteLine($" min is {min} ");
+//     diff = max - min;
+//     return diff;
+// }
+
+// void PrintArray(double[] array)
+// {
+//     // Console.WriteLine("  Массив: ");
+//     // for (int index = 0; index < array.Length; index++)
+//     // {
+//     //     Console.Write($"{Math.Round(array[index], 3)}    ");
+//     // }
+
+//     // Console.WriteLine($"{string.Join("\t", array)}\t");
+
+// Console.WriteLine($"{string.Join("\t", Math.Round(array, 2))}\t");
+
+
+
+// Console.WriteLine(string.Join("\t", array.Select(q => Math.Round(q, 2)).ToList()));
+
+//     //  Console.WriteLine($"{string.Join("\t", array)}\t");
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter array's  size");
+// int size = int.Parse(Console.ReadLine());
+// double[] array = FillArray(size);
+// Console.WriteLine();
+// Console.WriteLine($" Max and Min El Difference is {MaxMinDifference(array)} ");
+// PrintArray(array);
+
+
+
+
+
+
+
+
+
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         array[index] = new Random().Next(-10, 10);
+//         // Console.Write($" FillArray {array[index]} ");
+//         // Console.Write($"  {array[index]} ");
+//     }
+//     return array;
+// }
+
+// bool Istriangle(int[] array)
+// {
+//     if (array[0] < array[1] + array[2] && array[1] < array[0] + array[2] && array[2] < array[1] + array[0])
+//         return true;
+//     else
+//         return false;
+
+
+// }
+
+
+// // int[] array = new int[3] { 3, 2, 3 };
+
+// int[] array = FillArray(3);
+
+// if (Istriangle(array))
+// {
+
+//     Console.WriteLine("yes");
+// }
+// else
+// {
+//     Console.WriteLine("no");
+// }
+
+
+
+// Console.WriteLine(string.Join("\t", array.Select(q => Math.Round(q, 2)).ToList()));
+
+// Console.WriteLine(string.Join(", ", array.Select(x => Math.Round(x, 2))));
+
+
+
+
+
+
+
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+
+// 375 / 2 = 187 (остаток 1)      256/2 =128
+// 187 / 2 = 93 (остаток 1)
+// 93 / 2 = 46 (остаток 1)
+// 46 / 2 = 23 (остаток 0)
+// 23 / 2 = 11 (остаток 1)
+// 11 / 2 = 5 (остаток 1)
+// 5 / 2 = 2 (остаток 1)
+// 2 / 2 = 1 (остаток 0)
+// 1 / 2 = 0 (остаток 1)
+
+// Console.WriteLine("enter a number");
+// int number = int.Parse(Console.ReadLine()!);
+
+// int convert(int arg1)
+// {
+//     int arraysize = 0;
+//     int number = arg1;
+//     for (int index = 0; arg1 > 0; index++)
+//     {
+//         arg1 = arg1 / 2;
+//         arraysize++;
+//         Console.WriteLine(arg1);
+//     }
+//     Console.WriteLine(arraysize);
+//     return arraysize;
+// }
+
+// int[] Fillarray(int size, int number)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         // number = number % 2;
+//         array[index] = number % 2;
+//         number = number / 2;
+//     }
+//     return array;
+// }
+
+// int[] Reversearray(int[] array)
+// {
+//     for (int index = 0; index < array.Length / 2; index++)
+//     {
+//         int temp = array[index];
+//         array[index] = array[array.Length - 1 - index];
+//         array[array.Length - 1 - index] = temp;
+//     }
+//     return array;
+// }
+
+// Console.Clear();
+// int numbersize = convert(number);
+// int[] array = Fillarray(numbersize, number);
+// Console.WriteLine($" {string.Join(",\t", Reversearray(array))}.");
+
+// // Console.WriteLine($"{string.Join("\t", array)}\t");
+// // Console.WriteLine($"{string.Join("\t", Math.Round(array), 2)}\t");
+
+
+
+
+
+
+
+
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+// int[] Fillarray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         Console.WriteLine("Enter a digit");
+//         array[index] = int.Parse(Console.ReadLine()!);
+//     }
+//     Console.WriteLine($" {string.Join(" ", array)} ");
+//     return array;
+// }
+
+// void Checkdigits(int[] array)
+// {
+//     int summ = 0;
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         if (array[index] > 0)
+//         {
+//             summ++;
+//         }
+//     }
+//     Console.WriteLine($" Number of elements more ,than 0 in the array {string.Join(". ", array)} , equals {summ} ");
+// }
+
+// Console.Clear();
+// Console.WriteLine("Enter number of digits will be entered");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] array = Fillarray(size);
+// Checkdigits(array);
+
+
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+// если a1b2 - a2b1 = 0 - параллельны,
+// если a1b2 - a2b1 = 0 и c2b1-c1b2 = 0 - совпадают
+// в остальных случаях - пересекаются
+
+// Console.Clear();
+// double b1 = input("Enter b1");
+// double k1 = input("Enter k1");
+// double b2 = input("Enter b2");
+// double k2 = input("Enter k2");
+
+// FindPoint(b1, k1, b2, k2);
+
+// double input(string message)
+// {
+//     Console.WriteLine(message);
+//     double number = Convert.ToInt32(Console.ReadLine());
+//     return number;
+// }
+
+// void FindPoint(double b1, double k1, double b2, double k2)
+// {
+//     double x = (b2 - b1) / (k1 - k2);
+//     double y = (k1 * (b2 - b1)) / (k1 - k2) + b1;
+
+//     if (k1 == k2)
+//     {
+//         Console.WriteLine("The lines is parallel");
+//     }
+//     else if ((k1 * b2) - (k2 * b1) == 0)
+//     {
+//         Console.WriteLine("The lines is match");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"The lines is intersect, the point coordinates is {x},{y}");
+//     }
+// }
+
+

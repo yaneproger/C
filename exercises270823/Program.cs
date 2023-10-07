@@ -2586,102 +2586,102 @@
 // }
 
 
-int Input(string message)
-{
-    Console.WriteLine(message);
-    int array = int.Parse(Console.ReadLine());
-    return array;
-}
-
-int convert(int number)
-{
-    // int temp = 0;
-    int numbersize = 0;
-    int binarydigit = 0;
-    int index = 0;
-    for (index = 0; number > 0; index++)
-    {
-        binarydigit = number % 2;
-        number = number / 2;
-        // temp = binary;
-        numbersize = index + 1;
-        Console.Write(binarydigit);
-    }
-    Console.WriteLine();
-    // Console.WriteLine($"index {index}");
-    Console.WriteLine($"arr size is : {numbersize} ");
-    int[] array = new int[numbersize];
-
-    for (int jindex = numbersize - jindex - 1; jindex > 0; jindex++)
-    {
-        Console.WriteLine(binarydigit);
-        array[jindex] = binarydigit;
-        Console.Write($"CheckArray : {array[jindex]}");
-    }
-
-    // return numbersize;
-    return binarydigit;
-}
-
-int arrsize(int number)
-{
-    // int temp = 0;
-    int numbersize = 0;
-    int binarydigit = 0;
-    for (int index = 0; number > 0; index++)
-    {
-        binarydigit = number % 2;
-        number = number / 2;
-        // temp = binary;
-        numbersize = index + 1;
-        Console.Write(binarydigit);
-
-    }
-    Console.WriteLine();
-    Console.WriteLine($"arr size is : {numbersize} ");
-    return numbersize;
-    // return binarydigit;
-}
-
-
-
-void Fillarray(int[] array, int binarydigit)
-{
-    for (int index = 0; index < array.Length - index - 1; index++)
-    {
-        // Console.WriteLine("enter binary number's digit one by one");
-        array[index] = binarydigit;
-        Console.Write(array[index]);
-    }
-}
-
-
-
-
-int number = Input("enter a number");
-
-int binarydigit = convert(number);
-// int size = arrsize(number);
-
-// int[] arr = new int[size];
-
-// Console.WriteLine("Fillarray");
-
-// Fillarray(arr, binarydigit);
-
-
-
-
-// void reverse(int[] arr, int binary)
-
-// void reverse(int[] arr)
+// int Input(string message)
 // {
-//     for (int jindex = arr.Length - 1; jindex > 0; jindex++)
-//     {
-//         // Console.WriteLine("temp " + binary);
+//     Console.WriteLine(message);
+//     int array = int.Parse(Console.ReadLine());
+//     return array;
+// }
 
-//         Console.WriteLine();
-//         int swap = arr[jindex];
+// int convert(int number)
+// {
+//     // int temp = 0;
+//     int numbersize = 0;
+//     int binarydigit = 0;
+//     int index = 0;
+//     for (index = 0; number > 0; index++)
+//     {
+//         binarydigit = number % 2;
+//         number = number / 2;
+//         // temp = binary;
+//         numbersize = index + 1;
+//         Console.Write(binarydigit);
+//     }
+//     Console.WriteLine();
+//     // Console.WriteLine($"index {index}");
+//     Console.WriteLine($"arr size is : {numbersize} ");
+//     int[] array = new int[numbersize];
+
+//     for (int jindex = numbersize - jindex - 1; jindex > 0; jindex++)
+//     {
+//         Console.WriteLine(binarydigit);
+//         array[jindex] = binarydigit;
+//         Console.Write($"CheckArray : {array[jindex]}");
+//     }
+
+//     // return numbersize;
+//     return binarydigit;
+// }
+
+// int arrsize(int number)
+// {
+//     // int temp = 0;
+//     int numbersize = 0;
+//     int binarydigit = 0;
+//     for (int index = 0; number > 0; index++)
+//     {
+//         binarydigit = number % 2;
+//         number = number / 2;
+//         // temp = binary;
+//         numbersize = index + 1;
+//         Console.Write(binarydigit);
+
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"arr size is : {numbersize} ");
+//     return numbersize;
+//     // return binarydigit;
+// }
+
+
+
+// void Fillarray(int[] array, int binarydigit)
+// {
+//     for (int index = 0; index < array.Length - index - 1; index++)
+//     {
+//         // Console.WriteLine("enter binary number's digit one by one");
+//         array[index] = binarydigit;
+//         Console.Write(array[index]);
+//     }
+// }
+
+
+
+
+// int number = Input("enter a number");
+
+// int binarydigit = convert(number);
+// // int size = arrsize(number);
+
+// // int[] arr = new int[size];
+
+// // Console.WriteLine("Fillarray");
+
+// // Fillarray(arr, binarydigit);
+
+
+
+
+// // void reverse(int[] arr, int binary)
+
+// // void reverse(int[] arr)
+// // {
+// //     for (int jindex = arr.Length - 1; jindex > 0; jindex++)
+// //     {
+// //         // Console.WriteLine("temp " + binary);
+
+// //         Console.WriteLine();
+// //         int swap = arr[jindex];
 //         Console.WriteLine("arr " + arr[jindex]);
 //         arr[jindex] = arr[arr.Length - jindex - 1];
 //         arr[arr.Length - jindex - 1] = swap;
@@ -2891,3 +2891,133 @@ int binarydigit = convert(number);
 //
 //
 //
+
+
+// Console.WriteLine("enter a number");
+// int number = int.Parse(Console.ReadLine()!);
+
+// int convert(int arg1)
+// {
+//     int arraysize = 0;
+//     int number = arg1;
+//     for (int index = 0; arg1 > 0; index++)
+//     {
+
+//         arg1 = arg1 / 2;
+
+//         arraysize++;
+//         Console.WriteLine(arg1);
+//     }
+//     Console.WriteLine(arraysize);
+//     return arraysize;
+// }
+
+
+// int[] Fillarray(int size, int number)
+// {
+//     int[] array = new int[size];
+
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         // number = number % 2;
+//         array[index] = number % 2;
+//         number = number / 2;
+
+//     }
+//     return array;
+// }
+// int[] Reversearray(int[] array)
+// {
+//     for (int index = 0; index < array.Length / 2; index++)
+//     {
+//         int temp = array[index];
+//         array[index] = array[array.Length - 1 - index];
+//         array[array.Length - 1 - index] = temp;
+
+
+//     }
+
+//     return array;
+
+// }
+
+// convert(number);
+// int[] array = Fillarray(convert(number), number);
+// Console.WriteLine(string.Join(" ,", Reversearray(array)));
+
+
+
+
+
+
+
+
+
+
+
+// namespace GbNET5
+// {
+//     internal class Program
+//     {
+//         public static void Main(string[] args)
+//         {
+//             int num = Convert.ToInt32(Console.ReadLine());
+//             int[] arr = new int[num];
+//             Fibb(arr);
+//         }
+
+//         public static void Fibb(int[] arr)
+//         {
+
+//             for (int i = 0; i < arr.Length; i++)
+//             {
+//                 if (i == 0 || i == 1)
+//                 {
+//                     arr[i] = i;
+//                 }
+//                 else
+//                 {
+//                     arr[i] = (arr[i - 1]) + (arr[i - 2]);
+//                 }
+//             }
+
+//             Console.WriteLine(String.Join(" ", arr));
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+// Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+// Если N = 5 -> 0 1 1 2 3
+// Если N = 3 -> 0 1 1
+// Если N = 7 -> 0 1 1 2 3 5 8
+
+Console.WriteLine("enter a number");
+int num = int.Parse(Console.ReadLine()!);
+
+
+
+int fibonacci(int number)
+{
+    int fibonacci = 0;
+    for (int index = 0; index < number; index++)
+    {
+        fibonacci = number + index;
+
+    }
+    return fibonacci;
+}
+
+
+
+
+
+
+
+
+
