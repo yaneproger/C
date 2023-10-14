@@ -1935,3 +1935,1038 @@
 // }
 
 
+//Double Array testing
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int row = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int column = int.Parse(Console.ReadLine());
+
+// int[,] doublearray = new int[row, column];
+
+
+// void FillArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.WriteLine("enter array's element");
+//             array[i, j] = int.Parse(Console.ReadLine());
+//         }
+//     }
+
+//     // Console.WriteLine($" , {string.Join(",", array)}  ");
+// }
+
+
+// FillArray(doublearray);
+// PrintArray(doublearray);
+
+
+
+
+
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" , {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+
+
+
+
+
+
+// Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+
+
+
+// int[,] FillArray(int rows, int columns)
+// {
+//     int[,] array = new int[rows, columns];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = i + j;
+//         }
+//     }
+
+//     return array;
+// }
+
+
+
+// void PrintArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+
+//             Console.Write($" , {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int row = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int column = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(row, column);
+// PrintArray(array);
+
+
+
+
+
+// Задача 49: Задайте двумерный массив. Найдите элементы, у которых оба индекса нечётные, и замените эти элементы на их квадраты.
+// Например, изначально массив
+// выглядел вот так:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Новый массив будет выглядеть 
+// вот так:
+// 1 4 7 2
+// 5 81 2 9
+// 8 4 2 4
+
+
+
+
+// int[,] FillArray(int rows, int columns)
+// {
+//     int[,] array = new int[rows, columns];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//             Console.Write($" , {array[i, j]} ");
+//             if (i % 2 != 0 && j % 2 != 0)
+//             {
+//                 array[i, j] = array[i, j] * array[i, j];
+//             }
+//         }
+//     }
+
+//     return array;
+// }
+
+
+
+// void PrintArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+
+//             Console.Write($" , {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int row = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int column = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(row, column);
+// PrintArray(array);
+
+
+
+// Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+// int[,] FillArray(int rows, int columns)
+// {
+//     int[,] array = new int[rows, columns];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+
+//             Console.Write($" , {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// void Check(int[,] array)
+// {
+//     int summ = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i == j)
+//             {
+//                 summ = summ + array[i, j];
+//             }
+//         }
+//     }
+//     Console.Write($" , {summ} ");
+// }
+
+// void Check(int[,] array)
+// {
+//     int summ = 0;
+//     for (int i = 0; i < array.GetLength(0) && i < array.GetLength(1); i++)
+//     {
+//         summ = summ + array[i, i];
+//     }
+//     Console.Write($" , {summ} ");
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int row = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int column = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(row, column);
+// PrintArray(array);
+// Check(array);
+
+
+
+
+// Найти среднее арифметическое элементов матрицы, расположенных "по углам"
+
+
+
+// public static double Mean(int[,] arr)
+//         {
+//             return (arr[0,
+//                 arr.GetLength(1)-1] + arr[0, 0] + arr[arr.GetLength(0)-1, 0] + arr[arr.GetLength(0)-1, arr.GetLength(1)-1])/4.0;
+//         }
+
+
+
+// double AngleSumm(int[,] array)
+// {
+//     double summ = (array[0, 0] + array[0, (array.GetLength(1) - 1)] + array[(array.GetLength(1) - 1), 0] + array[(array.GetLength(1) - 1), (array.GetLength(1) - 1)]) / 4.0;
+//     Console.Write($" , AngleSumm {summ} ");
+//     return summ;
+// }
+
+
+// int[,] FillArray(int rows, int columns)
+// {
+//     int[,] array = new int[rows, columns];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+
+//             Console.Write($" , {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int row = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int column = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(row, column);
+// PrintArray(array);
+// AngleSumm(array);
+
+
+
+
+
+// Задача 47: Задайте двумерный массив размером m×n, 
+// заполненный случайными вещественными числами.
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
+
+
+// double[,] FillArray(int m, int n, int minLimitRandom, int maxLimitRandom)
+// {
+//     double[,] array = new double[m, n];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().NextDouble() * (maxLimitRandom - minLimitRandom) + minLimitRandom;
+//         }
+//     }
+//     return array;
+// }
+
+// void PrintArray(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+
+//             Console.Write($"\t{array[i, j]}");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter max range");
+// int maxLimitRandom = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter min range");
+// int minLimitRandom = int.Parse(Console.ReadLine());
+
+// double[,] array = FillArray(m, n, minLimitRandom, maxLimitRandom);
+// PrintArray(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 50: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+//  и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 1, 7 -> такого числа в массиве нет
+// 0, 2 -> 7
+
+
+
+// int[,] FillArray(int m, int n, int k)
+// {
+//     int[,] array = new int[m, n];
+//     int increment = 1;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = array[i, j] + increment;
+//             increment = increment + k;
+//         }
+//     }
+//     return array;
+// }
+
+
+// void PrintArray(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// int[] FindNumberByPosition(int[,] matrix, int rowPosition, int columnPosition)
+// {
+//     if (rowPosition < 0 || columnPosition < 0 || rowPosition > matrix.GetLength(0) - 1 || columnPosition > matrix.GetLength(1) - 1)
+//     {
+//         // int[] array = new int[] { 0 };
+//         // return array;
+//         return new int[] { 0 };
+//     }
+//     else
+//     {
+//         int number = matrix[rowPosition, columnPosition];
+//         int[] array = new int[] { number, 0 };
+//         // new int[] { number, 0 };
+//         Console.WriteLine($"number {number}   ");
+//         // array[0] = matrix[rowPosition, columnPosition];
+//         // array[1] = 0;
+//         return array;
+//     }
+// }
+
+// void PrintCheckIfError(int[] results, int X, int Y)
+// {
+//     if (results.Length != 1)
+//     {
+//         Console.WriteLine($"The number in [{X}, {Y}] is {results[0]}");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"There is no such index");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter increment number");
+// int k = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter searched row number");
+// int rowPosition = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter searched column number");
+// int columnPosition = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(m, n, k);
+// PrintArray(array);
+// int[] result = FindNumberByPosition(array, rowPosition, columnPosition);
+
+// PrintCheckIfError(result, rowPosition, columnPosition);
+
+
+
+
+// Задача 52: Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,7; 5,7; 3,7; 3.
+
+
+
+
+// int[,] FillArray(int m, int n, int k)
+// {
+//     int[,] array = new int[m, n];
+//     int increment = 1;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = array[i, j] + increment;
+//             increment = increment + k;
+//         }
+//     }
+//     return array;
+// }
+
+
+// void PrintArray(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// double[] FindAverageInColumns(int[,] matrix)
+// {
+//     double columnsumm = 0;
+//     double[] array = new double[matrix.GetLength(1)];
+
+//     for (int i = 0; i < matrix.GetLength(1); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(0); j++)
+//         {
+//             columnsumm = columnsumm + array[j];
+//         }
+//         array[i] = columnsumm;
+//         Console.Write($"{array[i]}, ");
+//     }
+//     return array;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int[] FindNumberByPosition(int[,] matrix, int rowPosition, int columnPosition)
+// {
+//     if (rowPosition < 0 || columnPosition < 0 || rowPosition > matrix.GetLength(0) - 1 || columnPosition > matrix.GetLength(1) - 1)
+//     {
+//         // int[] array = new int[] { 0 };
+//         // return array;
+//         return new int[] { 0 };
+//     }
+//     else
+//     {
+//         int number = matrix[rowPosition, columnPosition];
+//         int[] array = new int[] { number, 0 };
+//         // new int[] { number, 0 };
+//         Console.WriteLine($"number {number}   ");
+//         // array[0] = matrix[rowPosition, columnPosition];
+//         // array[1] = 0;
+//         return array;
+//     }
+// }
+
+// void PrintCheckIfError(int[] results, int X, int Y)
+// {
+//     if (results.Length != 1)
+//     {
+//         Console.WriteLine($"The number in [{X}, {Y}] is {results[0]}");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"There is no such index");
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter increment number");
+// int k = int.Parse(Console.ReadLine());
+
+// // Console.WriteLine("enter searched row number");
+// // int rowPosition = int.Parse(Console.ReadLine());
+
+// // Console.WriteLine("enter searched column number");
+// // int columnPosition = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(m, n, k);
+// PrintArray(array);
+
+// FindAverageInColumns(array);
+
+
+
+
+// int[] result = FindNumberByPosition(array, rowPosition, columnPosition);
+
+// PrintCheckIfError(result, rowPosition, columnPosition);
+
+
+
+
+
+
+
+// Задача 53: Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
+
+
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+//     return array;
+// }
+
+
+// int[,] SwapArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(1); i++)
+//     {
+
+//         int temp = array[0, i];
+//         array[0, i] = array[array.GetLength(0) - 1, i];
+//         array[array.GetLength(0) - 1, i] = temp;
+
+//     }
+
+
+
+
+//     return array;
+
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+
+// int[,] array = FillArray(m, n);
+
+
+
+
+
+
+
+
+
+// Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы.
+
+
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+//     return array;
+// }
+
+// int[,] ChangeArray(int[,] array)
+// {
+
+//     int[,] newarray = new int[array.GetLength(1), array.GetLength(0)];
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             newarray[j, i] = array[i, j];
+//         }
+//     }
+//     return newarray;
+// }
+
+// int[,] PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     return array;
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(m, n);
+// PrintArray(array);
+// Console.WriteLine();
+// int[,] newarr = ChangeArray(array);
+// Console.WriteLine();
+// PrintArray(newarr);
+
+
+
+
+// Задача 57: Составить частотный словарь элементов двумерного массива. 
+// Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+
+
+
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+//     return array;
+// }
+
+// int[,] PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     return array;
+// }
+
+
+// void CheckArray(int[,] array)
+// {
+//     for (int k = 0; k <= 9; k++)
+//     {
+//         int count = 0;
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 if (array[i, j] == k)
+//                 {
+//                     count++;
+//                 }
+//             }
+//         }
+//         if (count > 0)
+//         {
+//             Console.WriteLine($" {k} has {count} times");
+//         }
+//     }
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(m, n);
+
+// PrintArray(array);
+// CheckArray(array);
+
+
+
+
+// Задача 59: Задайте двумерный массив из целых чисел. Напишите программу, 
+// которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 5 2 6 7
+// Наименьший элемент - 1, на выходе получим 
+// следующий массив:
+// 9 4 2
+// 2 2 6
+// 3 4 7
+
+
+int[,] FillArray(int m, int n)
+{
+    int[,] array = new int[m, n];
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(0, 10);
+        }
+    }
+    return array;
+}
+
+int[,] PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($" {array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+    return array;
+}
+
+
+int[] FindEl(int[,] array)
+{
+    int i = 0;
+    int j = 0;
+    int[] newarr = new int[2];
+    int min = array[i, j];
+    int mini = 0;
+    int minj = 0;
+    for (i = 0; i < array.GetLength(0); i++)
+    {
+        for (j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < min)
+            {
+                min = array[i, j];
+                newarr[0] = i;
+                newarr[1] = j;
+            }
+        }
+    }
+    Console.WriteLine($"1st min el {min}");
+
+    return newarr;
+
+}
+
+
+// int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
+
+int[,] CheckArray(int[,] oldarray, int[] elarray)
+
+{
+
+    int row = 0;
+    int column = 0;
+    // Console.WriteLine(string.Join("." elarray    )");
+
+    Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
+
+
+    // Console.WriteLine($"min {min}");
+
+    int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
+
+    for (int i = 0; i < newarr.GetLength(0); i++)
+    {
+        if (i == elarray[0])
+        {
+            row++;
+        }
+        for (int j = 0; j < newarr.GetLength(1); j++)
+        {
+            // newarr[i, j] = oldarray[i + row, j];
+            if (j == elarray[1])
+            {
+                column++;
+            }
+            newarr[i, j] = oldarray[i + row, j + column];
+        }
+        row = 0;
+    }
+    return newarr;
+}
+
+Console.Clear();
+Console.WriteLine("enter rows number");
+int m = int.Parse(Console.ReadLine());
+
+Console.WriteLine("enter columns number");
+int n = int.Parse(Console.ReadLine());
+
+int[,] array = FillArray(m, n);
+PrintArray(array);
+
+int[] newarr = FindEl(array);
+
+int[,] result = CheckArray(array, newarr);
+PrintArray(result);
+
+
+
+
+
+
+
+// Задача 52: Задайте двумерный массив из целых чисел. 
+// Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,7; 5,7; 3,7; 3.
+
+
+
+// using System;
+// public class Answer
+// {
+//     public static void PrintArray(int[,] matrix)
+//     {
+//         // Введите свое решение ниже
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 Console.Write($"{matrix[i, j]}\t");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+//     public static int[,] CreateIncreasingMatrix(int n, int m, int k)
+//     {
+//         // Введите свое решение ниже
+//         int[,] array = new int[n, m];
+//         int increment = 1;
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 array[i, j] = array[i, j] + increment;
+//                 increment = increment + k;
+//             }
+//         }
+//         return array;
+//     }
+//     static void PrintListAvr(double[] list)
+//     {
+
+//         // Введите свое решение ниже
+//         Console.WriteLine($" The averages in columns are: ");
+
+//         for (int i = 0; i < list.Length; i++)
+//         {
+//             double temp = list[i];
+//             Console.Write($"{temp.ToString("0.00")}\t");
+//         }
+//     }
+
+//     static double[] FindAverageInColumns(int[,] matrix)
+//     {
+//         // Введите свое решение ниже
+//         double[] array = new double[matrix.GetLength(1)];
+//         for (int i = 0; i < matrix.GetLength(1); i++)
+//         {
+//             double summ = 0.00000;
+//             for (int j = 0; j < matrix.GetLength(0); j++)
+//             {
+//                 summ = summ + matrix[j, i];
+//                 // Console.Write($"el/{matrix[j, i]}--");
+//             }
+//             array[i] = summ / matrix.GetLength(0);
+//             // Console.Write($"ar.mean/{Math.Round(array[i], 2)};");
+//         }
+//         // Console.WriteLine($"array {string.Join("/", array)}");
+//         return array;
+//     }
+
+//     // Не удаляйте и не меняйте метод Main! 
+//     static public void Main(string[] args)
+//     {
+//         int n, m, k;
+
+//         if (args.Length >= 3)
+//         {
+//             n = int.Parse(args[0]);
+//             m = int.Parse(args[1]);
+//             k = int.Parse(args[2]);
+//         }
+//         else
+//         {
+//             // Здесь вы можете поменять значения для отправки кода на Выполнение
+//             n = 3;
+//             m = 4;
+//             k = 2;
+//         }
+//         // Не удаляйте строки ниже
+//         int[,] result = CreateIncreasingMatrix(n, m, k);
+//         PrintArray(result);
+//         Console.WriteLine();
+//         PrintListAvr(FindAverageInColumns(result));
+//         // FindAverageInColumns(result);
+//     }
+// }
+
+
+
+
