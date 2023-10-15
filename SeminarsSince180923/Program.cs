@@ -2756,113 +2756,111 @@
 // 3 4 7
 
 
-int[,] FillArray(int m, int n)
-{
-    int[,] array = new int[m, n];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = new Random().Next(0, 10);
-        }
-    }
-    return array;
-}
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+//     return array;
+// }
 
-int[,] PrintArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($" {array[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-    return array;
-}
-
-
-int[] FindEl(int[,] array)
-{
-    int i = 0;
-    int j = 0;
-    int[] newarr = new int[2];
-    int min = array[i, j];
-    int mini = 0;
-    int minj = 0;
-    for (i = 0; i < array.GetLength(0); i++)
-    {
-        for (j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] < min)
-            {
-                min = array[i, j];
-                newarr[0] = i;
-                newarr[1] = j;
-            }
-        }
-    }
-    Console.WriteLine($"1st min el {min}");
-
-    return newarr;
-
-}
+// int[,] PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     return array;
+// }
 
 
-// int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
+// int[] FindEl(int[,] array)
+// {
+//     int i = 0;
+//     int j = 0;
+//     int[] newarr = new int[2];
+//     int min = array[i, j];
+//     int mini = 0;
+//     int minj = 0;
+//     for (i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j] < min)
+//             {
+//                 min = array[i, j];
+//                 newarr[0] = i;
+//                 newarr[1] = j;
+//             }
+//         }
+//     }
+//     Console.WriteLine($"1st min el {min}");
 
-int[,] CheckArray(int[,] oldarray, int[] elarray)
+//     return newarr;
 
-{
-
-    int row = 0;
-    int column = 0;
-    // Console.WriteLine(string.Join("." elarray    )");
-
-    Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
-
-
-    // Console.WriteLine($"min {min}");
-
-    int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
-
-    for (int i = 0; i < newarr.GetLength(0); i++)
-    {
-        if (i == elarray[0])
-        {
-            row++;
-        }
-        for (int j = 0; j < newarr.GetLength(1); j++)
-        {
-            // newarr[i, j] = oldarray[i + row, j];
-            if (j == elarray[1])
-            {
-                column++;
-            }
-            newarr[i, j] = oldarray[i + row, j + column];
-        }
-        row = 0;
-    }
-    return newarr;
-}
-
-Console.Clear();
-Console.WriteLine("enter rows number");
-int m = int.Parse(Console.ReadLine());
-
-Console.WriteLine("enter columns number");
-int n = int.Parse(Console.ReadLine());
-
-int[,] array = FillArray(m, n);
-PrintArray(array);
-
-int[] newarr = FindEl(array);
-
-int[,] result = CheckArray(array, newarr);
-PrintArray(result);
+// }
 
 
+// // int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
+
+// int[,] CheckArray(int[,] oldarray, int[] elarray)
+
+// {
+
+//     int row = 0;
+//     int column = 0;
+//     // Console.WriteLine(string.Join("." elarray    )");
+
+//     Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
+
+
+//     // Console.WriteLine($"min {min}");
+
+//     int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
+
+//     for (int i = 0; i < newarr.GetLength(0); i++)
+//     {
+//         if (i == elarray[0])
+//         {
+//             row++;
+//         }
+//         for (int j = 0; j < newarr.GetLength(1); j++)
+//         {
+//             // newarr[i, j] = oldarray[i + row, j];
+//             if (j == elarray[1])
+//             {
+//                 column++;
+//             }
+//             newarr[i, j] = oldarray[i + row, j + column];
+//         }
+//         row = 0;
+//     }
+//     return newarr;
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(m, n);
+// PrintArray(array);
+
+// int[] newarr = FindEl(array);
+
+// int[,] result = CheckArray(array, newarr);
+// PrintArray(result);
 
 
 
@@ -2966,6 +2964,139 @@ PrintArray(result);
 //         // FindAverageInColumns(result);
 //     }
 // }
+
+
+// Задача 54: Задайте двумерный массив. Напишите программу, которая
+// упорядочит по убыванию элементы каждой строки двумерного массива.
+
+
+int[,] FillArray(int row, int col)
+{
+    int[,] array = new int[row, col];
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(0, 10);
+        }
+    }
+    return array;
+}
+
+int[,] PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]}\t");
+        }
+        Console.WriteLine();
+    }
+    return array;
+}
+
+int[,] SortArray(int[,] array)
+{
+    int i = 0;
+    int j = 0;
+    int min = array[i, j];
+    for (i = 0; i < array.GetLength(0); i++)
+    {
+        for (j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(1) - 1; k++)
+            {
+                if (array[i, k] < array[i, k + 1])
+                {
+                    int temp = array[i, k];
+                    array[i, k] = array[i, k + 1];
+                    array[i, k + 1] = temp;
+                }
+            }
+        }
+    }
+    return array;
+}
+
+
+Console.Clear();
+Console.WriteLine("enter rows number");
+int row = int.Parse(Console.ReadLine());
+
+Console.WriteLine("enter columns number");
+int col = int.Parse(Console.ReadLine());
+
+int[,] array = FillArray(row, col);
+PrintArray(array);
+// int[,] newarray = SortArray(array);
+int[,] newarray = SortArray(array);
+Console.WriteLine();
+PrintArray(newarray);
+
+
+
+
+// Задача 56: Задайте прямоугольный двумерный массив. Напишите
+// программу, которая будет находить строку с наименьшей суммой элементов.
+
+
+
+
+
+
+
+
+
+
+// Задача 58: Задайте две матрицы. Напишите программу, которая будет
+// находить произведение двух матриц.
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 60: Сформируйте трёхмерный массив из неповторяющихся
+// двузначных чисел. Напишите программу, которая будет построчно выводить
+// массив, добавляя индексы каждого элемента.
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 62: Заполните спирально массив 4 на 4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
