@@ -2785,15 +2785,12 @@
 
 // int[] FindEl(int[,] array)
 // {
-//     int i = 0;
-//     int j = 0;
 //     int[] newarr = new int[2];
-//     int min = array[i, j];
-//     int mini = 0;
-//     int minj = 0;
-//     for (i = 0; i < array.GetLength(0); i++)
+//     int min = array[0, 0];
+
+//     for (int i = 0; i < array.GetLength(0); i++)
 //     {
-//         for (j = 0; j < array.GetLength(1); j++)
+//         for (int j = 0; j < array.GetLength(1); j++)
 //         {
 //             if (array[i, j] < min)
 //             {
@@ -2803,37 +2800,32 @@
 //             }
 //         }
 //     }
-//     Console.WriteLine($"1st min el {min}");
+//     Console.WriteLine($"min el in array {min}");
 
 //     return newarr;
 
 // }
 
 
-// // int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
+// // // int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
 
 // int[,] CheckArray(int[,] oldarray, int[] elarray)
 
 // {
-
 //     int row = 0;
 //     int column = 0;
-//     // Console.WriteLine(string.Join("." elarray    )");
 
 //     Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
 
-
-//     // Console.WriteLine($"min {min}");
-
 //     int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
 
-//     for (int i = 0; i < newarr.GetLength(0); i++)
+//     for (int i = 0; i < oldarray.GetLength(0); i++)
 //     {
 //         if (i == elarray[0])
 //         {
 //             row++;
 //         }
-//         for (int j = 0; j < newarr.GetLength(1); j++)
+//         for (int j = 0; j < oldarray.GetLength(1); j++)
 //         {
 //             // newarr[i, j] = oldarray[i + row, j];
 //             if (j == elarray[1])
@@ -2857,9 +2849,9 @@
 // int[,] array = FillArray(m, n);
 // PrintArray(array);
 
-// int[] newarr = FindEl(array);
+// // int[] newarr = FindEl(array);
 
-// int[,] result = CheckArray(array, newarr);
+// int[,] result = CheckArray(array, FindEl(array));
 // PrintArray(result);
 
 
@@ -2970,75 +2962,280 @@
 // упорядочит по убыванию элементы каждой строки двумерного массива.
 
 
-int[,] FillArray(int row, int col)
-{
-    int[,] array = new int[row, col];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = new Random().Next(0, 10);
-        }
-    }
-    return array;
-}
+// int[,] FillArray(int row, int col)
+// {
+//     int[,] array = new int[row, col];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+//     return array;
+// }
 
-int[,] PrintArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($"{array[i, j]}\t");
-        }
-        Console.WriteLine();
-    }
-    return array;
-}
+// int[,] PrintArray(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine();
+//     }
+//     return matrix;
+// }
 
-int[,] SortArray(int[,] array)
-{
-    int i = 0;
-    int j = 0;
-    int min = array[i, j];
-    for (i = 0; i < array.GetLength(0); i++)
-    {
-        for (j = 0; j < array.GetLength(1); j++)
-        {
-            for (int k = 0; k < array.GetLength(1) - 1; k++)
-            {
-                if (array[i, k] < array[i, k + 1])
-                {
-                    int temp = array[i, k];
-                    array[i, k] = array[i, k + 1];
-                    array[i, k + 1] = temp;
-                }
-            }
-        }
-    }
-    return array;
-}
+// int[,] SortArray(int[,] matrix)
+// {
+//     int i = 0;
+//     int j = 0;
+//     for (i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < matrix.GetLength(1) - 1; k++)
+//             {
+//                 if (matrix[i, k] < matrix[i, k + 1])
+//                 {
+//                     int temp = matrix[i, k];
+//                     matrix[i, k] = matrix[i, k + 1];
+//                     matrix[i, k + 1] = temp;
+//                 }
+//             }
+//         }
+//     }
+//     return matrix;
+// }
 
 
-Console.Clear();
-Console.WriteLine("enter rows number");
-int row = int.Parse(Console.ReadLine());
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int row = int.Parse(Console.ReadLine());
 
-Console.WriteLine("enter columns number");
-int col = int.Parse(Console.ReadLine());
+// Console.WriteLine("enter columns number");
+// int col = int.Parse(Console.ReadLine());
 
-int[,] array = FillArray(row, col);
-PrintArray(array);
+// int[,] array = FillArray(row, col);
+// PrintArray(array);
+// // int[,] newarray = SortArray(array);
 // int[,] newarray = SortArray(array);
-int[,] newarray = SortArray(array);
-Console.WriteLine();
-PrintArray(newarray);
+// Console.WriteLine();
+// PrintArray(newarray);
+
+
+
+
+
+
+// using System;
+
+// public class Answer
+// {
+
+//     public static void SortRowsDescending(int[,] matrix)
+//     {
+//         // Введите свое решение ниже
+//         int i = 0;
+//         int j = 0;
+//         for (i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 for (int k = 0; k < matrix.GetLength(1) - 1; k++)
+//                 {
+//                     if (matrix[i, k] < matrix[i, k + 1])
+//                     {
+//                         int temp = matrix[i, k];
+//                         matrix[i, k] = matrix[i, k + 1];
+//                         matrix[i, k + 1] = temp;
+//                     }
+//                 }
+//             }
+//         }
+
+
+//     }
+
+
+//     public static void PrintMatrix(int[,] matrix)
+//     {  // Введите свое решение ниже
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 Console.Write($"{matrix[i, j]}\t");
+//             }
+//             Console.WriteLine();
+//         }
+
+//     }
+//     // Не удаляйте и не меняйте метод Main! 
+//     public static void Main(string[] args)
+//     {
+//         int[,] matrix;
+
+//         if (args.Length == 0)
+//         {
+//             // Если аргументы не переданы, используем матрицу по умолчанию
+//             matrix = new int[,]
+//             {
+//                 {5, 2, 9},
+//                 {8, 1, 4},
+//                 {6, 7, 3}
+//             };
+//         }
+//         else
+//         {
+//             // Иначе, парсим аргументы в двумерный массив
+//             string[] rows = args[0].Split(';');
+//             matrix = new int[rows.Length, rows[0].Split(',').Length];
+//             for (int i = 0; i < rows.Length; i++)
+//             {
+//                 string[] elements = rows[i].Split(',');
+//                 if (elements.Length != matrix.GetLength(1))
+//                 {
+//                     Console.WriteLine($"Ошибка: Неправильное количество элементов в строке {i + 1}.");
+//                     return;
+//                 }
+//                 for (int j = 0; j < elements.Length; j++)
+//                 {
+//                     if (int.TryParse(elements[j], out int number))
+//                     {
+//                         matrix[i, j] = number;
+//                     }
+//                     else
+//                     {
+//                         Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
+//                         return;
+//                     }
+//                 }
+//             }
+//         }
+
+
+//         Console.WriteLine("Исходная матрица:");
+//         PrintMatrix(matrix);
+
+//         SortRowsDescending(matrix);
+
+//         Console.WriteLine("\nМатрица с упорядоченными по убыванию строками:");
+//         PrintMatrix(matrix);
+//     }
+// }
+
+
 
 
 
 
 // Задача 56: Задайте прямоугольный двумерный массив. Напишите
 // программу, которая будет находить строку с наименьшей суммой элементов.
+
+// Определение строки с наименьшей суммой элементов
+
+
+using System;
+public class Answer
+{
+    public static int SumOfRow(int[,] matrix, int row)
+    {
+        // Введите свое решение ниже
+        int summ = 0;
+        for (int i = 0; i < matrix.GetLength(1); i++)
+        {
+            // summ = summ + matrix[row, i];
+            summ += matrix[row, i];
+        }
+        return summ;
+    }
+
+    public static int[] MinimumSumRow(int[,] matrix)
+    {
+        // Введите свое решение ниже
+        int[] result = new int[2];
+        int rowindex = 0;
+        // int minsumm = int.MaxValue;
+        int minsumm = SumOfRow(matrix, 0);
+        Console.WriteLine($"minsumm-{minsumm}");
+
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            int rowsumm = SumOfRow(matrix, i);
+            Console.WriteLine($"rowsumm-{rowsumm}");
+            if (rowsumm < minsumm)
+            {
+                minsumm = rowsumm;
+                rowindex = i;
+            }
+            result[0] = rowindex;
+            result[1] = minsumm;
+            // result[1] = SumOfRow(matrix, rowindex);
+            // Console.WriteLine($"minsumm-11-{minsumm}");
+        }
+        return result;
+    }
+
+    // Не удаляйте и не меняйте метод Main! 
+    public static void Main(string[] args)
+    {
+        int[,] matrix;
+        if (args.Length == 0)
+        {
+            // Здесь вы можете поменять значения для отправки кода на Выполнение
+            // Если аргументы не переданы, используем матрицу по умолчанию
+
+            matrix = new int[,]
+            {
+                {2, 5, 3},
+                {4, 1, 2},
+                {9, 6, 9}
+            };
+        }
+        else
+        {
+            // Иначе, парсим аргументы в двумерный массив
+            string[] rows = args[0].Split(';');
+            matrix = new int[rows.Length, rows[0].Split(',').Length];
+            for (int i = 0; i < rows.Length; i++)
+            {
+                string[] elements = rows[i].Split(',');
+                for (int j = 0; j < elements.Length; j++)
+                {
+                    if (int.TryParse(elements[j], out int number))
+                    {
+                        matrix[i, j] = number;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
+                        return;
+                    }
+                }
+            }
+        }
+
+        Console.WriteLine("Исходная матрица:");
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                Console.Write($"{matrix[i, j]}\t");
+            }
+            Console.WriteLine();
+        }
+
+        int[] minSumRow = MinimumSumRow(matrix);
+
+        Console.WriteLine($"\nСумма наименьшей строки (строка {minSumRow[0] + 1}): {minSumRow[1]}");
+
+    }
+}
+
+
+
 
 
 
@@ -3051,6 +3248,234 @@ PrintArray(newarray);
 
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет
 // находить произведение двух матриц.
+
+
+
+// using System;
+
+// public class Answer
+// {
+//     public static void MultiplyIfPossible(int[,] matrixA, int[,] matrixB)
+//     { // Введите свое решение ниже
+//       // if (matrixA.GetLength(1) != matrixB.GetLength(0) || matrixA.GetLength(0) != matrixB.GetLength(1))
+//         if (matrixA.GetLength(1) != matrixB.GetLength(0))
+//         {
+//             Console.WriteLine($"It is impossible to multiply.");
+//         }
+//         else
+//         {
+//             int[,] result = MatrixMultiplication(matrixA, matrixB);
+//             PrintMatrix(result);
+//             // PrintMatrix(MatrixMultiplication(matrixA, matrixB));
+
+
+//         }
+//     }
+
+//     public static int[,] MatrixMultiplication(int[,] matrixA, int[,] matrixB)
+//     {  // Введите свое решение ниже
+
+//         int[,] newmatrix = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
+
+//         for (int i = 0; i < newmatrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < newmatrix.GetLength(1); j++)
+//             {
+//                 for (int k = 0; k < matrixA.GetLength(1); k++)
+//                 {
+
+//                     // newmatrix[i, j] += matrixA[i, k] * matrixB[k, j];
+
+//                     newmatrix[i, j] = newmatrix[i, j] + matrixA[i, k] * matrixB[k, j];
+
+//                     // newmatrix[i, j] = matrixA[i, j] * matrixB[i, j] + matrixA[i, j + 1] * matrixB[i + 1, j];    ///29
+
+//                     // newmatrix[i, j + 1] = matrixA[i, j] * matrixB[i, j + 1] + matrixA[i, j + 1] * matrixB[i + 1, j + 1];  ///26
+
+//                     // newmatrix[i + 1, j] = matrixA[i, j] * matrixB[i, j] + matrixA[i + 1, j] * matrixB[i + 1, j + 1];   ///47
+
+//                     // newmatrix[i + 1, j + 1] = matrixA[i + 1, j] * matrixB[i, j + 1] + matrixA[i + 1, j + 1] * matrixB[i + 1, j + 1];   ///52
+//                 }
+//             }
+//         }
+//         return newmatrix;
+//     }
+
+//     public static void PrintMatrix(int[,] matrix)
+//     {  // Введите свое решение ниже
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 Console.Write($"{matrix[i, j]}\t");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+
+//     // Не удаляйте и не меняйте метод Main! 
+
+//     public static void Main(string[] args)
+//     {
+//         int[,] matrix;
+
+//         if (args.Length == 0)
+//         {
+//             // Если аргументы не переданы, используем матрицу по умолчанию
+//             matrix = new int[,]
+//             {
+//                 {3, 2},
+//                 {8, 1}
+//             };
+//         }
+//         else
+//         {
+//             // Иначе, парсим аргументы в двумерный массив
+//             string[] rows = args[0].Split(';');
+//             matrix = new int[rows.Length, rows[0].Split(',').Length];
+//             for (int i = 0; i < rows.Length; i++)
+//             {
+//                 string[] elements = rows[i].Split(',');
+//                 for (int j = 0; j < elements.Length; j++)
+//                 {
+//                     if (int.TryParse(elements[j], out int number))
+//                     {
+//                         matrix[i, j] = number;
+//                     }
+//                     else
+//                     {
+//                         Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
+//                         return;
+//                     }
+//                 }
+//             }
+//         }
+
+//         Console.WriteLine("Исходная матрица:");
+//         PrintMatrix(matrix);
+
+//         int[,] matrixB = {
+//             {5, 6},
+//             {7,4}
+//         };
+
+//         Console.WriteLine("\nMatrix B:");
+//         PrintMatrix(matrixB);
+
+//         Console.WriteLine("\nMultiplication result:");
+
+//         MultiplyIfPossible(matrix, matrixB);
+//     }
+// }
+
+
+
+
+
+
+// using System;
+
+// public class Answer
+// {
+//     public static void MultiplyIfPossible(int[,] matrixA, int[,] matrixB)
+//     {
+//         if (matrixA.GetLength(1) != matrixB.GetLength(0))
+//         {
+//             Console.WriteLine("It is impossible to multiply.");
+//         }
+//         else
+//         {
+//             int[,] multiplicative = MatrixMultiplication(matrixA, matrixB);
+//             PrintMatrix(multiplicative);
+//         }
+//     }
+
+//     public static int[,] MatrixMultiplication(int[,] matrixA, int[,] matrixB)
+//     {
+//         int[,] multiplicative = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
+//         for (int i = 0; i < multiplicative.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < multiplicative.GetLength(1); j++)
+//             {
+//                 for (int k = 0; k < matrixA.GetLength(1); k++)
+//                 {
+//                     multiplicative[i, j] += matrixA[i, k] * matrixB[k, j];
+//                 }
+//             }
+//         }
+//         return multiplicative;
+//     }
+
+//     public static void PrintMatrix(int[,] matrix)
+//     {
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 Console.Write($"{matrix[i, j]}\t");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+
+//     public static void Main(string[] args)
+//     {
+//         int[,] matrix;
+
+//         if (args.Length == 0)
+//         {
+//             // Если аргументы не переданы, используем матрицу по умолчанию
+//             matrix = new int[,]
+//             {
+//                 {5, 2},
+//                 {5, 2},
+//                 {5, 2},
+//                 {5, 2},
+//                 {5, 2},
+//                 {5, 2},
+//                 {8, 1}
+//             };
+//         }
+//         else
+//         {
+//             // Иначе, парсим аргументы в двумерный массив
+//             string[] rows = args[0].Split(';');
+//             matrix = new int[rows.Length, rows[0].Split(',').Length];
+//             for (int i = 0; i < rows.Length; i++)
+//             {
+//                 string[] elements = rows[i].Split(',');
+//                 for (int j = 0; j < elements.Length; j++)
+//                 {
+//                     if (int.TryParse(elements[j], out int number))
+//                     {
+//                         matrix[i, j] = number;
+//                     }
+//                     else
+//                     {
+//                         Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
+//                         return;
+//                     }
+//                 }
+//             }
+//         }
+
+//         Console.WriteLine("Исходная матрица:");
+//         PrintMatrix(matrix);
+
+//         int[,] matrixB = {
+//             {5, 1,6,3,2},
+//             {7,1, 8,4,3}
+//         };
+
+//         Console.WriteLine("\nMatrix B:");
+//         PrintMatrix(matrixB);
+
+//         Console.WriteLine("\nMultiplication result:");
+
+//         MultiplyIfPossible(matrix, matrixB);
+//     }
+// }
+
 
 
 
@@ -3067,9 +3492,6 @@ PrintArray(newarray);
 // Задача 60: Сформируйте трёхмерный массив из неповторяющихся
 // двузначных чисел. Напишите программу, которая будет построчно выводить
 // массив, добавляя индексы каждого элемента.
-
-
-
 
 
 
@@ -3101,3 +3523,185 @@ PrintArray(newarray);
 
 
 
+
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+
+// int n = 453;
+// int digitscore(int n)
+// {
+//     if (n == 0)
+//     {
+//         return 0;
+//     }
+//     int temp = n % 10;
+//     int temp1 = n / 10;
+//     int summ = digitscore(temp1) + temp;
+//     return summ;
+// }
+// Console.WriteLine(digitscore(n));
+
+
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+// int digitscore(int a, int b)
+// {
+//     if (b == 0)
+//     {
+//         return 1;
+//     }
+//     int square = a;
+
+//     return square * digitscore(square, b - 1);
+// }
+
+// int a = 3;
+// int b = 3;
+
+// Console.WriteLine(digitscore(a, b));
+
+
+
+
+
+
+// Задача 63: Задайте значение N. Напишите программу, 
+// которая выведет все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+// same as
+
+// Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5 -> "1, 2, 3, 4, 5"
+// M = 4; N = 8 -> "4, 5, 6, 7, 8"
+
+// int digitscore(int m, int n)
+// {
+//     if (n == 0)
+//     {
+//         n = n + 1;
+//         return
+//                 0;
+//     }
+
+//     Console.Write($"\t{m}, ");
+//     int digit = m + 1;
+
+//     return (digitscore(digit, n - 1));
+
+// }
+
+// int m = 0;
+// int n = 4;
+
+// Console.WriteLine(digitscore(m, n));
+
+
+
+
+
+
+// Определение строки с наименьшей суммой элементов
+
+
+
+// using System;
+
+// public class Answer
+// {
+//     // public static int SumOfRow(int[,] matrix, int row)
+//     // {
+//     //     // Введите свое решение ниже
+
+//     // }
+
+//     public static int[] MinimumSumRow(int[,] matrix)
+//     {
+//         int[] result = new int[2];
+//         int i = 0;
+//         int j = 0;
+//         // Введите свое решение ниже
+//         for (i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (j = 0; j < matrix.GetLength(1); j++)
+//             {
+
+//                 for (int k = 0; k < matrix.GetLength(1) - 1; k++)
+//                 {
+
+//                     // if (matrix[i, k] < matrix[i, k + 1])
+
+//                     if (matrix[i, k] < matrix[i, k] + 1)
+//                     {
+//                         int min = matrix[i, k] + 1;
+//                         Console.Write($"min{min}, ");
+//                     }
+
+
+
+//                 }
+//             }
+//         }
+//         return result;
+
+//     }
+
+//     // Не удаляйте и не меняйте метод Main! 
+//     public static void Main(string[] args)
+//     {
+//         int[,] matrix;
+//         if (args.Length == 0)
+//         {
+//             // Если аргументы не переданы, используем матрицу по умолчанию
+//             matrix = new int[,]
+//             {
+//                 {5, 2, 9},
+//                 {8, 1, 4},
+//                 {6, 7, 3}
+//             };
+//         }
+//         else
+//         {
+//             // Иначе, парсим аргументы в двумерный массив
+//             string[] rows = args[0].Split(';');
+//             matrix = new int[rows.Length, rows[0].Split(',').Length];
+//             for (int i = 0; i < rows.Length; i++)
+//             {
+//                 string[] elements = rows[i].Split(',');
+//                 for (int j = 0; j < elements.Length; j++)
+//                 {
+//                     if (int.TryParse(elements[j], out int number))
+//                     {
+//                         matrix[i, j] = number;
+//                     }
+//                     else
+//                     {
+//                         Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
+//                         return;
+//                     }
+//                 }
+//             }
+//         }
+
+//         Console.WriteLine("Исходная матрица:");
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 Console.Write($"{matrix[i, j]}\t");
+//             }
+//             Console.WriteLine();
+//         }
+
+//         int[] minSumRow = MinimumSumRow(matrix);
+
+//         // Console.WriteLine($"\nСумма наименьшей строки (строка {minSumRow[0] + 1}): {minSumRow[1]}");
+//     }
+
+// }
