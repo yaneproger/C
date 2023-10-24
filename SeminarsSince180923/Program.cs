@@ -3137,102 +3137,102 @@
 // Определение строки с наименьшей суммой элементов
 
 
-using System;
-public class Answer
-{
-    public static int SumOfRow(int[,] matrix, int row)
-    {
-        // Введите свое решение ниже
-        int summ = 0;
-        for (int i = 0; i < matrix.GetLength(1); i++)
-        {
-            // summ = summ + matrix[row, i];
-            summ += matrix[row, i];
-        }
-        return summ;
-    }
+// using System;
+// public class Answer
+// {
+//     public static int SumOfRow(int[,] matrix, int row)
+//     {
+//         // Введите свое решение ниже
+//         int summ = 0;
+//         for (int i = 0; i < matrix.GetLength(1); i++)
+//         {
+//             // summ = summ + matrix[row, i];
+//             summ += matrix[row, i];
+//         }
+//         return summ;
+//     }
 
-    public static int[] MinimumSumRow(int[,] matrix)
-    {
-        // Введите свое решение ниже
-        int[] result = new int[2];
-        int rowindex = 0;
-        // int minsumm = int.MaxValue;
-        int minsumm = SumOfRow(matrix, 0);
-        Console.WriteLine($"minsumm-{minsumm}");
+//     public static int[] MinimumSumRow(int[,] matrix)
+//     {
+//         // Введите свое решение ниже
+//         int[] result = new int[2];
+//         int rowindex = 0;
+//         // int minsumm = int.MaxValue;
+//         int minsumm = SumOfRow(matrix, 0);
+//         Console.WriteLine($"minsumm-{minsumm}");
 
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            int rowsumm = SumOfRow(matrix, i);
-            Console.WriteLine($"rowsumm-{rowsumm}");
-            if (rowsumm < minsumm)
-            {
-                minsumm = rowsumm;
-                rowindex = i;
-            }
-            result[0] = rowindex;
-            result[1] = minsumm;
-            // result[1] = SumOfRow(matrix, rowindex);
-            // Console.WriteLine($"minsumm-11-{minsumm}");
-        }
-        return result;
-    }
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             int rowsumm = SumOfRow(matrix, i);
+//             Console.WriteLine($"rowsumm-{rowsumm}");
+//             if (rowsumm < minsumm)
+//             {
+//                 minsumm = rowsumm;
+//                 rowindex = i;
+//             }
+//             result[0] = rowindex;
+//             result[1] = minsumm;
+//             // result[1] = SumOfRow(matrix, rowindex);
+//             // Console.WriteLine($"minsumm-11-{minsumm}");
+//         }
+//         return result;
+//     }
 
-    // Не удаляйте и не меняйте метод Main! 
-    public static void Main(string[] args)
-    {
-        int[,] matrix;
-        if (args.Length == 0)
-        {
-            // Здесь вы можете поменять значения для отправки кода на Выполнение
-            // Если аргументы не переданы, используем матрицу по умолчанию
+//     // Не удаляйте и не меняйте метод Main! 
+//     public static void Main(string[] args)
+//     {
+//         int[,] matrix;
+//         if (args.Length == 0)
+//         {
+//             // Здесь вы можете поменять значения для отправки кода на Выполнение
+//             // Если аргументы не переданы, используем матрицу по умолчанию
 
-            matrix = new int[,]
-            {
-                {2, 5, 3},
-                {4, 1, 2},
-                {9, 6, 9}
-            };
-        }
-        else
-        {
-            // Иначе, парсим аргументы в двумерный массив
-            string[] rows = args[0].Split(';');
-            matrix = new int[rows.Length, rows[0].Split(',').Length];
-            for (int i = 0; i < rows.Length; i++)
-            {
-                string[] elements = rows[i].Split(',');
-                for (int j = 0; j < elements.Length; j++)
-                {
-                    if (int.TryParse(elements[j], out int number))
-                    {
-                        matrix[i, j] = number;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
-                        return;
-                    }
-                }
-            }
-        }
+//             matrix = new int[,]
+//             {
+//                 {2, 5, 3},
+//                 {4, 1, 2},
+//                 {9, 6, 9}
+//             };
+//         }
+//         else
+//         {
+//             // Иначе, парсим аргументы в двумерный массив
+//             string[] rows = args[0].Split(';');
+//             matrix = new int[rows.Length, rows[0].Split(',').Length];
+//             for (int i = 0; i < rows.Length; i++)
+//             {
+//                 string[] elements = rows[i].Split(',');
+//                 for (int j = 0; j < elements.Length; j++)
+//                 {
+//                     if (int.TryParse(elements[j], out int number))
+//                     {
+//                         matrix[i, j] = number;
+//                     }
+//                     else
+//                     {
+//                         Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
+//                         return;
+//                     }
+//                 }
+//             }
+//         }
 
-        Console.WriteLine("Исходная матрица:");
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                Console.Write($"{matrix[i, j]}\t");
-            }
-            Console.WriteLine();
-        }
+//         Console.WriteLine("Исходная матрица:");
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 Console.Write($"{matrix[i, j]}\t");
+//             }
+//             Console.WriteLine();
+//         }
 
-        int[] minSumRow = MinimumSumRow(matrix);
+//         int[] minSumRow = MinimumSumRow(matrix);
 
-        Console.WriteLine($"\nСумма наименьшей строки (строка {minSumRow[0] + 1}): {minSumRow[1]}");
+//         Console.WriteLine($"\nСумма наименьшей строки (строка {minSumRow[0] + 1}): {minSumRow[1]}");
 
-    }
-}
+//     }
+// }
 
 
 
@@ -3606,102 +3606,3 @@ public class Answer
 
 
 
-
-// Определение строки с наименьшей суммой элементов
-
-
-
-// using System;
-
-// public class Answer
-// {
-//     // public static int SumOfRow(int[,] matrix, int row)
-//     // {
-//     //     // Введите свое решение ниже
-
-//     // }
-
-//     public static int[] MinimumSumRow(int[,] matrix)
-//     {
-//         int[] result = new int[2];
-//         int i = 0;
-//         int j = 0;
-//         // Введите свое решение ниже
-//         for (i = 0; i < matrix.GetLength(0); i++)
-//         {
-//             for (j = 0; j < matrix.GetLength(1); j++)
-//             {
-
-//                 for (int k = 0; k < matrix.GetLength(1) - 1; k++)
-//                 {
-
-//                     // if (matrix[i, k] < matrix[i, k + 1])
-
-//                     if (matrix[i, k] < matrix[i, k] + 1)
-//                     {
-//                         int min = matrix[i, k] + 1;
-//                         Console.Write($"min{min}, ");
-//                     }
-
-
-
-//                 }
-//             }
-//         }
-//         return result;
-
-//     }
-
-//     // Не удаляйте и не меняйте метод Main! 
-//     public static void Main(string[] args)
-//     {
-//         int[,] matrix;
-//         if (args.Length == 0)
-//         {
-//             // Если аргументы не переданы, используем матрицу по умолчанию
-//             matrix = new int[,]
-//             {
-//                 {5, 2, 9},
-//                 {8, 1, 4},
-//                 {6, 7, 3}
-//             };
-//         }
-//         else
-//         {
-//             // Иначе, парсим аргументы в двумерный массив
-//             string[] rows = args[0].Split(';');
-//             matrix = new int[rows.Length, rows[0].Split(',').Length];
-//             for (int i = 0; i < rows.Length; i++)
-//             {
-//                 string[] elements = rows[i].Split(',');
-//                 for (int j = 0; j < elements.Length; j++)
-//                 {
-//                     if (int.TryParse(elements[j], out int number))
-//                     {
-//                         matrix[i, j] = number;
-//                     }
-//                     else
-//                     {
-//                         Console.WriteLine($"Ошибка при парсинге аргумента {elements[j]}.");
-//                         return;
-//                     }
-//                 }
-//             }
-//         }
-
-//         Console.WriteLine("Исходная матрица:");
-//         for (int i = 0; i < matrix.GetLength(0); i++)
-//         {
-//             for (int j = 0; j < matrix.GetLength(1); j++)
-//             {
-//                 Console.Write($"{matrix[i, j]}\t");
-//             }
-//             Console.WriteLine();
-//         }
-
-//         int[] minSumRow = MinimumSumRow(matrix);
-
-//         // Console.WriteLine($"\nСумма наименьшей строки (строка {minSumRow[0] + 1}): {minSumRow[1]}");
-//     }
-
-// }
