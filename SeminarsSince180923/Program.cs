@@ -2756,103 +2756,104 @@
 // 3 4 7
 
 
-// int[,] FillArray(int m, int n)
-// {
-//     int[,] array = new int[m, n];
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             array[i, j] = new Random().Next(0, 10);
-//         }
-//     }
-//     return array;
-// }
 
-// int[,] PrintArray(int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             Console.Write($" {array[i, j]} ");
-//         }
-//         Console.WriteLine();
-//     }
-//     return array;
-// }
+int[,] FillArray(int m, int n)
+{
+    int[,] array = new int[m, n];
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(0, 10);
+        }
+    }
+    return array;
+}
 
-
-// int[] FindEl(int[,] array)
-// {
-//     int[] newarr = new int[2];
-//     int min = array[0, 0];
-
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             if (array[i, j] < min)
-//             {
-//                 min = array[i, j];
-//                 newarr[0] = i;
-//                 newarr[1] = j;
-//             }
-//         }
-//     }
-//     Console.WriteLine($"min el in array {min}");
-
-//     return newarr;
-
-// }
+int[,] PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($" {array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+    return array;
+}
 
 
-// // // int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
+int[] FindEl(int[,] array)
+{
+    int[] newarr = new int[2];
+    int min = array[0, 0];
 
-// int[,] CheckArray(int[,] oldarray, int[] elarray)
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < min)
+            {
+                min = array[i, j];
+                newarr[0] = i;
+                newarr[1] = j;
+            }
+        }
+    }
+    Console.WriteLine($"min el in array {min}");
 
-// {
-//     int row = 0;
-//     int column = 0;
+    return newarr;
 
-//     Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
+}
 
-//     int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
 
-//     for (int i = 0; i < oldarray.GetLength(0); i++)
-//     {
-//         if (i == elarray[0])
-//         {
-//             row++;
-//         }
-//         for (int j = 0; j < oldarray.GetLength(1); j++)
-//         {
-//             // newarr[i, j] = oldarray[i + row, j];
-//             if (j == elarray[1])
-//             {
-//                 column++;
-//             }
-//             newarr[i, j] = oldarray[i + row, j + column];
-//         }
-//         row = 0;
-//     }
-//     return newarr;
-// }
+// // int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
 
-// Console.Clear();
-// Console.WriteLine("enter rows number");
-// int m = int.Parse(Console.ReadLine());
+int[,] CheckArray(int[,] oldarray, int[] elarray)
 
-// Console.WriteLine("enter columns number");
-// int n = int.Parse(Console.ReadLine());
+{
+    int row = 0;
+    int column = 0;
 
-// int[,] array = FillArray(m, n);
-// PrintArray(array);
+    Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
 
-// // int[] newarr = FindEl(array);
+    int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
 
-// int[,] result = CheckArray(array, FindEl(array));
-// PrintArray(result);
+    for (int i = 0; i < oldarray.GetLength(0); i++)
+    {
+        if (i == elarray[0])
+        {
+            row++;
+        }
+        for (int j = 0; j < oldarray.GetLength(1); j++)
+        {
+            // newarr[i, j] = oldarray[i + row, j];
+            if (j == elarray[1])
+            {
+                column++;
+            }
+            newarr[i, j] = oldarray[i + row, j + column];
+        }
+        row = 0;
+    }
+    return newarr;
+}
+
+Console.Clear();
+Console.WriteLine("enter rows number");
+int m = int.Parse(Console.ReadLine());
+
+Console.WriteLine("enter columns number");
+int n = int.Parse(Console.ReadLine());
+
+int[,] array = FillArray(m, n);
+PrintArray(array);
+
+// int[] newarr = FindEl(array);
+
+int[,] result = CheckArray(array, FindEl(array));
+PrintArray(result);
 
 
 
@@ -3602,6 +3603,38 @@
 
 // Console.WriteLine(digitscore(m, n));
 
+
+
+
+
+
+
+
+
+
+// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+
+
+
+
+
+
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+
+
+
+
+
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 29
+// m = 3, n = 2 -> A(m,n) = 9
 
 
 
