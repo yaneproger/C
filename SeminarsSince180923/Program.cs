@@ -2757,103 +2757,103 @@
 
 
 
-int[,] FillArray(int m, int n)
-{
-    int[,] array = new int[m, n];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = new Random().Next(0, 10);
-        }
-    }
-    return array;
-}
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+//     return array;
+// }
 
-int[,] PrintArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($" {array[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-    return array;
-}
-
-
-int[] FindEl(int[,] array)
-{
-    int[] newarr = new int[2];
-    int min = array[0, 0];
-
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] < min)
-            {
-                min = array[i, j];
-                newarr[0] = i;
-                newarr[1] = j;
-            }
-        }
-    }
-    Console.WriteLine($"min el in array {min}");
-
-    return newarr;
-
-}
+// int[,] PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" {array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     return array;
+// }
 
 
-// // int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
+// int[] FindEl(int[,] array)
+// {
+//     int[] newarr = new int[2];
+//     int min = array[0, 0];
 
-int[,] CheckArray(int[,] oldarray, int[] elarray)
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j] < min)
+//             {
+//                 min = array[i, j];
+//                 newarr[0] = i;
+//                 newarr[1] = j;
+//             }
+//         }
+//     }
+//     Console.WriteLine($"min el in array {min}");
 
-{
-    int row = 0;
-    int column = 0;
+//     return newarr;
 
-    Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
+// }
 
-    int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
 
-    for (int i = 0; i < oldarray.GetLength(0); i++)
-    {
-        if (i == elarray[0])
-        {
-            row++;
-        }
-        for (int j = 0; j < oldarray.GetLength(1); j++)
-        {
-            // newarr[i, j] = oldarray[i + row, j];
-            if (j == elarray[1])
-            {
-                column++;
-            }
-            newarr[i, j] = oldarray[i + row, j + column];
-        }
-        row = 0;
-    }
-    return newarr;
-}
+// // // int[,] CheckArray(int[,] oldarray, int elrow, int elcol)
 
-Console.Clear();
-Console.WriteLine("enter rows number");
-int m = int.Parse(Console.ReadLine());
+// int[,] CheckArray(int[,] oldarray, int[] elarray)
 
-Console.WriteLine("enter columns number");
-int n = int.Parse(Console.ReadLine());
+// {
+//     int row = 0;
+//     int column = 0;
 
-int[,] array = FillArray(m, n);
-PrintArray(array);
+//     Console.WriteLine($"el position - {string.Join(",", elarray)}\t");
 
-// int[] newarr = FindEl(array);
+//     int[,] newarr = new int[oldarray.GetLength(0) - 1, oldarray.GetLength(1) - 1];
 
-int[,] result = CheckArray(array, FindEl(array));
-PrintArray(result);
+//     for (int i = 0; i < oldarray.GetLength(0); i++)
+//     {
+//         if (i == elarray[0])
+//         {
+//             row++;
+//         }
+//         for (int j = 0; j < oldarray.GetLength(1); j++)
+//         {
+//             // newarr[i, j] = oldarray[i + row, j];
+//             if (j == elarray[1])
+//             {
+//                 column++;
+//             }
+//             newarr[i, j] = oldarray[i + row, j + column];
+//         }
+//         row = 0;
+//     }
+//     return newarr;
+// }
+
+// Console.Clear();
+// Console.WriteLine("enter rows number");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("enter columns number");
+// int n = int.Parse(Console.ReadLine());
+
+// int[,] array = FillArray(m, n);
+// PrintArray(array);
+
+// // int[] newarr = FindEl(array);
+
+// int[,] result = CheckArray(array, FindEl(array));
+// PrintArray(result);
 
 
 
@@ -3520,12 +3520,6 @@ PrintArray(result);
 
 
 
-
-
-
-
-
-
 // Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
 // 453 -> 12
 // 45 -> 9
@@ -3544,6 +3538,21 @@ PrintArray(result);
 //     return summ;
 // }
 // Console.WriteLine(digitscore(n));
+
+
+// int n = 453;
+// int digitscore(int n)
+// {
+//     {
+//         if (n == 0)
+//             return 0;
+//     }
+//     return n % 10 + digitscore(n / 10);
+// }
+// Console.WriteLine(digitscore(n));
+
+
+
 
 
 // Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
@@ -3575,6 +3584,34 @@ PrintArray(result);
 // которая выведет все натуральные числа в промежутке от 1 до N.
 // N = 5 -> "1, 2, 3, 4, 5"
 // N = 6 -> "1, 2, 3, 4, 5, 6"
+
+
+
+
+// int n = 1;
+
+// int recursion1(int n)
+// {
+
+//     if (n == 6)
+//     {
+//         return n;
+//     }
+
+//     Console.Write($"{n}.");
+
+//     return recursion1(n + 1);
+
+// }
+
+// recursion1(n);
+
+
+
+
+
+
+
 
 // same as
 
@@ -3609,14 +3646,28 @@ PrintArray(result);
 
 
 
-
-
-
 // Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+// int n = -10;
 
+// int recursion(int n)
+// {
+//     if (n < 1)
+//     {
+//         return 0;
+//     }
+//     else
+//     {
+
+//         Console.WriteLine(n);
+//         n = n - 1;
+//         return recursion(n);
+//     }
+// }
+
+// recursion(n);
 
 
 
@@ -3626,8 +3677,43 @@ PrintArray(result);
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
+// int m = 1;
+// int n = 15;
+// int recursion(int m, int n)
+// {
+//     if (m == n) return m;
+
+//     return m + recursion(m + 1, n);
+// }
+// Console.WriteLine(recursion(m, n));
 
 
+
+
+
+// int m = 1;
+// int n = 5;
+
+// int recursion(int m, int n)
+// {
+
+//     if (m == n)
+//     {
+//         // Console.WriteLine($" 2nd-returned m is -{m}");
+//         return m;
+//     }
+//     // int temp = m + 1;
+
+//     // Console.WriteLine($" 1st -recursive-m -is {m}");
+
+//     int summ = recursion(m + 1, n) + m;
+
+//     // Console.WriteLine($" result summ {summ}");
+
+//     return summ;
+
+// }
+// Console.WriteLine(recursion(m, n));
 
 
 
@@ -3639,3 +3725,17 @@ PrintArray(result);
 
 
 
+
+
+
+
+
+// Задача 60:
+// Сформируйте трёхмерный массив из неповторяющихся
+// двузначных чисел. Напишите программу, которая будет построчно выводить
+// массив, добавляя индексы каждого элемента.
+
+
+// Задача 62:
+// Заполните спирально массив 4 на 4.
+// Домашнее задание
