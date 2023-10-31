@@ -3532,9 +3532,9 @@
 //     {
 //         return 0;
 //     }
-//     int temp = n % 10;
-//     int temp1 = n / 10;
-//     int summ = digitscore(temp1) + temp;
+//     int lastdigit = n % 10;
+//     int restdigits = n / 10;
+//     int summ = digitscore(restdigits) + lastdigit;
 //     return summ;
 // }
 // Console.WriteLine(digitscore(n));
@@ -3586,24 +3586,31 @@
 // N = 6 -> "1, 2, 3, 4, 5, 6"
 
 
+// int m = 1;
+// int n = 10;
+// int recursion(int m)
+// {
+//     if (m == n) return m;
+//     Console.Write($"m{m}");
+//     return m + recursion(m + 1);
+// }
+// Console.WriteLine();
+// Console.WriteLine($"   digits summ is - {recursion(m)}");
+
+
+
 
 
 // int n = 1;
-
 // int recursion1(int n)
 // {
-
 //     if (n == 6)
 //     {
 //         return n;
 //     }
-
 //     Console.Write($"{n}.");
-
 //     return recursion1(n + 1);
-
 // }
-
 // recursion1(n);
 
 
@@ -3614,6 +3621,8 @@
 
 
 // same as
+
+
 
 // Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
 // M = 1; N = 5 -> "1, 2, 3, 4, 5"
@@ -3627,17 +3636,13 @@
 //         return
 //                 0;
 //     }
-
 //     Console.Write($"\t{m}, ");
 //     int digit = m + 1;
 
 //     return (digitscore(digit, n - 1));
-
 // }
-
 // int m = 0;
 // int n = 4;
-
 // Console.WriteLine(digitscore(m, n));
 
 
@@ -3669,6 +3674,19 @@
 
 // recursion(n);
 
+
+
+
+// int m = 0;
+// int recursion(int m)
+// {
+//     // int n = 10;
+//     if (m == 10) return 10;
+//     Console.Write($"m{m}");
+//     return m + recursion(m + 1);
+// }
+// Console.WriteLine();
+// Console.WriteLine($"   digits summ is - {recursion(m)}");
 
 
 
@@ -3722,7 +3740,42 @@
 // m = 2, n = 3 -> A(m,n) = 29
 // m = 3, n = 2 -> A(m,n) = 9
 
+// int m = 3;
+// int n = 2;
 
+// int akkerman(int m, int n)
+// {
+//     if (m == 0) return n + 1;
+//     else if (n == 0) return akkerman(m - 1, 1);
+//     else return akkerman(m - 1, akkerman(m, n - 1));
+// }
+// Console.Write($"Функция Аккермана равно {akkerman(m, n)} ");
+
+//
+
+// int argA = 10;
+// int argB = 20;
+// int akkerman(int argA, int argB)
+// {
+//     if (argA == 0)
+//     {
+//         Console.WriteLine($" 1st  returned argA is -{argA}");
+//         Console.WriteLine($" 1st  returned argB is -{argB}");
+//         return argB + 1;
+//     }
+//     else
+//     if (argA > 0 && argB == 0)
+//     {
+//         Console.WriteLine($" 2nd  returned argA is -{argA}");
+//         Console.WriteLine($"  2nd returned argB is -{argB}");
+//         return akkerman(argA - 1, 1);
+//     }
+//     else
+//         Console.WriteLine($" 3rd  returned argA is -{argA}");
+//     Console.WriteLine($"  3rd returned argB is -{argB}");
+//     return akkerman(argA - 1, akkerman(argA, argB - 1));
+// }
+// Console.WriteLine(akkerman(argA, argB));
 
 
 
@@ -3736,6 +3789,82 @@
 // массив, добавляя индексы каждого элемента.
 
 
+// Console.WriteLine("Enter layers number");
+// int layer = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Enter rows number");
+// int rows = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Enter colums number");
+// int columns = int.Parse(Console.ReadLine()!);
+
+// // string[,] newarray = new string[3, 3] { { "a", "b", "c" }, { "d", "e", "f" }, { "g", "h", "i" } };
+
+// // int[,] multi_dim = { { 10, 20, 30 }, { 40, 50, 60 }, { 70, 80, 90 }, { 100, 110, 120 } };
+
+// int[,,] Fillarray(int layer, int rows, int columns)
+// {
+//     int[,,] array = new int[layer, rows, columns];
+
+//     for (int k = 0; k < layer; k++)
+//     {
+//         Console.WriteLine($"Номер слоя - массив-{k}");
+
+//         for (int i = 0; i < rows; i++)
+//         {
+//             Console.WriteLine($"Номер строки {i}");
+
+//             for (int j = 0; j < columns; j++)
+//             {
+//                 array[k, i, j] = new Random().Next(10, 100);
+
+//                 Console.Write($"элемент- {array[k, i, j]}   -  {k},{i},{j},");
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.WriteLine();
+//     }
+//     return array;
+// }
+
+// int[,,] Zarray = Fillarray(layer, rows, columns);
+
+
+
+
+
 // Задача 62:
 // Заполните спирально массив 4 на 4.
 // Домашнее задание
+
+
+int[,] array = new int[4, 4];
+
+Console.WriteLine("Enter rows number");
+int rows = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Enter colums number");
+int columns = int.Parse(Console.ReadLine()!);
+
+
+int[,] FillArray(int rows, int columns)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        Console.WriteLine($"Номер строки {i}");
+
+        for (int j = 0; j < columns; j++)
+        {
+            array[i, j] = new Random().Next(10, 100);
+
+            Console.Write($"элемент- {array[i, j]}   -  {i},{j},");
+        }
+        Console.WriteLine();
+    }
+    return array;
+}
+
+int[,] newarray = FillArray(rows, columns);
+
+
+
+
+
+
