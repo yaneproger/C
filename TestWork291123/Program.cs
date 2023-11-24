@@ -48,3 +48,48 @@
 
 
 
+
+
+// using System;
+
+// public class Answer
+// {
+
+Console.WriteLine("Enter rows number");
+int rows = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter colums number");
+int columns = int.Parse(Console.ReadLine());
+
+
+string[,] FillArray(int rows, int columns)
+{
+    string[,] array = new string[rows, columns];
+    for (int i = 0; i < rows; i++)
+    {
+        Console.WriteLine("1st row");
+        for (int j = 0; j < columns; j++)
+        {
+            Console.WriteLine("Enter massive's element");
+            array[i, j] = Console.ReadLine()!;
+        }
+        Console.WriteLine();
+        Console.WriteLine("next row");
+    }
+    return array;
+}
+
+
+void PrintArray(string[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.WriteLine($" Номер строки {i}");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($" элемент-{i},{j}- {array[i, j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+
