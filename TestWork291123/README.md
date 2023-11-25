@@ -41,3 +41,9 @@
 ### Solution
 #### Description
 
+### Solution
+#### Description
+* Main part of the solution consist of 2 functions, with double cycle with 1 decision, in each. 
+* First one checks number of symbols in massive's element, and increases count size to 1, this variable -  will be count of elements, in whose symbols count no more or equals 3.
+* This count, represented as number, will be forwarded to second function, which takes initial array, and forwarded element count, as new array's size for input, and cheks initial array for elements, which length no more, or equals 3, and puts them in new array, which will be returned and printed as result of this function.
+that's all.
