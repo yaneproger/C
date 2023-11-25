@@ -89,7 +89,65 @@ void PrintArray(string[,] array)
             Console.Write($" элемент-{i},{j}- {array[i, j]}");
         }
         Console.WriteLine();
+
     }
 }
+
+
+
+
+int ElementCount(string[,] array)
+
+{
+    int arraysize = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j].Length >= 3)
+            {
+                arraysize = arraysize + 1;
+            }
+        }
+    }
+    Console.WriteLine($"arraysize{arraysize}");
+    return arraysize;
+}
+
+
+
+
+string[] ChangedArray(string[,] array, int arraysize)
+
+{
+    string[] newarray = new string[arraysize];
+
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j].Length >= 3)
+            {
+                newarray[i] = array[i, j];
+                Console.Write($"newarray [{newarray[i]} ]");
+            }
+        }
+        // Console.WriteLine(string.Join(", ", array.Where(x => x.Length > 3)));
+    }
+    return newarray;
+}
+
+
+
+Console.Clear();
+string[,] newarray = FillArray(rows, columns);
+PrintArray(newarray);
+int newarraysize = ElementCount(newarray);
+Console.WriteLine("newarray");
+ChangedArray(newarray, newarraysize);
+// Console.WriteLine("newarray");
+// PrintArray(ChangeArray(newarray));
 
 
