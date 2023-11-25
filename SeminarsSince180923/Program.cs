@@ -4040,11 +4040,12 @@ int ElementCount(string[,] array)
 
 
 
+// string[]
 
-string[] ChangedArray(string[,] array, int arraysize)
+void ChangedArray(string[,] array, int arraysize)
 
 {
-    string[] newarray = new string[arraysize];
+    string[] newarray = new string[arraysize + 1];
 
 
     for (int i = 0; i < array.GetLength(0); i++)
@@ -4055,12 +4056,13 @@ string[] ChangedArray(string[,] array, int arraysize)
             if (array[i, j].Length >= 3)
             {
                 newarray[i] = array[i, j];
-                Console.Write($"newarray [{newarray[i]} ]");
+                // Console.Write($"newarray [{newarray[i]} ]");
             }
         }
         // Console.WriteLine(string.Join(", ", array.Where(x => x.Length > 3)));
     }
-    return newarray;
+    Console.WriteLine($"{string.Join("\t", newarray)}\t");
+    // return newarray;
 }
 
 
@@ -4074,7 +4076,7 @@ Console.Clear();
 string[,] newarray = FillArray(rows, columns);
 PrintArray(newarray);
 int newarraysize = ElementCount(newarray);
-Console.WriteLine("newarray");
+// Console.WriteLine("newarray");
 ChangedArray(newarray, newarraysize);
 // Console.WriteLine("newarray");
 // PrintArray(ChangeArray(newarray));
