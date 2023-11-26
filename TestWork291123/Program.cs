@@ -46,78 +46,79 @@
 
 
 
-Console.WriteLine("Enter rows number");
-int rows = int.Parse(Console.ReadLine());
-Console.WriteLine("Enter colums number");
-int columns = int.Parse(Console.ReadLine());
+// Console.WriteLine("Enter rows number");
+// int rows = int.Parse(Console.ReadLine());
+// Console.WriteLine("Enter colums number");
+// int columns = int.Parse(Console.ReadLine());
 
-string[,] FillArray(int rows, int columns)
-{
-    string[,] array = new string[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        Console.WriteLine("1st row");
-        for (int j = 0; j < columns; j++)
-        {
-            Console.WriteLine("Enter massive's element");
-            array[i, j] = Console.ReadLine()!;
-        }
-        Console.WriteLine();
-        Console.WriteLine("next row");
-    }
-    return array;
-}
+// string[,] FillArray(int rows, int columns)
+// {
+//     string[,] array = new string[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         Console.WriteLine("1st row");
+//         for (int j = 0; j < columns; j++)
+//         {
+//             Console.WriteLine("Enter massive's element");
+//             array[i, j] = Console.ReadLine()!;
+//         }
+//         Console.WriteLine();
+//         Console.WriteLine("next row");
+//     }
+//     return array;
+// }
 
-void PrintArray(string[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        Console.WriteLine($" Номер строки {i}");
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($" элемент-{i},{j}- {array[i, j]}");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintArray(string[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.WriteLine($" Номер строки {i}");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" элемент-{i},{j}- {array[i, j]}");
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
-int ElementCount(string[,] array)
-{
-    int arraysize = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j].Length <= 3)
-            {
-                arraysize = arraysize + 1;
-            }
-        }
-    }
-    Console.WriteLine($"newarraysize is {arraysize} elements");
-    return arraysize;
-}
+// int ElementCount(string[,] array)
+// {
+//     int arraysize = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j].Length <= 3)
+//             {
+//                 arraysize = arraysize + 1;
+//             }
+//         }
+//     }
+//     Console.WriteLine($"newarraysize is {arraysize} elements");
+//     return arraysize;
+// }
 
-void ChangedArray(string[,] array, int arraysize)
-{
-    string[] newarray = new string[arraysize];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j].Length <= 3)
-            {
-                newarray[i] = array[i, j];
-                Console.Write($"[{newarray[i]}]");
-            }
-        }
-    }
-}
-Console.Clear();
-string[,] newarray = FillArray(rows, columns);
-PrintArray(newarray);
-int newarraysize = ElementCount(newarray);
-Console.WriteLine("newarray");
-ChangedArray(newarray, newarraysize);
-Console.WriteLine();
+// void ChangedArray(string[,] array, int arraysize)
+// {
+//     string[] newarray = new string[arraysize];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j].Length <= 3)
+//             {
+//                 newarray[i] = array[i, j];
+//                 Console.Write($"[{newarray[i]}]");
+//             }
+//         }
+//     }
+// }
+
+// Console.Clear();
+// string[,] newarray = FillArray(rows, columns);
+// PrintArray(newarray);
+// int newarraysize = ElementCount(newarray);
+// Console.WriteLine("newarray");
+// ChangedArray(newarray, newarraysize);
+// Console.WriteLine();
 

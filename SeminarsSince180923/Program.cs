@@ -4019,9 +4019,7 @@ void PrintArray(string[,] array)
     }
 }
 
-
 int ElementCount(string[,] array)
-
 {
     int arraysize = 0;
     for (int i = 0; i < array.GetLength(0); i++)
@@ -4038,38 +4036,21 @@ int ElementCount(string[,] array)
     return arraysize;
 }
 
-
-
-// string[]
-
 void ChangedArray(string[,] array, int arraysize)
-
 {
-    string[] newarray = new string[arraysize + 1];
-
-
+    string[] newarray = new string[arraysize];
     for (int i = 0; i < array.GetLength(0); i++)
     {
-
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i, j].Length >= 3)
+            if (array[i, j].Length <= 3)
             {
                 newarray[i] = array[i, j];
-                // Console.Write($"newarray [{newarray[i]} ]");
+                Console.Write($"[{newarray[i]}]");
             }
         }
-        // Console.WriteLine(string.Join(", ", array.Where(x => x.Length > 3)));
     }
-    Console.WriteLine($"{string.Join("\t", newarray)}\t");
-    // return newarray;
 }
-
-
-
-
-
-
 
 
 Console.Clear();
