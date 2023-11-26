@@ -46,11 +46,6 @@
 
 
 
-// using System;
-
-// public class Answer
-// {
-
 Console.WriteLine("Enter rows number");
 int rows = int.Parse(Console.ReadLine());
 Console.WriteLine("Enter colums number");
