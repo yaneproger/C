@@ -142,8 +142,11 @@
 //     max = a;
 //     Console.WriteLine("max number is : " + max);
 // }
-// else
-//     Console.WriteLine("max number is : " + b);
+// else if (a == b)
+// {
+//     Console.WriteLine("The numbers equals ");
+// }
+// else Console.WriteLine("max number is : " + b);
 
 
 
@@ -3000,18 +3003,28 @@
 Console.WriteLine("enter a number");
 int num = int.Parse(Console.ReadLine()!);
 
-
-
-int fibonacci(int number)
+int Fibonacci(int number)
 {
     int fibonacci = 0;
     for (int index = 0; index < number; index++)
     {
-        fibonacci = number + index;
+        fibonacci = fibonacci + (fibonacci + index);
 
+        0 1 1 2 3
+        0 = 0 + (0 + 0) = 0
+        0 = 0 + (0 + 1) = 1
+        1 = 1 + (1 + 2) = 4
+
+
+
+        Console.WriteLine(fibonacci);
     }
     return fibonacci;
 }
+Fibonacci(num);
+
+
+
 
 
 

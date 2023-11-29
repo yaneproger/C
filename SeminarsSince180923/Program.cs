@@ -4026,13 +4026,13 @@ int ElementCount(string[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i, j].Length >= 3)
+            if (array[i, j].Length <= 3)
             {
                 arraysize = arraysize + 1;
             }
         }
     }
-    Console.WriteLine($"arraysize{arraysize}");
+    Console.WriteLine($"newarraysize is {arraysize} elements");
     return arraysize;
 }
 
@@ -4057,7 +4057,8 @@ Console.Clear();
 string[,] newarray = FillArray(rows, columns);
 PrintArray(newarray);
 int newarraysize = ElementCount(newarray);
-// Console.WriteLine("newarray");
+Console.WriteLine("newarray");
 ChangedArray(newarray, newarraysize);
-// Console.WriteLine("newarray");
+Console.WriteLine();
 // PrintArray(ChangeArray(newarray));
+
