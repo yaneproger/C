@@ -4062,3 +4062,259 @@ ChangedArray(newarray, newarraysize);
 Console.WriteLine();
 // PrintArray(ChangeArray(newarray));
 
+
+
+//KOONSTANTNIY ALGORITM  - VIPOLNAYETSA ODNO DEYSTVIYE
+//   O(1)  - DONO DEYSTIVE - VI4ISLENIYE
+//Console.WriteLine(((1 + n) / 2.0) * n);
+
+
+
+//  logarifmi4esky algoritm   
+// O(log2(n)
+// BINARNIY POISK
+//  Обход дерева. Перебор с возвратами
+//  SORTIROVKA SLIYANIYEM
+
+// BINARNIY POISK
+// BEREM ZADANNOE KOLI4ESTVO VARIANTOV I DELIM NA 2
+//  NAPRIMER NUJNO NAYTI CISLO OT 1-GO DO 100
+// SRAZU SPRAWIVAEM - ETO CISLO BOLWE 50 ILI NET
+// TO EST KOLI4ESTVO OPERACIY V ALGORITME RAVNO - O(n) = n(1-PERVOE) + n(POSLEDNEE)/2 (DELIM NA 2) * n (UMNOJAEM NA n)
+//  
+// KOLI4ESTVO OPERACIY O= LOG2(n)  
+//LOGARIFM n PO OSNOVANIYU 2
+//
+
+
+
+//LINEYNIY ALGORITM 
+// O(n) - KOLI4ESTVO OPERACIY RAVNO - n
+//  ETO odin CISKL 
+//   ODNOMERNIY MASSIV
+
+// Console.WriteLine("Enter  number");
+// int n = int.Parse(Console.ReadLine());
+
+// for (int j = 0; j < n; j++)
+// {
+//     summ += j;    // sum==summ+j;
+//     Console.Write($"[{summ}]");
+// }
+
+
+
+
+// LINEYNO  LOGARIFMI4ESKIY ALGORITM -ALGORITM BINARNOGO POISKA
+// O(log2(n)*n
+// Naprimer
+// ALGORITM BISTROY SORTIRIVKI
+// Napisan na osnove rekursii na osnove strategii razdelay i vlastvuy
+//  [5, 4, 0, 2, 1]
+
+// Beretsa luboy  oporniy element
+// vnutri Algoritma bistroy sortiroki est oprniy element
+// v osnovnom bertsa perviy element
+// zdes et0 - 5
+// dalee vistraivaetsa dva massiva
+// v pervom - zna4eniya elementov massiva kot menwe Opornogo elementa
+//  [4, 0, 2, 1]
+// Zatem vtoroy massiv, v kot zna4enite kot prinadlejat opornomu elementu
+//  V dannoy situacii u ns oponiy element odin,
+// i nawe zna4enie budet sostoyat is odnogo elementa - [5]
+//  Dalwe vistraivaetsa tretiy massiv, v kotorom elementi 
+// bolwe opornogo elementa
+//  [] - polu4aem pustoy massiv tak kak u nas net elementov bolwe 5
+
+//  [5, 4, 0, 2, 1]
+//  Oporniy element -5
+//  Perviy massiv - <5 - [4, 0, 2, 1]
+//  Vtoroy massiv - =5 - [5]
+//  Tretiy massiv - >5 - []
+//  Posledniy dva massiva ne nujnu sortirovat
+// Oni yavlayutsa bazisom vnutri nawey rekursii
+// 
+// Dalee v pervom massive snova na4inaem iskat Oporniy element
+//  [4, 0, 2, 1]
+//  Oporniy element -4
+//  Perviy massiv - <4 - [0, 2, 1]
+//  Vtoroy massiv - =4 - [4]
+//  Tretiy massiv - >4 - []
+//
+// Dalee analogi4nim obrazom
+// razbiraem massiv na oprniy element
+//  [0, 2, 1]
+//  Perviy massiv - <0 - [0, 2, 1]
+//  Vtoroy massiv - =0 - []
+//  Tretiy massiv - >0 - [2, 1]
+
+// Zdes uje massiv is 2x elementov - 
+// eto bazoviy slu4ay vnutri
+// rekursii, to est o4en legko opredelit
+// v massive iz dvux elementov 
+// kotoriy bolwe, - to est otsortirovat
+// to est algoritm bistoy sotirivki ispolzuet
+// strategiyu razdelay i vlastvuy
+// mi na4inali s massiva kotoriy soderjit 5
+// elementov i zakan4ivayem massivom
+// kotoriy soderjit nol, odin, ili dva elementa
+
+
+
+// KVADRATI4NUY ALGORITM
+// KOLI4ESTVO OPERACIY O(n^2) O RAVNO n-(na4alnoe 4islo) V KVADRATE
+
+
+// int[] array = new string[arraysize];
+// for (int i = 0; i < array.Length; i++)
+// {
+//  DVA CIKLA - KVADRATI4NIY!!!! ALGORITM !!!!  -- TRI CIKLA KUBI4ESKIY ALGORITM!!!!!
+//     for (int j = 0; j < array.Length - 1; j++)   //zdes MOJNO DOBAVIT -J  
+//                                     4TOBI SOKRATIT KOLI4ESTVO POVTORENIY PRI VIPOLNENII,  
+//       TAK KAK MAXIMALNOE 4ISLO BUDET PEREXODIT V KONEC MASSIVA   PRI KAJDOY ITERACII
+//         [-6, 4, 3, -9, 11]
+//         [-6, 3, -9, 4, 11]
+// TUT ZA PERVUYU ITERACIYU CIKLA SRAZU DVA (2) MAXIMZLNIX CISLA V KONCE MASSIVA
+// PRI SLEDUYUWEY ITERACII IX NE NUJNO PERESTAVLAT!!!!!
+
+//     {
+//         if (array[j] > array[j + 1])
+//         {
+//             (array[j], array[j + 1]) = (array[j + 1], array[j]);  //ZAMENA ARRAY J-TOYE  NA ARRAY J+1 - SORTIROVKA PUZIRKOM
+
+//         }
+//     }
+// }
+// Console.WriteLine($"     {string.Join(",", array)}");
+
+
+//KUBI4ESKIY ALGORITM  TRI CIKLA  (I,J,K)
+//
+// O(n^3)
+//  SORTIROVKA 2X MERNOGO MASSIVA
+//  BAZOVAYA RABOTA S 3X MERNIM MASSIVIOM - SOZDANIYE I T.D.
+// V TREXMENOM MASSIVE TRI IZMERENIYA - DLA KAJDOGO IZMERENIYA SOZDAYEM OTDELNIY CIKL
+
+
+
+
+// ZADA4A O KOMMIVOAYJERE (N!) - N FACTORIAL
+// VISOKAYA SLOJNOST ALGORITMA
+// NE REKOMENDUETSA NIGDE ISPOLZOVAT I S4ITAT
+
+
+// POSLEDOVAATELNOST FIBONACCI 
+// NUJNO ISKAT N  CISLO FIBONACCI 4EREZ OBIKNOVENNIY CIKL FOR
+//  O( 2^N) - SLOJNOST - o OT 2 V STEPENI N
+//  K KAJDOMU VIZOVU EWE DVA VIZOVA
+// TO EST ODIN VIZOV I K NEMU DVA VIZOVA
+// ETU SLOJNOST TOJE NELZA DOPUSKAT ISPOLZOVAT
+
+
+
+
+// Nije test kotoriy vilojil Denis Makarcev v koknce seminara
+
+/*
+1. Константные O(1)
+2. Логарифмические O(log2(n))
+3. Линейные O(n)
+4. Линейно-логарифмические O(log2(n) * n)
+5. Квадратичные O(n ^ 2)
+6. Кубические O(n ^ 3)
+7. Задача о комивояжере(N!)
+
+Лекции по С#(Последовательность Фиббоначчи) O(2^n)
+*/
+
+// Напишите программу, которая принимает на вход одно число и возвращает сумму чисел от 1 до n.
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int n = int.Parse(Console.ReadLine()!), result = 0;
+// for (int i = 1; i <= n; i++)
+//     result += i;
+// Console.WriteLine($"Сумма число от 1 до {n} = {result}");
+// Console.WriteLine(((1 + n) / 2.0) * n);
+// Sn = ((a0 + an) / 2) * n = ((1 + n) / 2) * n
+// (1 + 10) / 2.0 = 5.5
+
+
+// Алина попросила Костю загадать число от 1 до 100(он загадал 67)
+// Алгоритм Бинарного поиска
+// Это число больше чем (1 + 100) / 2 = 50? Да
+// Это число больше чем (50 + 100) / 2 = 75? Нет
+// Это число больше чем (50 + 75) / 2 = 62? Да
+// Это число больше чем (62 + 75) / 2 = 68? Нет
+// Это число больше чем (62 + 68) / 2 = 65? Да
+// Это число больше чем (65 + 68) / 2 = 66? Да
+// Это число больше чем (66 + 68) / 2 = 67? Нет
+// (66, 67)
+// 100 вариантов(n) - log2(100) = 7
+
+
+// Алгорит пузырьковой сортировки
+// Console.Clear();
+// Console.Write("Введите кол-во элементов: ");
+// int n = int.Parse(Console.ReadLine()!);
+// int[] array = new int[n];
+// for (int i = 0; i < array.Length; i++)
+//     array[i] = new Random().Next(-20, 21); // [-20; 20]
+// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+// for (int i = 0; i < array.Length; i++)
+// {
+//     for (int j = 0; j < array.Length - 1 - i; j++)
+//     {
+//         if (array[j] > array[j + 1])
+//             (array[j], array[j + 1]) = (array[j + 1], array[j]);
+//     }
+// }
+// Console.WriteLine($"Конечный массив: [{string.Join(", ", array)}]");
+// [-6, 4, 3, -9, 11]
+// [-6, 3, -9, 4, 11]
+
+
+// Последовательность Фибонначчи
+
+
+// int fib(int n)
+// {
+//     if (n == 0)
+//         return 0;
+//     if (n == 1)
+//         return 1;
+//     return fib(n - 1) + fib(n - 2);
+// }
+
+
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int n = int.Parse(Console.ReadLine()!), a0 = 0, a1 = 1, x;
+// for (int i = 0; i < n; i++)
+// {
+//     x = a0 + a1;
+//     a0 = a1;
+//     a1 = x;
+// }
+// Console.WriteLine($"I - {a0}"); // O(39)
+// Console.WriteLine($"II(рекурсия) - {fib(n)}"); // O(2 ^ 39)
+// 0 1 1 2 3 5 8
+// 0 1 2 3 4 5 6 7
+
+
+// [5, 4, 0, 2, 1]
+// Опорный элемент - 5
+// Первый массив < 5 [4, 0, 2, 1]
+// Второй массив = 5 [5]
+// Третий массив > 5 []
+
+// [4, 0, 2, 1]
+// Опорный элемент - 4
+// Первый массив < 4 [0, 2, 1]
+// Второй массив = 4 [4]
+// Третий массив > 4 []
+
+// [0, 2, 1]
+// Опорный элемент - 0
+// Первый массив < 0 []
+// Второй массив = 0 [0]
+// Третий массив > 0 [2, 1
