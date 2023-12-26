@@ -3010,10 +3010,10 @@ int Fibonacci(int number)
     {
         fibonacci = fibonacci + (fibonacci + index);
 
-        0 1 1 2 3
-        0 = 0 + (0 + 0) = 0
-        0 = 0 + (0 + 1) = 1
-        1 = 1 + (1 + 2) = 4
+        // 0 1 1 2 3
+        // 0 = 0 + (0 + 0) = 0
+        // 0 = 0 + (0 + 1) = 1
+        // 1 = 1 + (1 + 2) = 4
 
 
 

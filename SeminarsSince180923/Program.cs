@@ -3835,6 +3835,7 @@
 // Заполните спирально массив 4 на 4.
 // Домашнее задание
 
+
 // Console.WriteLine("Enter layers number");
 // int layer = int.Parse(Console.ReadLine()!);
 // Console.WriteLine("Enter rows number");
@@ -3982,85 +3983,85 @@
 // public class Answer
 // {
 
-Console.WriteLine("Enter rows number");
-int rows = int.Parse(Console.ReadLine());
-Console.WriteLine("Enter colums number");
-int columns = int.Parse(Console.ReadLine());
+// Console.WriteLine("Enter rows number");
+// int rows = int.Parse(Console.ReadLine());
+// Console.WriteLine("Enter colums number");
+// int columns = int.Parse(Console.ReadLine());
 
 
-string[,] FillArray(int rows, int columns)
-{
-    string[,] array = new string[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        Console.WriteLine("1st row");
-        for (int j = 0; j < columns; j++)
-        {
-            Console.WriteLine("Enter massive's element");
-            array[i, j] = Console.ReadLine()!;
-        }
-        Console.WriteLine();
-        Console.WriteLine("next row");
-    }
-    return array;
-}
+// string[,] FillArray(int rows, int columns)
+// {
+//     string[,] array = new string[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         Console.WriteLine("1st row");
+//         for (int j = 0; j < columns; j++)
+//         {
+//             Console.WriteLine("Enter massive's element");
+//             array[i, j] = Console.ReadLine()!;
+//         }
+//         Console.WriteLine();
+//         Console.WriteLine("next row");
+//     }
+//     return array;
+// }
 
 
-void PrintArray(string[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        Console.WriteLine($" Номер строки {i}");
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($" элемент-{i},{j}- {array[i, j]}");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintArray(string[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.WriteLine($" Номер строки {i}");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" элемент-{i},{j}- {array[i, j]}");
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
-int ElementCount(string[,] array)
-{
-    int arraysize = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j].Length <= 3)
-            {
-                arraysize = arraysize + 1;
-            }
-        }
-    }
-    Console.WriteLine($"newarraysize is {arraysize} elements");
-    return arraysize;
-}
+// int ElementCount(string[,] array)
+// {
+//     int arraysize = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j].Length <= 3)
+//             {
+//                 arraysize = arraysize + 1;
+//             }
+//         }
+//     }
+//     Console.WriteLine($"newarraysize is {arraysize} elements");
+//     return arraysize;
+// }
 
-void ChangedArray(string[,] array, int arraysize)
-{
-    string[] newarray = new string[arraysize];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j].Length <= 3)
-            {
-                newarray[i] = array[i, j];
-                Console.Write($"[{newarray[i]}]");
-            }
-        }
-    }
-}
+// void ChangedArray(string[,] array, int arraysize)
+// {
+//     string[] newarray = new string[arraysize];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j].Length <= 3)
+//             {
+//                 newarray[i] = array[i, j];
+//                 Console.Write($"[{newarray[i]}]");
+//             }
+//         }
+//     }
+// }
 
 
-Console.Clear();
-string[,] newarray = FillArray(rows, columns);
-PrintArray(newarray);
-int newarraysize = ElementCount(newarray);
-Console.WriteLine("newarray");
-ChangedArray(newarray, newarraysize);
-Console.WriteLine();
-// PrintArray(ChangeArray(newarray));
+// Console.Clear();
+// string[,] newarray = FillArray(rows, columns);
+// PrintArray(newarray);
+// int newarraysize = ElementCount(newarray);
+// Console.WriteLine("newarray");
+// ChangedArray(newarray, newarraysize);
+// Console.WriteLine();
+// // PrintArray(ChangeArray(newarray));
 
 
 
@@ -4422,5 +4423,219 @@ Console.WriteLine();
 // таким образом нас волнует не константа, а закон,
 //  по которому количество действий зависит от объёма данных — он тут 𝑁².
 
+//
 
 
+// O - notaciya - eto koli4estvo deystviy 4tobi uznat kone4niy rezultat
+//
+//ETO I NAZIVAETSA - SLOJNOST ALGORITMA ILI O-NOTACIYA - KOLI4ESTVO DEYSTVIY, 4TOBI UZNAT KONE4NIY REZULTAT
+
+// int size = 5;
+// int[] array = new int[size];
+// for (int i = 0; i < array.Length; i++)
+//     array[i] = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"[{string.Join(", ", array)}]");
+// Console.WriteLine(array[1]);
+//Slojnost Algoritma O(1)
+
+// ETOT ALRGORITM VIDAET RESLUTAT ZA O(1) - 4ITAETSA "O- OT ODNOGO"
+// za odno deystviye
+// Mo vipolnili odno deystviye, 
+// 4tobi uznat kakoe zna3eniye stoit pod indeksom 3
+
+//  [1, 2, 3, 4, 9]
+
+// Teper vopros - skolko operacii nujno 4tobi nayti summu etogo massiva
+// 5 opercaciy  - tak kak cikl proydet 5 raz po massivu,
+// 4tobi pos4titat vse cisla
+// Zna4it slojnost O(5) ili O(n)
+
+// [3, 1, 5, 4, 2]
+// [1, 2, 3, 4, 5]  -  O(n* Log2(n)) otsortirovali massiv s pomowyu "Bistroy sortirovki"
+//  ((5 + 1)/2 * 5)  - nawli summu s pomowyu odnogo deystviya
+// to est polu4aetsa, na reweniye zada4i potra4eno - "Bistrya sortirovka" plus odno deystviye
+
+//  i kak resultat -  n < n * log2(n) + 1  -
+
+// eto ozna4aet, 4to na naxojdeniye summi massiva bistree ispolzovat odno deystviye,
+// ispolzovat slojniy algoritm + odno deystviye
+
+// to est -  NE vsegda ispolzovanie slojnix algoritmov, napromer bistraya sortirovka i lus vipolnenie
+// odnogo kakogo-libo deystviya
+//  O(n* Log2(n)) + O(1)
+//  yavlaetsa bolee bistrim reweniem, 
+// 4em prostie algoritmi
+
+// O(n) < O(n * log2(n) + 1)  - Odno deystviye menwe  slonix algoritmov
+
+// int n = 5;
+// int summa = 0;
+// for (int i = 0; i < n; i++)
+//     summa += array[i]; // -  - Odno deystviye menwe 
+// Console.WriteLine(summa);
+
+
+
+// [3, 1, 5, 4, 2]
+// 4tobi otsortirovat massiv ponadobitsa takoe koli4estvo deystviy -
+// [1, 2, 3, 4, 5] = O(n* Log2(n)) - eto algoritm bistroy sortirovki
+// zdes summ ravna ((5 + 1)/2 * 5)  - i v resultate mi polu4im vrema vipolneniya
+//  etogo algoritma - O(n* Log2(n)) + O(n)
+
+
+// V arifmeti4eskoy progressii - kajdiy posleduyuwii element 
+// raven summe - prediduwii + 1 plus edinica
+// 
+//
+// Summa arifmeti4eskoy progressiyi 
+// 1-y element + posledniy element , delennoe "/" na 2 ,
+// i umnojennoe na koli4estvo
+//  ((1+9)/2)*5   -  O(1) - zdes O ot odnogo, 
+// tak kak vipolnayetsa odno deystviye
+
+// int n = 5;
+// for (int i = 1; i <= n; i++)
+// {
+//     for (int j = 1; j <= n; j++)
+//     {
+//         Console.Write($" {i * j}, ");
+//     }
+
+//     Console.WriteLine();
+// }
+
+
+// V nijnem kode mi !!! UMENWILI koli4estvo operaciy na dva,
+// VMESTO 25 , POLUCII 15 OPERACIY
+// U NAS 25 CISEL VIVODITSA, POETOMU 25 OPERACIY, NO MI
+// SDELALI " J=I" I POUCILI 15 OPERACIY
+// TO EST MI POLOJILI V "J' ZNA4ENIE  "I", TEM SAMIM
+//
+// tak kak primenili RAZDELENIE MATRICI po diagonali
+
+// est ponatie SMEJNIE TABLICI - ILI SMEJNIE MATRICI
+// DANNIE V SMEJNIX MATRICAX ODINAKOVI
+
+
+// for (int j = i; j < n; j++) 
+
+// vmesto
+
+//    for (int j = 0; j < n; j++)
+
+//     ZAPOLNENIE IDET NA POLOVINU
+// "J" U NAS VLOJENNIY CIKL I ON DOLJEN NA4INATSA
+// POSLE "I" NA KAJDOY ITERACII
+// TO EST SNA4ALA IDEM NA "I=0"
+// POTOM ZAXODIM V CIKL "J", I PROXODIM OT "0" DO "N"
+// DALWE VOZRAWAEMSA NA "I", GDE "I=1",  - ETO UJE 2-OY RYAD, 2-YA GORIZONTAL,
+// I ZAXODIM VO VNUTRENNIY CIKL "J", A TUT UJE "J=I" , "J" POLU4IL ZNA4ENIE NE "0",
+// KAK OBI4NO DOLJNO BIT, A POLU4IL ZNA4ENIE OT "I", TO EST "1"
+// I TAK DALEE, KOGDA "I=2", TO i  "J" BUDET TOJE RAVEN "2" "J-2"
+// KOGDA "I" BUDET RAVEN "3" TO I  "J" POLU4INT ZNA4ENIE "3"
+// V ITOGE UMEWITSA KOLI4ESTVO PROXODOV PO MATRICE
+//  0, 1, 2, 3, 4
+//     1, 2, 3, 4
+//        2, 3, 4
+//           3, 4
+//              4
+//
+// a ostalnaya 4AST MATRICI DOPISIVAETSA VTORIM VIRAJENIEM
+//
+// A IMENNO :   matrix[j, i] = (i + 1) * (j + 1);
+
+//            matrix[i, j] = (i + 1) * (j + 1);  PERVOE VIRAJENIE
+//         matrix[j, i] = (i + 1) * (j + 1);    VTOROE VIRAJENIE
+// TO EST "J" PRINIMAET ZNA4ENIE OT "I"
+// NA KAJDOY NOVOY ITERACII CIKLA,
+// A NE NA4INAET ITERACIYU C 0 - NULA
+// 
+// V ITOGE POLU4AEM 15 !!!  OPERCAIY VMESTO 25!!!!
+
+// int n = 5;
+// int summ = 0;
+// int[,] matrix = new int[n, n];
+// for (int i = 0; i < n; i++)
+// {
+//     // for (int j = 0; j < n; j++)
+//     for (int j = i; j < n; j++)
+//     {
+//         matrix[i, j] = (i + 1) * (j + 1);
+//         matrix[j, i] = (i + 1) * (j + 1);
+//         summ += 1;
+//     }
+// }
+// for (int i = 0; i < n; i++)
+// {
+//     for (int j = 0; j < n; j++)
+//     {
+//         Console.Write($" {matrix[i, j]}, ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.WriteLine($"summA OPERACIY {summ}");
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApplication
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var arr = new List<int> { 55, 3, 55, 2, 10 };
+            Console.WriteLine(string.Join(", ", SelectionSort(arr)));
+        }
+
+        private static int[] SelectionSort(List<int> arr)
+        {
+            var newArr = new int[arr.Count];
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                var smallest = FindSmallest(arr);
+                newArr[i] = arr[smallest];
+                arr.RemoveAt(smallest);
+            }
+            return newArr;
+        }
+
+        private static int FindSmallest(List<int> arr)
+        {
+            var smallest = arr[0];
+            var smallestIndex = 0;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                if (arr[i] < smallest)
+                {
+                    smallest = arr[i];
+                    smallestIndex = i;
+                }
+            }
+            return smallestIndex;
+        }
+
+        public static int[] SelectionSort(int[] unorderedArray)
+        {
+            for (var i = 0; i < unorderedArray.Length; i++)
+            {
+                var smallestIndex = i;
+
+                for (var remainingIndex = i + 1; remainingIndex < unorderedArray.Length; remainingIndex++)
+                {
+                    if (unorderedArray[remainingIndex] < unorderedArray[smallestIndex])
+                    {
+                        smallestIndex = remainingIndex;
+                    }
+                }
+                (unorderedArray[i], unorderedArray[smallestIndex]) = (unorderedArray[smallestIndex], unorderedArray[i]);
+            }
+
+            return unorderedArray;
+        }
+    }
+}
